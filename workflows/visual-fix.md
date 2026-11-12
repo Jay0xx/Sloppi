@@ -1,19 +1,31 @@
-# Workflow: Visual Fix & Anti-Slop Cleanup
+# Workflow: Visual Fix & Anti-Slop Cleanup (Sloppi v2.0)
 
-This workflow guides an agent through diagnosing and repairing broken visual hierarchy, mobile layout overflow, or generic AI slop in an existing interface.
+This workflow guides an agent through diagnosing and repairing weak visual hierarchy, mobile layout overflow, generic AI slop, or sterile wireframe flatness in an existing interface.
 
 ---
 
 ## Operational Recipe
 
 ```
-[ Visual Fix Workflow ]
+[ Visual Fix Workflow v2.0 ]
         │
-        ├──────► STEP 1: Inspect Rendered Defect (Capture viewport screenshot / DOM state)
-        ├──────► STEP 2: Root-Cause Trace (Trace symptom through 5-layer diagnostic model)
-        ├──────► STEP 3: Prioritize Fix (Plot on Impact × Cost matrix; isolate 1 objective)
-        ├──────► STEP 4: Minimal Intervention (Apply targeted code diff; DO NOT rewrite whole page)
-        ├──────► STEP 5: Re-Render & Compare (Verify problem improved in viewport)
-        ├──────► STEP 6: Regression Audit (Verify adjacent layouts, touch targets, and contrast)
-        └──────► STEP 7: Conclude (Record diff in Refinement Log)
+        ├──────► STEP 1: Capture "BEFORE" Viewport Screenshot
+        │                • Render and capture the exact defect at `390px` mobile and `1280px` desktop.
+        │
+        ├──────► STEP 2: 5-Layer Root-Cause Trace
+        │                • Trace symptom through Content → Hierarchy → Composition → Art Direction/Materiality → CSS.
+        │                • Check whether the page fell into the Polish Trap (blur blobs) OR the Wireframe Trap
+        │                  (flat `1px` boxes with `Inter` and zero depth).
+        │
+        ├──────► STEP 3: Formulate High-Craft Structural Intervention
+        │                • Isolate 1 primary objective per iteration (`refinement/iteration.md`).
+        │                • Apply targeted typographic, spatial, material, or interactive improvement.
+        │
+        ├──────► STEP 4: Re-Render & Compare BEFORE vs. AFTER Screenshots
+        │                • Capture the "After" screenshot at the exact same viewport dimensions.
+        │                • Verify that composition, focal hierarchy, and visual craft genuinely improved.
+        │
+        └──────► STEP 5: 7-Point Regression Check & Conclude
+                         • Verify zero horizontal overflow (`scrollWidth <= innerWidth`), ≥44px touch targets,
+                           WCAG AA/AAA contrast, and visible `:focus-visible` outlines.
 ```

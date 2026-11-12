@@ -1,111 +1,138 @@
 ---
 name: sloppi
-description: Design intelligence skill for coding agents to prevent generic, repetitive AI frontend defaults through disciplined research, reasoning, content architecture, visual synthesis, DESIGN.md contracts, implementation, visual QA, anti-slop audit, and iterative refinement.
+description: Creative direction and design engineering skill for coding agents (v2.0). Prevents both generic AI SaaS templates and repetitive "anti-slop" clichés through mandatory live reference inspection, 3-direction creative divergence, pre-implementation originality gating, expressive art direction, visual-first prototyping, and screenshot-verified regression testing.
 ---
 
-# Sloppi: Design Intelligence for Coding Agents
+# Sloppi v2.0: Creative Direction & Design Intelligence for Coding Agents
 
-**Sloppi** prevents coding agents from producing generic, repetitive, low-intent frontend interfaces by providing an end-to-end system for design research, content architecture, visual synthesis, `DESIGN.md` contracts, frontend implementation, visual QA, anti-slop auditing, and closed-loop refinement.
+**Sloppi v2.0** transforms coding agents from passive template generators—and rigid checklist bureaucrats—into **high-craft Creative Directors and Design Engineers**.
+
+Most AI frontends fail in one of two ways:
+1. **Generation-1 AI Slop**: Centered H1 + two pill buttons + tilted dashboard mockup, purple/indigo blur blobs, `Inter` on `#0f172a`, 3-card icon grids, and fake testimonials.
+2. **Generation-2 "Anti-Slop" Monoculture**: Over-correcting into the exact same sterile wireframe on every project—flat `1px solid` bordered boxes, `11px` uppercase monospace labels, `Inter` + `JetBrains Mono`, Midnight Tungsten `#0b0d13` + Phosphor Green `#00d084` terminals for every dev tool, Warm Alabaster `#fbf9f5` + Navy `#102A56` ledgers for every fintech app, and cookie-cutter 8+4 bento grids.
+
+**Sloppi v2.0 bans both.** Design system consistency without original art direction just produces neat, accessible boredom. Sloppi v2.0 pairs **divergent creative exploration** with **uncompromising engineering rigor**.
 
 ---
 
 ## 1. When to Activate Sloppi
 
 Activate Sloppi whenever you are:
-- Creating a new frontend, landing page, dashboard, or web application.
-- Redesigning or improving an existing user interface.
-- Implementing a frontend based on user screenshots, Figma designs, or URLs.
-- Resolving visual bugs, broken mobile layouts, or accessibility flaws.
-- Responding to user requests containing aesthetic descriptors (*"modern"*, *"premium"*, *"clean"*, *"minimal"*, *"impressive"*, *"sleek"*), translating vague requests into rigorous design reasoning.
+- Creating a new frontend, landing page, interactive web application, dashboard, or mobile web interface.
+- Redesigning, elevating, or refactoring an existing user interface.
+- Implementing a frontend from user screenshots, Figma designs, or live reference URLs.
+- Resolving visual hierarchy defects, broken responsive layouts, or generic AI styling.
+- Translating aesthetic prompts (*"modern"*, *"premium"*, *"editorial"*, *"sleek"*, *"impressive"*, *"minimal"*) into bold, bespoke art direction.
 
 ---
 
-## 2. Core Operational Doctrine
+## 2. Core Operational Doctrine (v2.0)
 
-1. **Anti-Default, Not Anti-Style**: Sloppi has no default visual aesthetic. It produces stark terminal CLIs for dev tools, rich editorial serif for luxury, and dense tabular matrices for finance.
-2. **Never Override Explicit User Direction**: If the user explicitly asks for cards, gradients, or glassmorphism, implement them with structural excellence rather than rejecting them.
-3. **Preserve User References**: When the user supplies a reference image, URL, or mockup, extract its transferable principles rather than substituting generic preferences.
-4. **Rendered Output Outranks Mental Assumptions**: A design is unproven until inspected in the browser. Never assume code compilation equals design success.
-5. **Zero Fabricated Evidence**: Never claim to have inspected a screenshot if no rendering occurred. Distinguish `Observed`, `Inferred`, `Assumed`, and `Unavailable`.
+1. **Creative Director First, Compliance Officer Second**: Never treat design as a bureaucratic form-filling exercise. Spend your cognitive budget on **visual storytelling, spatial tension, expressive typography, tactile materiality, and bespoke interactive mechanics**.
+2. **Mandatory Reference Inspection (No Name-Dropping)**: Never cite reference websites (e.g., *Linear, Stripe, Mercury, Wise, Awwwards*) from memory without inspecting live visual references or user-supplied assets. When live browsing/search is available, inspect real designs from [references/source-registry.md](references/source-registry.md) (`awwwards.com`, `godly.website`, `minimal.gallery`, `60fps.design`, `dribbble.com`, `saaspo.com`, `loadmo.re`) and log **concrete visual observations**. If offline, explicitly declare `OFFLINE_SYNTHESIS`—never fabricate URL decompositions.
+3. **Three Distinct Design Directions Before Code**: For any new page, app, or redesign, you MUST formulate **3 structurally and aesthetically distinct creative directions** (differing in spatial layout paradigm, typographic voice, surface materiality, and interactive hook)—not three color themes of the same wireframe. See [doctrine/creative-direction.md](doctrine/creative-direction.md).
+4. **Pre-Implementation Design Originality Gate**: Screen concepts **before writing component code**. Reject any direction that resembles either a standard SaaS template OR your own recent projects (e.g., repeating the same `1px` border ledger or dark-green terminal).
+5. **Visual-First Implementation (Primary Composition Gate)**: Build and render the **primary composition (above-the-fold hero or core interactive workspace) first**. Inspect the actual browser render and verify that the typography, atmosphere, and interactive centerpiece genuinely sing before building the remaining sections.
+6. **Real Visual Regression Testing**: Compare **Before vs. After viewport screenshots** across Mobile (`390px`), Tablet (`768px`), and Desktop (`1280px+`). Verify that revisions improved composition, focal hierarchy, and craft rather than piling on decorative effects.
+7. **Never Override Explicit User Direction**: If the user explicitly requests a specific palette, layout, glassmorphism, or reference style, execute it at world-class level rather than lecturing them.
 
 ---
 
-## 3. The 14-Stage Closed-Loop Lifecycle
+## 3. The 8-Stage Creative Director Lifecycle
+
+Sloppi v2.0 replaces bureaucratic 14-stage waterfalls with a tight, visual-first creative loop:
 
 ```
-Understand ──► Research ──► Synthesize ──► Content Architecture ──► Design System ──► DESIGN.md ──► Inspect Project ──► Implement ──► Render ──► Visual Audit ──► Anti-Slop Audit ──► Critique & Prioritize ──► Targeted Refinement ──► Regression Check ──► Accept / Re-Enter
+1. Understand & Inspect Live References
+        │
+        ▼
+2. Diverge: Generate 3 Distinct Creative Directions
+        │  (Orthogonal in Layout + Type + Materiality + Interactive Hook)
+        ▼
+3. Originality Gate & Focused DESIGN.md Contract
+        │  (Reject Gen-1 AI Slop AND Gen-2 "Anti-Slop" Clichés)
+        ▼
+4. Prototype Primary Composition First (Above-the-Fold / Core Workspace)
+        │
+        ▼
+5. Render & Visual Proof Gate (Live Browser Screenshot Check)
+        │  (Does the art direction, scale, and motion actually work?)
+        ▼
+6. Scale Full Interface & Bespoke Interactions
+        │
+        ▼
+7. Multi-Viewport Visual QA & Anti-Slop Audit (390px / 768px / 1280px+)
+        │
+        ▼
+8. Screenshot Regression Comparison & Ship
 ```
 
 ---
 
 ## 4. Task Complexity & Fast-Path Routing
 
-Consult [routing.md](routing.md) to calibrate workflow depth to task scope:
+Consult [routing.md](routing.md) to calibrate process depth so you spend maximum effort on actual design and code craft:
 
-- **MICRO TASK** (1-line CSS/token fix) $\longrightarrow$ Direct edit + verify focus ring & contrast.
-- **SMALL TASK** (Button primitive, navbar tweak) $\longrightarrow$ Follow [workflows/component.md](workflows/component.md).
-- **MEDIUM TASK** (Hero redesign, new section) $\longrightarrow$ Follow [workflows/visual-fix.md](workflows/visual-fix.md).
-- **LARGE TASK** (Full landing page / app) $\longrightarrow$ Follow [workflows/new-project.md](workflows/new-project.md) or [workflows/redesign.md](workflows/redesign.md).
+- **MICRO TASK** (1-line CSS/token tweak) $\longrightarrow$ Direct edit + verify `:focus-visible` & contrast.
+- **SMALL TASK** (Single component / navbar / interactive widget) $\longrightarrow$ Follow [workflows/component.md](workflows/component.md).
+- **MEDIUM TASK** (Hero redesign, new section, slop cleanup) $\longrightarrow$ Follow [workflows/visual-fix.md](workflows/visual-fix.md).
+- **LARGE TASK** (New project, full landing page, web app, full redesign) $\longrightarrow$ Follow [workflows/new-project.md](workflows/new-project.md) or [workflows/redesign.md](workflows/redesign.md).
 
 ---
 
 ## 5. Master Resource Directory
 
-Load only the specific module files required for your active task:
+Load only the specific modules needed for your current task:
 
-### Foundations & Principles
-- [principles.md](principles.md) — 15 core design principles.
-- [doctrine/anti-slop.md](doctrine/anti-slop.md) — Contextual evaluation & failure catalog.
-- [doctrine/design-reasoning.md](doctrine/design-reasoning.md) — 6-stage cognitive framework.
+### Creative Direction & Core Doctrine
+- [doctrine/creative-direction.md](doctrine/creative-direction.md) — **START HERE (v2.0)**: 3-Direction Divergence, Originality Gate, Art Direction Archetypes & Visual Storytelling.
+- [principles.md](principles.md) — 15 core design and creative direction principles.
+- [doctrine/anti-slop.md](doctrine/anti-slop.md) — Dual evaluation model: defeating both Gen-1 AI Slop and Gen-2 "Anti-Slop" clichés.
+- [doctrine/design-reasoning.md](doctrine/design-reasoning.md) — Cognitive pipeline from product stakes to visual execution.
 
-### Research & Synthesis
-- [research/protocol.md](research/protocol.md) — High-intent research questions & stopping criteria.
-- [references/source-registry.md](references/source-registry.md) — Map of 15 specialized reference channels (Supahero, Navbar, Minimal, etc.).
-- [research/reference-analysis.md](research/reference-analysis.md) — Transferable principles extraction.
-- [research/synthesis.md](research/synthesis.md) — Design Thesis formulation.
+### Live Research & Reference Synthesis
+- [research/protocol.md](research/protocol.md) — Mandatory reference inspection & evidence logging protocol.
+- [references/source-registry.md](references/source-registry.md) — Curated channels (Awwwards, Godly, Minimal Gallery, 60fps.design, Dribbble, SaaSPO, Loadmo.re, Refero).
+- [research/reference-analysis.md](research/reference-analysis.md) — Extracting visual mechanics, spatial ratios, and choreography.
+- [research/synthesis.md](research/synthesis.md) — Formulating the 3 divergent concepts and winning Design Thesis.
 
-### Content & Composition
-- [content/methodology.md](content/methodology.md) — 7 pre-content inquiries & density modes.
-- [content/product-messaging.md](content/product-messaging.md) — Falsifiable claims & mechanism language.
-- [content/page-architecture.md](content/page-architecture.md) — 10 Hero models & 8 feature layouts.
-- [content/cta.md](content/cta.md) — Outcome-explicit action copywriting.
+### Content, Narrative & Page Architecture
+- [content/methodology.md](content/methodology.md) — Content-driven composition & density calibration.
+- [content/page-architecture.md](content/page-architecture.md) — Diverse hero paradigms, scrollytelling, and non-cookie-cutter section cadences.
+- [content/product-messaging.md](content/product-messaging.md) — Falsifiable claims & domain-authentic copywriting.
+- [content/cta.md](content/cta.md) — Outcome-explicit action hierarchy.
 
-### Design System & Contracts
-- [design-system/methodology.md](design-system/methodology.md) — 9 pre-token inquiries.
-- [design-system/typography.md](design-system/typography.md) — Modular scales, leading inversion & 65ch measure.
-- [design-system/color.md](design-system/color.md) — Semantic color roles & WCAG contrast.
-- [design-system/layout.md](design-system/layout.md) — Container archetypes & section cadence.
-- [templates/DESIGN.template.md](templates/DESIGN.template.md) — Canonical 25-section persistent contract.
+### Art Direction, Design System & Contracts
+- [design-system/visual-language.md](design-system/visual-language.md) — Atmospheric mood, materiality, texture, and visual tension.
+- [design-system/typography.md](design-system/typography.md) — Expressive font pairings, fluid `clamp()` scales, and kinetic type rules.
+- [design-system/color.md](design-system/color.md) — Perceptual color harmony (OKLCH/HSL), atmospheric lighting, and WCAG contrast.
+- [design-system/layout.md](design-system/layout.md) — Editorial grids, spatial canvases, poster layouts, and rhythm modulation.
+- [design-system/geometry.md](design-system/geometry.md) — Silhouette variety, concentric radii, and custom SVG/clip-path craft.
+- [design-system/elevation.md](design-system/elevation.md) — Specular highlights, optical depth, tactile shadows, and surface grain.
+- [design-system/component-rules.md](design-system/component-rules.md) — Adaptive component anatomy and 12 interactive states.
+- [templates/DESIGN.template.md](templates/DESIGN.template.md) — Streamlined 10-section Creative Direction & Design System contract.
 
-### Implementation Protocol
-- [implementation/protocol.md](implementation/protocol.md) — Incremental 7-pass build strategy & Polish Trap protocol.
-- [implementation/project-inspection.md](implementation/project-inspection.md) — 16-point codebase inspection matrix.
-- [implementation/token-implementation.md](implementation/token-implementation.md) — 3-tier CSS Custom Properties template.
-- [implementation/responsive-implementation.md](implementation/responsive-implementation.md) — Mobile touch ergonomics ($\ge 44\text{px}$) & clamp formulas.
-- [implementation/interaction-implementation.md](implementation/interaction-implementation.md) — 12 states & 2px focus rings.
-- [implementation/asset-strategy.md](implementation/asset-strategy.md) — Intentional asset absence & single icon family.
-- [implementation/dependency-policy.md](implementation/dependency-policy.md) — 6 evaluation gates & package bloat ban.
+### Visual-First Implementation Protocol
+- [implementation/protocol.md](implementation/protocol.md) — Primary Composition Gate, visual-first build sequence & Polish Trap remediation.
+- [implementation/token-implementation.md](implementation/token-implementation.md) — Multi-archetype CSS Custom Properties (never defaulting to `Inter`).
+- [implementation/layout-implementation.md](implementation/layout-implementation.md) — CSS Grid choreography, sticky scrollytelling, and container architecture.
+- [implementation/interaction-implementation.md](implementation/interaction-implementation.md) — Spring physics, scroll-driven choreography, and keyboard focus.
+- [implementation/responsive-implementation.md](implementation/responsive-implementation.md) — Mobile ergonomics ($\ge 44\text{px}$ targets) & viewport adaptation.
+- [implementation/asset-strategy.md](implementation/asset-strategy.md) — Bespoke SVGs, shaders, interactive canvases, and icon governance.
+- [implementation/dependency-policy.md](implementation/dependency-policy.md) — Encouraging high-craft motion (`motion`/`framer-motion`), headless primitives, and creative tech.
 
-### Visual QA & Anti-Slop Audit
-- [audit/visual-audit.md](audit/visual-audit.md) — 4-tier Viewport Matrix (Mobile, Tablet, Desktop, Wide).
-- [audit/anti-slop-audit.md](audit/anti-slop-audit.md) — 26 AI Default Review Signals & Strip the Effects test.
-- [audit/hierarchy-audit.md](audit/hierarchy-audit.md) — Focal point & Equal Loudness checks.
-- [audit/severity.md](audit/severity.md) — 4-tier severity model (Blocker, High, Medium, Low).
-- [audit/audit-output.md](audit/audit-output.md) — Category dashboard & 9-field finding schema.
-
-### Critique, Refinement & Stopping Rules
-- [refinement/critique.md](refinement/critique.md) — 5-layer root-cause diagnostic pipeline.
-- [refinement/prioritization.md](refinement/prioritization.md) — Impact $\times$ Cost matrix.
-- [refinement/iteration.md](refinement/iteration.md) — "One Iteration = One Objective" rule.
-- [refinement/change-strategy.md](refinement/change-strategy.md) — Minimal intervention principle.
-- [refinement/regression.md](refinement/regression.md) — 7-point regression checklist.
-- [refinement/stopping-rules.md](refinement/stopping-rules.md) — 7 objective stopping criteria & diminishing returns.
-- [refinement/human-review.md](refinement/human-review.md) — Strategic review boundaries & request precision.
+### Visual QA, Originality Audit & Screenshot Regression
+- [audit/visual-audit.md](audit/visual-audit.md) — Primary Composition Gate & 4-Viewport Screenshot Inspection Matrix.
+- [audit/anti-slop-audit.md](audit/anti-slop-audit.md) — 30 Review Signals (Gen-1 AI Slop + Gen-2 Overfit Clichés).
+- [audit/distinctiveness-audit.md](audit/distinctiveness-audit.md) — The Mistaken Identity Test & Category Subversion check.
+- [refinement/critique.md](refinement/critique.md) — 5-layer root-cause diagnosis.
+- [refinement/iteration.md](refinement/iteration.md) — Single-objective refinement & screenshot comparison loop.
+- [refinement/regression.md](refinement/regression.md) — Before/After visual regression verification.
 
 ### Workflows & Checklists
-- [checklists/pre-design.md](checklists/pre-design.md) — Validation before drafting design system.
-- [checklists/pre-implementation.md](checklists/pre-implementation.md) — Verification before writing code.
+- [checklists/pre-design.md](checklists/pre-design.md) — Originality & 3-Direction Divergence gate before `DESIGN.md`.
+- [checklists/pre-implementation.md](checklists/pre-implementation.md) — Readiness gate before writing code.
 - [checklists/pre-render.md](checklists/pre-render.md) — Code integrity gate before rendering.
-- [checklists/pre-ship.md](checklists/pre-ship.md) — Final quality gate before ship.
-- [failure-recovery.md](failure-recovery.md) — Graceful degradation & honesty rules.
+- [checklists/pre-ship.md](checklists/pre-ship.md) — Final visual + functional quality gate.
+- [failure-recovery.md](failure-recovery.md) — Epistemic honesty (`OBSERVED` vs. `OFFLINE_SYNTHESIS`) & graceful recovery.
 - [artifacts.md](artifacts.md) — Artifact persistence & anti-pollution rules.

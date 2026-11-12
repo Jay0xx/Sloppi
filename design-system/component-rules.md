@@ -1,114 +1,44 @@
-# Sloppi Component Behavior & Primitive Rules
+# Sloppi v2.0 Adaptive Component Anatomy & State Rules
 
-Component rules define how abstract design tokens and visual principles translate into concrete, deterministic UI primitives.
+Component primitives must **embody your project's Creative Direction**, never force every website into the same `40px`-tall, `8px`-rounded wireframe box.
 
-In Sloppi, component rules eliminate ad-hoc decision-making during implementation. Every component primitive must have clearly defined anatomy, variants, interactive states, responsive behavior, and accessibility bindings.
-
----
-
-## 1. Button Primitive Rules
-
-### Anatomy
-`[Leading Icon (optional)] + [Action Label] + [Trailing Icon (optional)]` inside a bounded interactive container.
-
-### Variants & Semantic Roles
-- **Primary Action**: Background: `var(--color-brand)`, Text: `var(--color-brand-contrast)`. Single dominant action per viewport.
-- **Secondary Action**: Background: `transparent`, Border: `1px solid var(--color-border)`, Text: `var(--color-text-primary)`.
-- **Ghost / Tertiary**: Background: `transparent`, Border: `none`, Text: `var(--color-text-secondary)`. Hover: `var(--color-surface-hover)`.
-- **Destructive**: Background: `var(--color-accent-danger)`, Text: `#ffffff`. Reserved for permanent deletions/cancellations.
-
-### Interactive State Matrix
-- **Resting**: Height: `40px` (standard) / `32px` (compact), Padding: `0 var(--space-4)`, Radius: `var(--radius-md)`.
-- **Hover**: Background brightness shift ($+10\%$ light / $-10\%$ dark); transition: `background-color var(--duration-fast) var(--ease-standard)`.
-- **Active / Pressed**: `transform: scale(0.98)`; transition: `transform var(--duration-instant) var(--ease-standard)`.
-- **Focus**: `outline: 2px solid var(--color-focus-ring); outline-offset: 2px;`.
-- **Disabled**: `opacity: 0.5; pointer-events: none; cursor: not-allowed;`.
+While **accessibility and state completeness are universal**, **silhouette, surface physics, and typography must adapt** to your winning direction in `DESIGN.md`.
 
 ---
 
-## 2. Form Input & Field Primitive Rules
+## 1. Adaptive Component Silhouettes by Art Direction
 
-### Anatomy
-`[Field Label]` + `[Input Container with Optional Leading/Trailing Glyphs]` + `[Helper Text / Validation Error]`.
-
-### State Specifications
-- **Resting**: Background: `var(--color-surface)`, Border: `1px solid var(--color-border)`, Radius: `var(--radius-md)`, Text: `var(--color-text-primary)`. Height: `40px`.
-- **Focus**: Border: `1px solid var(--color-brand)`, Box-Shadow / Ring: `0 0 0 3px var(--color-brand-subtle)`.
-- **Error**: Border: `1px solid var(--color-accent-danger)`, Error Text: `var(--color-accent-danger)` with `aria-invalid="true"`.
-- **Disabled**: Background: `var(--color-canvas-alt)`, Border: `1px solid var(--color-border-subtle)`, Text: `var(--color-text-muted)`.
+| Primitive | Editorial Broadsheet / Monograph | Tactile Industrial / Hardware | Kinetic Poster / Neo-Brutalist | Atmospheric Spatial Canvas |
+| :--- | :--- | :--- | :--- | :--- |
+| **Primary Trigger / Button** | Sharp or subtle pill (`0px` or `9999px`), high-contrast ink fill, italicized serif or crisp grotesque label, directional arrow motion. | Beveled physical key (`6px–10px` radius), `inset 0 1px 0 rgba(255,255,255,0.4)` top specular edge, tactile `active:translate-y-[1px]`. | Bold chromatic block, `0px` or pill radius, `2px solid` ink border, hard offset shadow (`4px 4px 0 #111`) that collapses on press. | Luminous surface fill with subtle perimeter glow or refractive border, magnetic hover physics (`scale(1.02)` / `active:scale(0.98)`). |
+| **Containers & Surfaces** | Borderless whitespace grouping, fine `1px` column hairlines, or recessed warm paper wells (`--color-canvas-alt`). | Recessed dark telemetry wells (`inset 0 2px 4px rgba(0,0,0,0.35)`) inside brushed metallic or matte panels. | Exposed architectural grid cells (`gap-px`) or overlapping sticker cards with crisp `2px` outlines. | Multi-layered tonal depth with `1px` top specular highlight and subtle SVG noise grain. |
+| **Section Introductions** | Large italicized serif chapter numerals (`I`, `II` or `01`) + flush-left editorial running heads. | Laser-etched coordinate indices (`[SYS.01]`) + LED status indicator dot. | Oversized bleed display typography or vertical rotated margin headers. | Subtle optical index + fluid scroll-linked reveal headline. |
 
 ---
 
-## 3. Card & Surface Primitive Rules
+## 2. Universal 6-State Interactive Matrix (Mandatory for Every Control)
 
-### Variants
-- **Flush / Flat Card**: Background: `var(--color-surface)`, Border: `1px solid var(--color-border)`, Shadow: `none`.
-- **Elevated Card**: Background: `var(--color-surface)`, Border: `1px solid var(--color-border)`, Shadow: `var(--elevation-1)`.
-- **Interactive Action Card**: Elevates to `var(--elevation-2)` on hover with subtle border luminance transition.
+Regardless of aesthetic archetype, every interactive primitive (`Button`, `Input`, `Tab`, `Select`, `Row`, `Card Trigger`) must implement six deterministic states:
 
-### Internal Spacing
-- Compact Density: Padding: `var(--space-3)` (`12px`)
-- Comfortable Density: Padding: `var(--space-6)` (`24px`)
-- Spacious Editorial: Padding: `var(--space-8)` (`32px`)
-
----
-
-## 4. Navigation & Wayfinding Primitives
-
-### Header Bar
-- Height: `64px` desktop / `56px` mobile.
-- Sticky Behavior: `position: sticky; top: 0; z-index: 50; backdrop-filter: blur(12px); background-color: var(--color-canvas-alpha); border-bottom: 1px solid var(--color-border);`.
-- Link Spacing: Horizontal gap: `var(--space-6)` (`24px`). Active link: `color: var(--color-text-primary); font-weight: 600;`. Inactive link: `color: var(--color-text-secondary);`.
-
-### Mobile Navigation Transformation
-- Bottom-docked tab bar (`56px` height) with icon + micro-label or slide-up bottom drawer.
+1. **Resting**: Clear affordance signaling interactivity through contrast, surface elevation, or border definition.
+2. **Hover (`:hover`)**: Immediate optical response (`120ms–180ms` or spring)—surface luminance shift, directional icon translation, or border contrast elevation.
+3. **Keyboard Focus (`:focus-visible`)**: Unmistakable `2px solid var(--color-focus-ring)` with `2px` `outline-offset`. Never `outline: none` without a high-contrast replacement.
+4. **Active / Pressed (`:active` / `whileTap`)**: Physical tactile response (`scale(0.98)` or `translateY(1px)`).
+5. **Loading / Pending**: Preserves exact button/container dimensions (`min-width`) with inline spinner or progress trace; prevents double-submission.
+6. **Disabled (`:disabled` / `aria-disabled`)**: Lowered contrast (`opacity: 0.45`), `cursor: not-allowed`, no hover lift.
 
 ---
 
-## 5. Tab & Segmented Control Primitives
+## 3. Navigation, Wayfinding & Mobile Transformation
 
-### Variants
-- **Segmented Pill Bar**: Encapsulated track (`background: var(--color-canvas-alt); padding: 4px; border-radius: var(--radius-full)`). Active pill: `background: var(--color-surface); box-shadow: var(--elevation-1); border-radius: var(--radius-full);`.
-- **Underline Tabs**: Flush horizontal row. Active tab features a `2px` bottom border line in `var(--color-brand)`.
-
----
-
-## 6. Modal Dialog & Drawer Primitives
-
-### Anatomy
-`[Scrim Overlay]` + `[Dialog Box: Header with Title & Close Icon] + [Body Container] + [Footer Action Bar]`.
-
-### Behavior & Constraints
-- Dialog Box: Max-width: `560px` (standard) / `720px` (wide), Radius: `var(--radius-xl)`, Shadow: `var(--elevation-3)`, Border: `1px solid var(--color-border)`.
-- Animation: Backdrop fades in (`200ms ease-out`); Dialog scales up from `0.96` to `1.00` (`250ms cubic-bezier(0.16, 1, 0.3, 1)`).
-- Accessibility: Focus trapped within dialog; `Esc` key dismisses; `aria-modal="true"`.
+- **Desktop Wayfinding**: Match navigation geometry to content architecture—editorial masthead with date/edition coordinates, compact floating command island, persistent studio sidebar dock, or Swiss architectural top bar.
+- **Mobile Ergonomics (`< 768px`)**:
+  - Never cram 6 desktop links into a tiny wrapping header.
+  - Transform into a **thumb-zone bottom navigation dock** (`60px–68px` height) or a **physics-driven bottom sheet / full-screen editorial index drawer** with $\ge 44\times 44\text{px}$ tap targets.
 
 ---
 
-## 7. Data Table & Grid Primitives
+## 4. Data Visualization, Schematics & Tables
 
-- **Header Row**: Height: `36px`, Background: `var(--color-canvas-alt)`, Typography: `text-xs font-mono uppercase tracking-wider text-muted-foreground`, Border-bottom: `1px solid var(--color-border)`.
-- **Data Rows**: Height: `44px` (comfortable) / `32px` (compact), Border-bottom: `1px solid var(--color-border-subtle)`.
-- **Numeric Alignment**: All currency, percentage, and latency columns must be **right-aligned** with `font-variant-numeric: tabular-nums; font-family: var(--font-mono);`.
-
----
-
-## 8. Badge & Status Chip Primitives
-
-- **Geometry**: Height: `22px`, Padding: `0 8px`, Radius: `var(--radius-full)` or `var(--radius-xs)`, Typography: `text-xs font-mono font-medium`.
-- **Semantic Tints**:
-  - *Success*: Background: `rgba(0, 208, 132, 0.12)`, Text: `#00d084`.
-  - *Warning*: Background: `rgba(255, 171, 0, 0.12)`, Text: `#ffab00`.
-  - *Danger*: Background: `rgba(255, 77, 79, 0.12)`, Text: `#ff4d4f`.
-  - *Neutral*: Background: `var(--color-canvas-alt)`, Text: `var(--color-text-secondary)`.
-
----
-
-## 9. Empty State & Loading State Primitives
-
-### Empty State
-`[Illustration / Micro-HUD Icon]` + `[Clear Descriptive Headline]` + `[1-sentence explanation of what to do next]` + `[Primary Creation CTA]`.
-
-### Loading States
-- **Skeleton Loaders**: Muted placeholder shapes (`background: var(--color-surface-hover)`) with a subtle linear-gradient shimmer wave (`1.5s infinite`).
-- **Disabled Actions**: Maintain layout dimensions; never collapse buttons during network operations.
+- **Bespoke SVG Schematics Over Generic Icon Boxes**: When explaining a product mechanism, build an interactive SVG schematic, scrubbable chart, or live parameter control rather than three static icon cards.
+- **Numeric Discipline**: Enforce `font-variant-numeric: tabular-nums` and right-alignment on all dynamic counters, financial columns, latency readouts, and axis labels so live updates never cause horizontal layout jitter.

@@ -1,134 +1,92 @@
-# Sloppi Design Reasoning Framework
+# Sloppi v2.0 Design Reasoning Framework
 
-Design reasoning is the disciplined cognitive process by which a coding agent translates a product description, target audience, and functional requirements into an intentional, cohesive visual system.
+Design reasoning is the disciplined creative and engineering process by which a coding agent translates a product brief into an **unmistakable, original visual system**.
 
-Coding agents often fail at design because they jump directly from a prompt ("Build a SaaS landing page for an API monitor") to raw CSS generation (`bg-slate-900 text-white rounded-lg p-6 flex flex-col items-center`). This bypasses design reasoning and defaults to statistical averages.
+Coding agents fail at frontend design for two opposite reasons:
+1. **Unthinking Autopilot**: Jumping straight from prompt to `bg-slate-900 text-white rounded-xl p-6`, producing generic purple/blue SaaS slop.
+2. **Bureaucratic Over-Compliance**: Following rigid token rules so conservatively that every interface turns into the same flat `1px`-bordered wireframe with `Inter` and monospace labels.
 
-Sloppi enforces a structured 6-stage reasoning pipeline:
+Sloppi v2.0 enforces a **6-stage Creative Director & Engineering reasoning pipeline**:
 
 ```
-1. Product & Audience Analysis
+1. Product, Persona & Category Subversion Analysis
                │
                ▼
-2. Formulation of Design Thesis
+2. Live Reference Inspection & Evidence Extraction
                │
                ▼
-3. Constraint & Ergonomic Mapping
+3. 3-Direction Creative Divergence (A vs. B vs. C)
                │
                ▼
-4. Visual Synthesis & Token Definition
+4. Pre-Implementation Originality Gate & Design Thesis
                │
                ▼
-5. Layout Architecture & Narrative Pacing
+5. Expressive Art Direction & Semantic Token System
                │
                ▼
-6. Creation of Persistent DESIGN.md
+6. Visual-First Primary Composition Prototype
 ```
 
 ---
 
-## Stage 1: Product & Audience Analysis
+## Stage 1: Product, Persona & Category Subversion Analysis
 
-Before choosing a single color or font, the agent must interrogate the product context across four dimensions:
+Before choosing a font or color, interrogate four dimensions:
 
-### 1. Operational Stakes & Trust Level
-- **Low Stakes / Casual**: Social apps, music visualizers, personal journals, hobbyist tools. Visual language can be playful, experimental, high-color, unconventional geometry.
-- **Medium Stakes / Productivity**: Project management, team communication, marketing automation. Visual language prioritizes high legibility, clear workflows, and comfortable density.
-- **High Stakes / Mission-Critical**: Developer infrastructure, medical tools, security auditing, financial settlement. Visual language requires uncompromising data clarity, high information density, precise typography, monospaced alignment, and zero frivolous ornamentation.
+### 1. Operational Stakes & Emotional Register
+- **Low Stakes / Expressive**: Creative tools, consumer social, music/audio, culture, gaming. *Demands kinetic motion, bold chromatic tension, unconventional geometry, and playful tactility.*
+- **Medium Stakes / High-Craft Productivity**: Collaborative workspaces, design tools, knowledge systems, commerce. *Demands tactile ergonomics, spatial clarity, warm or distinctive surface materiality, and fluid state choreography.*
+- **High Stakes / Mission-Critical**: Developer infrastructure, financial ledgers, security, clinical systems. *Demands high legibility and precision—but **never** excuse boredom in the name of "utility." Distinguish through archival Swiss typography, cartographic schematics, or industrial hardware craft rather than generic dark-mode boxes.*
 
-### 2. User Persona & Mental Model
-- What tools does this audience live in?
-  - A Linux systems engineer lives in terminals and text editors. They value keyboard shortcuts, tight monospace tables, and muted contrast over splashy animated cards.
-  - A fashion brand marketer lives in Instagram, Figma, and print magazines. They value generous whitespace, high-impact editorial typography, and polished photography.
-  - A healthcare professional values contrast, error prevention, scan-friendly data hierarchy, and calm neutrals.
+### 2. Category Cliché Identification (What to Subvert)
+Ask explicitly: **"What do 90% of AI-generated websites in this category look like?"**
+- *Fintech cliché*: Dark blue/purple cards OR sterile white-and-navy `1px` boxes with `Plus Jakarta Sans`.
+- *Dev-tool cliché*: `#0b0d13` dark canvas + neon green `#00d084` + split CLI box + 3-card or 8+4 bento grid.
+- *AI tool cliché*: Glowing violet/cyan mesh orbs, sparkles, and centered pill badges.
+Write down the category cliché first so you can **deliberately subvert it**.
 
-### 3. Primary Value Proposition Dynamic
-- **Demonstrative**: The product must be seen in action to be understood (e.g., video editor, code generator, canvas design tool). *Hero must feature an active interactive canvas or live demo.*
-- **Analytical**: The value is in insights and data depth (e.g., analytics engine, fraud detector). *Hero and features must showcase high-density data visualizations, benchmark comparisons, and real telemetry.*
-- **Ecosystem / Utility**: The value is in connectivity and simplicity (e.g., payments gateway, auth SDK). *Hero must showcase copyable code integration, SDK tabs, and architectural wiring diagrams.*
-
----
-
-## Stage 2: Formulation of Design Thesis
-
-The **Design Thesis** is a single-sentence visual point of view that governs all aesthetic decisions. It establishes the physical or emotional metaphor for the interface.
-
-### Examples of Weak vs. Strong Design Theses
-
-| Product | Weak Generic Thesis | Strong Sloppi Design Thesis |
-| :--- | :--- | :--- |
-| **API Load Testing Tool** | "A modern, clean dark-mode developer website with nice gradients." | *"A high-density telemetry console: midnight tungsten canvas, crisp phosphor-green latency indicators, monospaced tabular alignment, and zero decorative glassmorphism."* |
-| **Boutique Coffee Subscription** | "A clean minimalist store with coffee images and cards." | *"An editorial broadsheet on textured warm paper: high-contrast serif headlines, asymmetric multi-column layout, and rich earth-tone accents."* |
-| **Decentralized Wallet** | "A crypto web3 website with purple neon glow and 3D coins." | *"A tactile sticker-book universe: soft pastel sky background, crushed heavy display typography, 1px solid black hand-cut outlines, and pill-shaped controls."* |
-
-Every token, component, and layout rule defined in the subsequent stages must derive from and support this thesis.
+### 3. The 5-Second Interactive Proof
+How does the user *experience* the product's core mechanism within 5 seconds of landing—without reading three paragraphs of marketing text?
+- Design an **interactive instrument, live canvas, scrubbable timeline, morphing schematic, or tactile workbench** as the centerpiece of the primary viewport.
 
 ---
 
-## Stage 3: Constraint & Ergonomic Mapping
+## Stage 2: Live Reference Inspection & Evidence Extraction
 
-Visual choices are not arbitrary artistic preferences; they are mathematical and ergonomic responses to constraints:
-
-### 1. Spatial Density & Base Unit
-- Choose a base spatial unit ($4\text{px}$ or $8\text{px}$) and stick to its multiples ($4, 8, 12, 16, 24, 32, 48, 64, 96\text{px}$).
-- Map density to task complexity:
-  - **Compact Density**: $4\text{px}$ base, $12\text{px}–16\text{px}$ card padding, $4\text{px}–8\text{px}$ element gaps. Used for data-dense dashboards, code tools, and spreadsheets.
-  - **Comfortable Density**: $8\text{px}$ base, $24\text{px}–32\text{px}$ card padding, $16\text{px}–24\text{px}$ element gaps. Used for general SaaS workflows and account settings.
-  - **Spacious / Editorial Density**: $8\text{px}$ base, $48\text{px}–80\text{px}$ section gaps, $32\text{px}–48\text{px}$ card padding. Used for landing pages, portfolios, and marketing storytelling.
-
-### 2. Geometry & Corner Radii Scale
-- Define a cohesive geometric progression rather than mixing random pixel values:
-  - **Sharp / Technical**: `0px`–`4px` (industrial, terminal, tabular, brutalist).
-  - **Balanced / Modern**: `6px` for small controls, `8px` for inputs/buttons, `12px` for cards, `16px` for dialogs.
-  - **Soft / Organic**: `16px` for cards, `24px` for modals, `9999px` (pill) for interactive badges and action buttons.
+Consult [references/source-registry.md](../references/source-registry.md) and inspect 2–4 references (`awwwards.com`, `godly.website`, `minimal.gallery`, `60fps.design`, `dribbble.com`, `saaspo.com`, `loadmo.re`).
+- Record **concrete observable mechanics**: exact grid ratios, typographic scale jumps, surface lighting/texture, and motion choreography.
+- Never copy a single site's skin; synthesize orthogonal mechanics from disparate references.
 
 ---
 
-## Stage 4: Visual Synthesis & Semantic Token Definition
+## Stage 3: 3-Direction Creative Divergence
 
-Sloppi agents do not invent random hex codes in stylesheet selectors. Agents define a semantic token hierarchy where every color has a documented role.
+Generate **3 distinct creative concepts** (`Direction A`, `Direction B`, `Direction C`) as defined in [doctrine/creative-direction.md](creative-direction.md):
+- **Direction A**: High-craft evolution of domain conventions.
+- **Direction B**: Editorial, archival, or spatial subversion of the category.
+- **Direction C**: Tactile instrument, kinetic poster, or atmospheric canvas approach.
 
-### 1. Semantic Color Taxonomy
-- **Canvas / Background**: Ground plane upon which all content rests (e.g., `#ffffff`, `#090a0f`, `#f7f5f0`).
-- **Foreground / Primary Text**: Main reading contrast (WCAG AAA compliant against Canvas).
-- **Muted Text / Secondary**: Subtitles, metadata, captions (WCAG AA compliant).
-- **Brand Primary**: The signature brand anchor used for primary CTAs and active states.
-- **Accents**: 1–4 defined secondary hues for distinct semantic categories (e.g., Amber for warnings, Emerald for success, Cyan for technical endpoints).
-- **Border / Divider**: Structural boundary lines with explicit opacity or hex.
-- **Card / Surface**: Elevated or indented content planes.
-
-### 2. Typography Rationale & Scale Architecture
-- **Font Pairing Rationale**: Pair at most two typeface families (e.g., a high-character Display font with a neutral UI/Body font, or a single variable font with contrasting optical weights).
-- **Type Scale Ratio**: Select a mathematical scale (e.g., Minor Third $1.200$, Major Third $1.250$, Perfect Fourth $1.333$) from a defined base (e.g., $16\text{px}$).
-- **Line-Height Proportions**:
-  - Display / Hero Headlines ($48\text{px}–96\text{px}$): Tight leading ($0.85–1.05$) to prevent awkward spacing between stacked display words.
-  - Section Headings ($24\text{px}–40\text{px}$): Medium leading ($1.10–1.25$).
-  - Body Text ($14\text{px}–18\text{px}$): Generous leading ($1.50–1.65$) for optimal sustained readability.
-  - Monospace Data / Code ($12\text{px}–14\text{px}$): Strict uniform line-height ($1.40–1.50$) to align tabular rows.
+Each direction must specify a different **layout structure**, **font pairing**, **color/materiality system**, and **interactive centerpiece**.
 
 ---
 
-## Stage 5: Layout Architecture & Narrative Pacing
+## Stage 4: Pre-Implementation Originality Gate & Design Thesis
 
-An interface is not a random collection of widgets; it is an organized sequence of visual and informational moments.
-
-### 1. The Above-the-Fold Entry Point
-- Determine the entry point based on Stage 1:
-  - If the product solves an immediate friction, place the interactive solution directly into the hero.
-  - If the product introduces a novel paradigm, lead with clear editorial framing followed by a visual diagram.
-
-### 2. Rhythm and Modulation
-- Avoid "card fatigue" where every section is a 3-column card grid.
-- Modulate section pacing:
-  - **Dense Data / Proof Section** (e.g., comparative benchmark table)
-  - **Spacious Editorial Break** (e.g., large pull-quote or focused brand statement)
-  - **Interactive Deep Dive** (e.g., tabbed feature sandbox with live code preview)
-  - **High-Contrast Conversion Anchor** (e.g., focused CTA container)
+Evaluate Directions A, B, and C against the **Pre-Implementation Originality Gate** ([doctrine/creative-direction.md](creative-direction.md#3-the-pre-implementation-design-originality-gate)):
+- Reject any direction that relies on overused defaults—including Sloppi v1's own overused tropes (e.g., defaulting to `Inter` + `JetBrains Mono`, `#0b0d13` + `#00d084` terminals, or flat white/navy `1px` bordered tables).
+- Formulate a **Design Thesis** for the winning direction that locks in its physical metaphor, visual tension, typographic voice, and signature interactive mechanic.
 
 ---
 
-## Stage 6: Creation of Persistent DESIGN.md
+## Stage 5: Expressive Art Direction & Semantic Token System
 
-All design reasoning must be crystallized into a project-level `DESIGN.md` before any application code or UI components are written.
+Translate the winning direction into a cohesive system in `DESIGN.md`:
+1. **Distinctive Typography**: Pair an expressive, high-character Display/Headline typeface with a razor-sharp UI/Body typeface and a purposeful Monospace face. Use fluid `clamp()` sizing and optical tracking.
+2. **Perceptual Color & Materiality**: Define semantic tokens (`--color-canvas`, `--color-surface`, `--color-text-primary`, `--color-brand`, etc.) backed by rich materiality—whether warm paper grain, brushed metallic bevels, bold chromatic poster blocks, or deep optical refraction.
+3. **Choreographed Motion**: Define spring physics (`stiffness`, `damping`, `mass`), scroll-linked reveals, and state transitions alongside `@media (prefers-reduced-motion: reduce)` fallbacks.
 
-The `DESIGN.md` acts as a **persistent contract**. It guarantees that during subsequent implementation, refactoring, and feature expansion, the agent (or future agents) will maintain strict visual coherence and adhere to the established design thesis.
+---
+
+## Stage 6: Visual-First Primary Composition Prototype
+
+Crystallize the contract in `DESIGN.md`, then **implement and render the primary above-the-fold composition first**. Inspect the live browser render to confirm the art direction is visually striking before scaling to the rest of the interface.

@@ -1,21 +1,16 @@
-# Sloppi Agent Checklist: Pre-Ship Quality Gate
+# Sloppi v2.0 Agent Checklist: Pre-Ship Quality & Originality Gate
 
-Execute this final verification checklist before presenting work to the user or declaring task completion.
+Execute this final verification gate before declaring task completion.
 
 ---
 
 ```markdown
-## Pre-Ship Quality Gate
+## Pre-Ship Quality & Originality Gate (v2.0)
 
-- [ ] **1. Functional Integrity Verified**: All buttons, links, forms, and interactive tabs operate without runtime errors.
-- [ ] **2. Zero Horizontal Body Overflow**: `document.body.scrollWidth === window.innerWidth` across 390px, 768px, 1280px, 1920px.
-- [ ] **3. Mobile Touch Ergonomics Verified**: All touch targets >= 44x44px; input font size >= 16px (no iOS auto-zoom).
-- [ ] **4. Mathematical WCAG AA/AAA Contrast Passed**: Body text >= 4.5:1; primary text >= 7:1; UI borders >= 3:1.
-- [ ] **5. Full Keyboard Navigation Verified**: Tab traversal reaches all controls; visible 2px focus ring; Escape closes modals.
-- [ ] **6. Visual Hierarchy Clear**: Single unmistakable primary focal point per viewport; no Equal Loudness Syndrome.
-- [ ] **7. Anti-Slop Audit Cleared**: All 26 review signals inspected; zero generic 3-card grid reflexes or gradient text blobs.
-- [ ] **8. Distinctiveness & Thesis Verified**: Mistaken Identity Test passed; design reflects authentic domain mechanics.
-- [ ] **9. Absolute Truthfulness Verified**: Zero "Lorem Ipsum", zero fake customer quotes, zero unsubstantiated statistics.
-- [ ] **10. Zero Silent Design Drift**: All final tokens, typography scales, and component rules synchronized with `DESIGN.md`.
-- [ ] **11. All 7 Stopping Criteria Satisfied**: Zero Blockers, zero High-severity defects, diminishing returns recognized.
+- [ ] **1. Primary Composition Visual Proof Passed**: Above-the-fold hero / core workspace was rendered and verified in a live browser (`OBSERVED`), exhibiting bold art direction, dramatic scale contrast, and a working 5-second interactive centerpiece.
+- [ ] **2. Dual Integrity & Materiality Test Passed**: Free of both Gen-1 AI slop (purple blur orbs, centered H1 + 2 pills, 3-card icon grids) AND Gen-2 wireframe clichés (sterile flat `1px`-bordered boxes everywhere, default `Inter`, repetitive `11px` mono eyebrows).
+- [ ] **3. Multi-Viewport Ergonomics Verified (`390px`, `768px`, `1280px+`)**: Zero horizontal overflow (`document.body.scrollWidth <= window.innerWidth`), mobile touch targets >= 44x44px, and native-feeling mobile navigation.
+- [ ] **4. Before/After Screenshot Regression Verified**: Any refinement iterations compared Before vs. After screenshots to confirm improved composition and zero collateral layout regressions.
+- [ ] **5. WCAG AA/AAA Contrast & Keyboard Focus Verified**: Reading text >= 4.5:1 (7:1 primary), visible 2px `:focus-visible` rings on all controls, and `tabular-nums` on all dynamic figures.
+- [ ] **6. Zero Console/Build Errors & Truthful Content**: Clean production build/render, zero "Lorem Ipsum" or fake testimonials, and `DESIGN.md` fully synchronized with final code.
 ```

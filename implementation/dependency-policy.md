@@ -1,44 +1,30 @@
-# Sloppi Dependency Policy & Lean Architecture
+# Sloppi v2.0 Dependency Policy: High-Craft Motion, Creative Tech & Lean Architecture
 
-Dependency Policy governs the introduction of third-party NPM packages, external scripts, and UI libraries into a codebase.
+Dependency Policy governs how third-party packages are selected so your frontend achieves **world-class interactive polish and art direction** without unnecessary bloat.
 
-A coding agent must never indiscriminately install packages simply because they are popular, or add heavy JavaScript libraries to solve problems easily handled by modern CSS.
-
----
-
-## 1. The 6 Dependency Evaluation Gates
-
-Before proposing or executing `npm install`, `pnpm add`, or `yarn add`, the agent must verify all six evaluation gates:
-
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│ 1. ABSOLUTE NECESSITY       ──► Is this dependency strictly necessary? │
-│ 2. NATIVE CAPABILITY TEST   ──► Can modern CSS/JS solve this cleanly? │
-│ 3. COMPATIBILITY & OVERHEAD ──► Does it conflict with existing stack?  │
-│ 4. ACCESSIBILITY BENEFIT    ──► Does it provide robust ARIA/keyboard?  │
-│ 5. BUNDLE SIZE FOOTPRINT    ──► Is bundle impact justified (<25KB)?    │
-│ 6. PRODUCTION STABILITY     ──► Is it actively maintained & typed?     │
-└────────────────────────────────────────────────────────────────────────┘
-```
+> **CRITICAL v2.0 UPDATE**:
+> Sloppi v2.0 **explicitly encourages** purposeful animation, physics, creative coding, and accessible headless UI primitives when they elevate art direction and interactivity. Never strip an interface down to lifeless static HTML out of misguided package austerity.
 
 ---
 
-## 2. Native Alternatives to Common Dependency Reflexes
+## 1. High-Value Dependencies Explicitly Encouraged
 
-| ❌ Lazy AI Dependency Reflex | ❌ Why It Fails | ✅ Sloppi Lean Native Solution |
+When building rich, memorable interfaces, use best-in-class libraries for motion, interactivity, and accessibility:
+
+| Capability Domain | Recommended Packages | When to Use |
 | :--- | :--- | :--- |
-| `framer-motion` for basic hover/tab fades | Adds 35KB JS bundle for simple opacity shifts. | Native CSS transitions (`transition: opacity 240ms var(--ease-snappy)`). |
-| `react-slick` / `swiper` for card rows | Heavy bundle, complex touch listeners. | Native CSS Scroll Snap (`scroll-snap-type: x mandatory;`). |
-| `lodash` / `ramda` for simple array operations | Redundant JS overhead. | Native ES6+ methods (`Array.prototype.map`, `filter`, `reduce`). |
-| `react-icons` (full bundle) | Imports thousands of unused icons into build. | Targeted single-icon imports or clean inline SVGs. |
-| `classnames` / `clsx` (for simple static classes) | Unnecessary for static string concatenation. | Template literals (use `clsx`/`tailwind-merge` only when handling dynamic conditional class collisions). |
+| **Spring Physics, Shared Layouts & Scrollytelling** | `motion` (`motion/react` or `framer-motion`) | Shared `layoutId` transitions, interruptible bottom sheets, tactile spring gestures (`whileTap`, `whileHover`), scroll-linked choreography (`useScroll`, `useTransform`), and `AnimatePresence` view transitions. |
+| **Accessible Headless UI Primitives** | `@radix-ui/react-*`, `cmdk`, `vaul` | Focus-trapped modal dialogs, command palettes (`⌘K`), accessible popovers/selects, and physics-driven mobile drawers. |
+| **Expressive Web Typography** | `next/font/google` or `@fontsource/*` | Loading distinctive Display, Serif, Grotesque, and Monospace pairings with zero layout shift. |
+| **Interactive Canvas, Shaders & 3D (When Thesis Demands)** | `three` / `@react-three/fiber` / lightweight HTML5 `<canvas>` 2D/WebGL | When the chosen creative direction features an interactive shader field, spatial node graph, or 3D physical artifact. |
+| **Single Curated Icon Family** | `lucide-react` or `@phosphor-icons/react` | Choose **one** icon library per project and enforce uniform stroke weight (`1.5px` or `1.75px`), paired with custom bespoke SVGs for hero schematics. |
+| **Dynamic Class Composition** | `clsx` + `tailwind-merge` | Clean variant composition in component primitives. |
 
 ---
 
-## 3. Justified Dependencies: High-Value Primitives
+## 2. What to Avoid (True Package Slop)
 
-Dependencies **are** justified when they provide complex accessibility, focus-trapping, and keyboard management that is error-prone to hand-roll:
-
-- **Accessible Headless Primitives**: `@radix-ui/react-dialog`, `@radix-ui/react-dropdown-menu`, `@radix-ui/react-popover`.
-- **Complex Floating Positioning**: `@floating-ui/dom` (for sub-pixel collision-aware tooltips).
-- **Utility Conflict Resolution**: `tailwind-merge` + `clsx` (when composing dynamic Tailwind variant wrappers).
+1. **Never Mix Multiple Icon Libraries**: Do not mix `lucide-react`, `react-icons/fa`, and `@mui/icons-material` in the same app.
+2. **Never Install Heavy monolithic UI Kits That Override Your Art Direction**: Avoid dropping in default unstyled Material UI (`@mui/material`), Ant Design (`antd`), or Bootstrap themes that make your app look like a 2019 corporate intranet.
+3. **Prefer Custom SVG for Domain Diagrams & Micro-Charts**: Instead of fighting a 500KB charting library for a signature hero visualization, craft bespoke, interactive, animated SVGs (`<svg>`, `<motion.path>`) that match your exact typography and grid tokens.
+4. **Always Respect Reduced Motion**: Whenever using `motion` or canvas animations, wire `<MotionConfig reducedMotion="user">` and `@media (prefers-reduced-motion: reduce)` so accessibility is never compromised.

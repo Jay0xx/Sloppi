@@ -1,99 +1,55 @@
-# Sloppi Typography Architecture
+# Sloppi v2.0 Expressive Typography & Scale Architecture
 
-Typography is the primary structural backbone of user interface design. In Sloppi, typography is not merely styling applied to text; it defines spatial hierarchy, reading pace, cognitive effort, and brand authority.
+Typography is the single fastest way to establish an unmistakable visual identity—and the #1 place where coding agents default to generic mediocrity.
 
-A coding agent must never default to Inter, Roboto, or system-ui without reasoning. Conversely, an agent must not avoid standard fonts out of superficial novelty. The operative question is always: **Why this font for this specific product?**
-
----
-
-## 1. Font Selection Methodology
-
-Every font family selected for a project must have an explicit rationale connecting it to the product's operational reality:
-
-```
-[ Product Operational Context ] ──► [ Personality Axes ] ──► [ Font Pairing Rationale ] ──► [ Fallback Stack ]
-```
-
-### Font Selection Criteria
-- **Personality Alignment**: Does the typeface's stroke modulation, geometric structure, or serifs support the Design Thesis?
-- **Optical Legibility at Scale**: Does the body font perform cleanly at $12\text{px}–16\text{px}$ in low-contrast environments?
-- **Tabular / Numeric Support**: For data-rich tools, does the font include tabular figures (`tnum`) where all numbers share identical widths?
-- **Character Set & Weights**: Does the family provide necessary weights without artificial browser faux-bolding?
-- **Fallback Stacks**: Explicit, robust fallback chains (e.g., `'Aeonik Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`).
+> **THE ANTI-MONOCULTURE FONT RULE (v2.0)**:
+> Never blindly default to `'Inter'`, `'Roboto'`, `'Plus Jakarta Sans'`, or `system-ui` paired with `'JetBrains Mono'` and `11px uppercase tracking-widest` labels on every project.
+> Your font pairing must actively express your chosen **Creative Direction**.
 
 ---
 
-## 2. The 3 Functional Type Categories
+## 1. Curated High-Character Font Pairings by Art Direction
 
-A project system defines at most three functional font roles:
+Load Google Fonts / web fonts explicitly in the project layout (`next/font/google` or `@import` / `<link>`) so your typography actually renders with character:
 
-### 1. Display & Heading Typeface
-- **Role**: Visual entry points, hero punchlines, major section anchors (H1, H2).
-- **Attributes**: High character, expressive letterforms, distinct optical weight.
-- **Rule**: Never use a high-character display font for dense body copy.
-
-### 2. UI & Body Typeface
-- **Role**: Sustained reading, interactive button controls, input fields, form labels, card copy.
-- **Attributes**: Neutral grotesque or clean humanist sans with open counters and large x-height.
-
-### 3. Monospace & Data Typeface
-- **Role**: Code blocks, terminal logs, tabular telemetry, numerical values, timestamps, technical tags.
-- **Attributes**: Strict monospaced character widths, distinct zero/O and 1/l glyphs.
+| Art Direction Archetype | Display / Headline Font (`--font-display`) | UI / Body Font (`--font-sans`) | Monospace / Data Font (`--font-mono`) | Visual Character & Ideal Domain |
+| :--- | :--- | :--- | :--- | :--- |
+| **1. Editorial Broadsheet & Institutional Luxury** | `Instrument Serif`, `Newsreader`, or `Playfair Display` (with expressive italics) | `Plus Jakarta Sans` or `DM Sans` | `IBM Plex Mono` | High-contrast literary authority; ideal for wealth/fintech subversions, research labs, cultural platforms, luxury commerce. |
+| **2. Swiss Neo-Brutalist & Kinetic Poster** | `Syne`, `Unbounded`, or `Archivo Black` | `Space Grotesk` or `Switzer` | `Space Mono` or `JetBrains Mono` | Monumental geometric weight & poster tension; ideal for creative studios, Web3 protocols, design tools, bold launches. |
+| **3. Industrial Precision & Hardware Instrument** | `Space Grotesk`, `Chakra Petch`, or `Rajdhani` | `IBM Plex Sans` or `Inter Tight` | `JetBrains Mono` or `Fira Code` | Machined technical clarity; ideal for hardware interfaces, audio synths, robotics, telemetry workbenches. |
+| **4. Warm Humanist & Tactile Studio** | `Fraunces` (variable optical size/softness) or `Bricolage Grotesque` | `Work Sans` or `Figtree` | `Commit Mono` or `Inconsolata` | Warm, approachable, human-crafted; ideal for consumer apps, health/wellness, editorial SaaS, education, creator tools. |
+| **5. Contemporary Geometric & Architectural** | `Outfit`, `Sora`, or `Manrope` | `DM Sans` or `Geist` | `Geist Mono` or `IBM Plex Mono` | Crisp modern architectural geometry without generic Bootstrap vibes; ideal for modern workflows, spatial canvases, cloud platforms. |
+| **6. Scientific Monograph & Cartographic** | `Cormorant Garamond` or `EB Garamond` | `Source Sans 3` or `Public Sans` | `Source Code Pro` or `IBM Plex Mono` | Archival Bell-Labs / academic monograph aesthetic; ideal for AI research, cryptography, climate tech, deep-tech engines. |
 
 ---
 
-## 3. Mathematical Modular Scale Architecture
+## 2. Dynamic Scale Ratios (Never Lock Every Site to 1.250)
 
-Sloppi structures type scales mathematically rather than picking arbitrary pixel numbers. The agent selects a scale multiplier based on the product's required information density:
+Choose a mathematical scale multiplier that matches your spatial composition—and use fluid `clamp()` sizing so display typography commands real presence on desktop while adapting cleanly to `390px` mobile:
 
-- **Minor Third ($1.200$)**: Recommended for high-density tools, code editors, and data analytics dashboards where vertical space is constrained.
-- **Major Third ($1.250$)**: Recommended for balanced SaaS workflows and standard web applications.
-- **Perfect Fourth ($1.333$)**: Recommended for spacious editorial layouts, luxury marketing, and high-impact visual storytelling.
+- **High-Density Workbench / HUD ($1.150 - 1.200$ Minor Third)**: Compact control surfaces where viewport real estate is sacred.
+- **Balanced Application & Product Flow ($1.250$ Major Third)**: Multi-screen web apps and interactive dashboards.
+- **Editorial, Poster & High-Impact Storytelling ($1.333$ Perfect Fourth to $1.500$ Perfect Fifth)**: Dramatic scale contrast between monumental display anchors (`clamp(3.25rem, 7.5vw, 6.5rem)`) and disciplined `16px` body copy.
 
-### Complete Modular Type Scale (Major Third 1.250 Example, Base 16px)
+### Fluid Typographic Scale Reference
 
-| Scale Token | Font Size | Weight | Line-Height | Letter-Spacing | Intended Semantic Role |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| `--font-display-2xl` | `61px / 3.81rem` | 800 | `0.95` | `-0.030em` | Hero visual anchor wordmark |
-| `--font-display-xl` | `49px / 3.05rem` | 700 | `1.02` | `-0.025em` | Page main titles (H1) |
-| `--font-heading-lg` | `39px / 2.44rem` | 600 | `1.12` | `-0.020em` | Section primary headers (H2) |
-| `--font-heading-md` | `31px / 1.95rem` | 600 | `1.20` | `-0.015em` | Subsection & feature headers (H3) |
-| `--font-heading-sm` | `25px / 1.56rem` | 600 | `1.30` | `-0.010em` | Card titles, modal headers (H4) |
-| `--font-body-lg` | `20px / 1.25rem` | 400 | `1.50` | `-0.005em` | Lead paragraphs, hero subtext |
-| `--font-body` | `16px / 1.00rem` | 400 | `1.60` | `normal` | Standard body copy, form inputs |
-| `--font-body-sm` | `13px / 0.81rem` | 500 | `1.45` | `+0.010em` | Buttons, navigation links, table cells |
-| `--font-caption` | `11px / 0.69rem` | 500 | `1.40` | `+0.030em` | Uppercase labels, status tags, timestamps |
-
----
-
-## 4. Proportional Line-Height & Letter-Spacing Rules
-
-Sloppi enforces strict mathematical relationships between font size, leading, and tracking:
-
-### The Leading Inversion Rule
-- **Large Display Type ($48\text{px}+$) requires Compressed Leading ($0.85–1.05$)**: As type size increases, standard $1.5$ leading creates cavernous gaps between stacked words, breaking visual unity. Compressed leading allows large words to function as sculpted visual objects.
-- **Body Type ($14\text{px}–18\text{px}$) requires Generous Leading ($1.55–1.65$)**: Small text requires breathing space between ascenders and descenders to prevent eye fatigue during multi-line reading.
-- **Code & Tabular Data ($12\text{px}–14\text{px}$) requires Uniform Leading ($1.40–1.50$)**: Keeps row heights consistent across multi-line terminal outputs and side-by-side diffs.
-
-### The Tracking Compensation Rule
-- **Negative Tracking on Large Headings (`-0.02em` to `-0.035em`)**: Compensates for optical letter spreading at large scales.
-- **Positive Tracking on Small Uppercase Labels (`+0.02em` to `+0.05em`)**: Gives uppercase caps and metadata badges breathing room for rapid optical recognition.
+| Semantic Role | Fluid CSS `clamp()` Formula | Line-Height (`leading`) | Letter-Spacing (`tracking`) | Usage Guidance |
+| :--- | :--- | :--- | :--- | :--- |
+| `--font-display-hero` | `clamp(2.75rem, 6.5vw + 1rem, 5.75rem)` | `0.90 – 0.98` | `-0.035em` to `-0.045em` | Primary viewport visual anchor; sculpted tight leading. |
+| `--font-display-xl` | `clamp(2.25rem, 4.5vw + 0.75rem, 4.00rem)` | `0.98 – 1.05` | `-0.025em` to `-0.035em` | Major chapter statements, oversized data readouts. |
+| `--font-heading-lg` | `clamp(1.75rem, 2.8vw + 0.5rem, 2.75rem)` | `1.08 – 1.15` | `-0.020em` | Section primary headings (H2) with `text-wrap: balance`. |
+| `--font-heading-md` | `clamp(1.35rem, 1.8vw + 0.4rem, 1.85rem)` | `1.18 – 1.25` | `-0.015em` | Feature sub-anchors and interactive panel titles (H3). |
+| `--font-body-lg` | `clamp(1.125rem, 0.5vw + 0.95rem, 1.30rem)` | `1.50 – 1.60` | `-0.005em` | Lead narrative paragraphs (`max-width: 60ch`). |
+| `--font-body` | `1rem` (`16px`) | `1.55 – 1.65` | `normal` | Sustained reading copy and form inputs (`max-width: 65ch`). |
+| `--font-body-sm` | `0.875rem` (`14px`) | `1.45` | `+0.005em` | Interactive controls, compact table rows, secondary notes. |
+| `--font-meta` | `0.75rem` (`12px`) | `1.35` | `+0.02em` to `+0.06em` | Coordinates, footnotes, status badges (do NOT overuse on every heading!). |
 
 ---
 
-## 5. Text Measure & Optical Line Balancing
+## 3. Expressive Typographic Choreography
 
-- **Optimal Reading Measure**: Constrain paragraph text between 45 and 75 characters per line (`max-width: 65ch`). Lines exceeding 80 characters cause reader disorientation when returning to the next line.
-- **Headline Balancing**: Apply `text-wrap: balance` to all H1, H2, and H3 headers to eliminate typographic orphans (single words wrapping onto their own line).
-
----
-
-## 6. Responsive Typography Scaling
-
-Do not arbitrarily reduce body font size on mobile devices ($16\text{px}$ must remain the baseline for readable mobile text to prevent unwanted browser auto-zooming).
-
-Instead, scale display headings down using CSS `clamp()` or discrete breakpoint tokens:
-- Desktop H1: `49px` / `3.05rem`
-- Tablet H1: `39px` / `2.44rem`
-- Mobile H1: `31px` / `1.95rem`
-- Formula: `clamp(1.95rem, 4vw + 1rem, 3.05rem)`
+Instead of treating text as static paragraphs inside boxes, use typography as an active visual medium:
+1. **Mixed-Voice Headlines**: Combine roman grotesque with an italicized high-contrast serif keyword or an inline interactive pill/sparkline inside the H1 itself.
+2. **Index & Coordinate Framing**: Frame sections with large editorial numerals (`01`, `02`), margin citations, or live data coordinates rather than repetitive pill badges.
+3. **Tabular Numeric Discipline (`tabular-nums`)**: Enforce `font-variant-numeric: tabular-nums` on all live counters, scrubbable charts, clocks, and financial figures so interactive updates never jitter horizontally.
+4. **Optical Line Balancing**: Apply `text-wrap: balance` to headings and `text-wrap: pretty` to body copy, strictly capping reading measure at `60ch–68ch`.

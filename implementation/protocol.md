@@ -1,127 +1,67 @@
-# Sloppi Frontend Implementation Protocol
+# Sloppi v2.0 Visual-First Implementation Protocol
 
-The Implementation Protocol governs how a coding agent translates a Sloppi design specification (`DESIGN.md`), content architecture, and design thesis into working frontend code without compromising or diluting the underlying design reasoning.
+Implementation in Sloppi v2.0 is **visual-first and iterative**.
 
-Sloppi is **strictly framework-agnostic**. It does not replace React, Vue, Svelte, Next.js, Astro, or vanilla HTML/CSS; it establishes the cognitive and architectural discipline required to implement any interface with high fidelity and token integrity.
+A coding agent must never write 15 components blindly from top to bottom and only inspect the browser at the very end. If the primary composition (the hero or core workspace) looks flat, generic, or timid in the browser, building 10 more sections on top of it only compounds the mediocrity.
 
 ---
 
-## 1. The Core Implementation Workflow
-
-Implementation is strictly downstream from design reasoning. A Sloppi agent must never generate code by guessing layout aesthetics or writing ad-hoc styles.
+## 1. The Visual-First Implementation Sequence
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                   THE SLOPPI IMPLEMENTATION WORKFLOW                   │
+│               SLOPPI v2.0 VISUAL-FIRST BUILD SEQUENCE                  │
 │                                                                        │
-│   1. DESIGN DECISION          (Design Thesis & Operational Stakes)     │
-│             │                                                          │
-│             ▼                                                          │
-│   2. DESIGN SYSTEM            (DESIGN.md Contract & Token Taxonomy)    │
-│             │                                                          │
-│             ▼                                                          │
-│   3. PROJECT INSPECTION       (Stack, Existing Tokens, Library Audit)  │
-│             │                                                          │
-│             ▼                                                          │
-│   4. COMPONENT ARCHITECTURE   (Primitives, Components, Sections, Pages)│
-│             │                                                          │
-│             ▼                                                          │
-│   5. CONTENT STRUCTURE        (7-Tier Hierarchy & Data Models)         │
-│             │                                                          │
-│             ▼                                                          │
-│   6. VISUAL IMPLEMENTATION    (Layout, Typography, Tokens, Surfaces)   │
-│             │                                                          │
-│             ▼                                                          │
-│   7. RESPONSIVE COMPOSITION   (Breakpoint Transformations & Ergonomics)│
-│             │                                                          │
-│             ▼                                                          │
-│   8. INTERACTION & MOTION     (State Feedback, Keyboard, Transitions)  │
-│             │                                                          │
-│             ▼                                                          │
-│   9. RENDER & VALIDATION      (Accessibility, Anti-Drift Audit)        │
-└────────────────────────────────────────────────────────────────────────┘
-```
-
-### The Anti-Pattern to Reject
-```
-[❌ The Lazy AI Implementation Anti-Pattern]
-Generate Generic Components ──► Add Ad-hoc Styles ──► Add Random Gradients ──► Hope It Looks Nice
-```
-
----
-
-## 2. Visual Implementation Priority: Structure Before Polish
-
-When building an interface, the agent must resolve structural and informational challenges before applying surface styling. Sloppi enforces a 10-tier implementation priority:
-
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│ 1. INFORMATION HIERARCHY  ──► Correct sequence, reading flow & anchors │
-│ 2. LAYOUT & CONTAINERS    ──► Max-widths, alignment, grid structures   │
-│ 3. TYPOGRAPHY & MEASURE   ──► Font scales, line-heights, 45-75ch limit │
-│ 4. SPATIAL CADENCE        ──► Systematic margins, padding, rhythm      │
-│ 5. COLOR TAXONOMY         ──► Semantic canvas, surface, text tokens    │
-│ 6. GEOMETRY & RADII       ──► Concentric radii, border stroke weights  │
-│ 7. IMAGERY & MEDIA        ──► Real domain data, verified diagrams      │
-│ 8. INTERACTION STATES     ──► :hover, :focus-visible, :active, loading │
-│ 9. PURPOSEFUL MOTION      ──► Micro-timings, state transitions (240ms) │
-│ 10. DECORATIVE ACCENTS    ──► Subtle hairline highlights, dividers     │
+│ 1. DIVERGE & GATE      ──► Formulate 3 distinct directions (A/B/C),    │
+│                            pass the Originality Gate, write DESIGN.md. │
+│                                  │                                     │
+│                                  ▼                                     │
+│ 2. FONTS & TOKENS      ──► Load distinctive web fonts (never default   │
+│                            to Inter) & inject semantic tokens in :root.│
+│                                  │                                     │
+│                                  ▼                                     │
+│ 3. PRIMARY COMPOSITION ──► Build the above-the-fold Hero OR core       │
+│    PROTOTYPE FIRST         interactive workspace + navigation +        │
+│                            signature 5-second interactive centerpiece. │
+│                                  │                                     │
+│                                  ▼                                     │
+│ 4. LIVE VISUAL PROOF   ──► Render in the browser, capture screenshot,  │
+│    GATE (MANDATORY!)       and evaluate against references & thesis:   │
+│                            • Does it have bold art direction?          │
+│                            • Is the typographic scale dramatic?        │
+│                            • Does the interactive hook work?           │
+│                            If flat/generic ──► Fix NOW before scaling! │
+│                                  │                                     │
+│                                  ▼                                     │
+│ 5. SCALE FULL          ──► Build remaining sections/screens modulating │
+│    INTERFACE               spatial rhythm, ground tones, & mechanics.  │
+│                                  │                                     │
+│                                  ▼                                     │
+│ 6. MULTI-VIEWPORT QA   ──► Inspect 390px, 768px, 1280px+ screenshots,  │
+│    & REGRESSION DIFF       fix defects, compare Before/After, & ship.  │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 3. The "Polish Trap" & Remediation Protocol
+## 2. Defeating Both "The Polish Trap" AND "The Wireframe Trap"
 
-A critical failure mode of AI coding agents is the **"Polish Trap"**: when an interface feels generic, flat, or unconvincing, the agent instinctively reacts by adding superficial decorative clutter:
-- Adding radial background blur gradients (*"mesh gradients"* / *"glowing orbs"*).
-- Slapping excessive glassmorphism (`backdrop-filter: blur(16px)`) onto every box.
-- Applying dramatic multi-colored neon button drop-shadows.
-- Adding arbitrary float animations or constant rotational spins to icons.
-- Rounding every card corner to an exaggerated pill shape (`rounded-3xl`).
+Coding agents fail at visual craft in two opposite ways:
+- **Trap A — The Polish Trap (Gen-1 Slop)**: Trying to save a weak layout by slapping purple blur blobs, neon drop shadows, and glassmorphism onto generic 3-card grids.
+- **Trap B — The Wireframe Trap (Gen-2 Slop)**: Stripping away all lighting, texture, depth, and motion until the page is just flat white or dark rectangles with `1px solid` borders and `11px` monospace labels.
 
-### The Sloppi Remediation Protocol
-When an interface feels visually weak or generic, **do not add decorative effects**. Instead, diagnose and resolve core structural deficiencies:
+### The Sloppi v2.0 High-Craft Remediation Matrix
 
-| Symptom of Weak Design | ❌ Wrong Response (Polish Trap) | ✅ Sloppi Structural Remediation |
-| :--- | :--- | :--- |
-| **Page feels boring / flat** | Add colorful gradient orbs and animated particle canvas | Increase typographic scale contrast (e.g. bump display title from $36\text{px}$ to $56\text{px}$ with tight $-0.03\text{em}$ tracking). |
-| **Cards feel disconnected** | Add heavy dark drop-shadows and glassmorphic opacity | Tighten card padding, apply razor-sharp 1px border (`--color-border`), and introduce clear section ground contrast (`--color-canvas-alt`). |
-| **Hero feels empty** | Add arbitrary 3D floating shapes or generic stock mockup | Replace placeholder text with an interactive live code terminal, SVG architecture diagram, or split value layout. |
-| **Sections blend together** | Add wavy SVG divider curves | Modulate vertical padding ($64\text{px} \longleftrightarrow 128\text{px}$), alternate ground planes, and switch from grid to asymmetric editorial layout. |
-| **Buttons feel weak** | Add pulsing glow animations and rainbow borders | Use high-contrast solid brand fill (`--color-brand`), outcome-explicit copy (*"Create Free Workspace"*), and 2px high-contrast `:focus-visible` rings. |
+| Visual Symptom in Browser | ❌ Gen-1 Slop Reflex | ❌ Gen-2 Wireframe Reflex | ✅ Sloppi v2.0 High-Craft Remediation |
+| :--- | :--- | :--- | :--- |
+| **Page feels boring / flat** | Add purple/cyan blur blobs in background | Draw flat `1px` boxes around everything | Push typographic scale contrast (`clamp(3rem, 7vw, 6rem)` serif/display vs `16px` body), introduce warm surface materiality/grain or bold chromatic blocking, and create asymmetric negative space. |
+| **Hero feels static / generic** | Add tilted 3D dashboard screenshot | Add a generic dark terminal box with `$ npm i` | Build a domain-specific **interactive instrument** (scrubbable timeline, live node patch-bay, interactive calculator, morphing schematic) right in the primary viewport. |
+| **Surfaces feel lifeless** | Heavy black drop-shadows (`shadow-2xl`) | Zero depth—everything is flat `#fff` with `#e5e7eb` border | Use tactile materiality: subtle SVG noise texture, `1px` specular top inner highlight (`inset 0 1px 0 rgba(255,255,255,0.6)`), recessed input wells, or multi-layer ambient elevation. |
+| **Sections blend together** | Add wavy SVG dividers | Stack 5 sections with identical `1px` top borders | Modulate both **spatial architecture and ground tone**: follow a full-bleed dark/chromatic interactive showcase with an expansive, sunlit single-column editorial manifesto. |
+| **Interactions feel dead** | Infinite spinning icons & scroll-jacking | Abrupt `hover:bg-gray-100` only | Orchestrate spring-physics state transitions (`motion`), shared `layoutId` indicators, magnetic/tactile button feedback (`active:scale-[0.98]`), and live tabular number interpolation. |
 
 ---
 
-## 4. Incremental 7-Pass Implementation Strategy
+## 3. Design Drift Governance
 
-To ensure precision and prevent compounding bugs, the agent must implement complex interfaces across seven distinct, verifiable passes:
-
-```
-Pass 1: Structural Skeleton & Landmark Containers (Semantic HTML5: header, main, nav, section, footer)
-   ↓
-Pass 2: Content & Typographic Scale (Real domain copy, display/body tokens, balanced text wrapping)
-   ↓
-Pass 3: Spacing & Ground Surface Tokens (Canvas grounds, card fills, 1px perimeter borders)
-   ↓
-Pass 4: Responsive Transformations (Mobile ergonomics, layout refactoring, touch targets ≥44px)
-   ↓
-Pass 5: Interactive States & Keyboard Focus (:hover, :focus-visible, :active, disabled, loading)
-   ↓
-Pass 6: Purposeful Motion & State Transitions (Micro-durations 120ms–240ms, prefers-reduced-motion)
-   ↓
-Pass 7: Accessibility & Anti-Drift Audit (WCAG AA/AAA contrast check, token traceability validation)
-```
-
----
-
-## 5. Design Drift Governance
-
-**Design Drift** occurs when implementation incrementally diverges from the approved `DESIGN.md` contract through ad-hoc coding shortcuts:
-- Introducing unmapped arbitrary hex colors (`color: #3b82f6`).
-- Using hardcoded pixel margins (`margin-top: 37px`) outside the spatial scale.
-- Inventing new component radius values (`border-radius: 19px`).
-- Replacing domain-specific copy with generic placeholder text.
-
-### The Deviation Rule
-If implementation necessitates modifying a token or layout rule, the agent must determine if the change is **intentional and necessary**. If so, it must explicitly update `DESIGN.md` or record the rationale in the **Implementation Decision Log**. Silent drift is strictly prohibited.
+If browser inspection during Stage 4 (`Live Visual Proof Gate`) reveals that a token, font ratio, or layout proportion needs adjustment to make the design sing, **make the improvement boldly** and synchronize `DESIGN.md` so the contract always reflects the proven visual reality.

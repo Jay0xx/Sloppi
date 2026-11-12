@@ -1,85 +1,46 @@
-# Sloppi Design Synthesis & Thesis Formulation
+# Sloppi v2.0 Creative Synthesis, 3-Direction Divergence & Thesis Formulation
 
-Design Synthesis is the cognitive bridge between external research and original UI implementation. 
+Synthesis is the turning point where reference observations become an **original, unmistakable Creative Direction**.
 
-After completing reference analysis, a Sloppi agent must not immediately begin writing code. It must synthesize its findings into an original, coherent **Design Thesis** supported by explicit constraints, rejected conventions, and calibrated visual tensions.
-
----
-
-## 1. The Cross-Reference Comparison Matrix
-
-Before drafting the design thesis, the agent compares all analyzed references across five analytical vectors:
-
-```
-[ References Analyzed ]
-           │
-           ├────────────────────────► 1. Common Patterns (Shared solutions)
-           ├────────────────────────► 2. Strategic Divergences (Where & why they differ)
-           ├────────────────────────► 3. Convention vs. Default Test (Separating utility from cliché)
-           ├────────────────────────► 4. Unexplored Opportunities (Novel whitespace in the market)
-           └────────────────────────► 5. Rejected Clichés (Explicitly banned patterns for this project)
-```
-
-### The Convention vs. Default Evaluation Test
-
-| Observed Pattern | Is it a Convention or a Default? | Sloppi Evaluation Rationale |
-| :--- | :--- | :--- |
-| **Sticky Navigation Bar** | **Convention** | Solves a universal wayfinding friction on long-form pages. Retained and styled according to token rules. |
-| **3-Column Feature Cards**| **Default** | An unthinking layout reflex. Replaced by asymmetric bento or live interactive demo. |
-| **Pill Buttons for CTAs** | **Convention** | Universally signals clickability and primary action affordance. Adapted to brand radius scale. |
-| **Pills for Eyebrow Headers**| **Default** | Adds container clutter above headlines. Replaced by clean uppercase tracking-expanded typography. |
-| **Radial Purple Gradient Blobs**| **Default** | Disguises empty space without conveying light source or depth. Replaced by solid canvas or intentional surface tint. |
-| **Monospaced Data Alignment** | **Convention** | Essential for optical scanning of numerical metrics, timestamps, and code parameters. |
+After analyzing references, never jump straight to a single safe design. First **diverge into 3 distinct concepts**, then pass your chosen concept through the **Pre-Implementation Originality Gate**.
 
 ---
 
-## 2. The 5 Core Synthesis Pillars
+## 1. The 3-Direction Divergence Matrix
 
-Every synthesis pass must yield five concrete outputs:
+Before authoring `DESIGN.md`, compare three meaningfully different creative directions across four orthogonal vectors:
 
-### 1. Design Opportunities
-- Unconventional or underutilized approaches discovered during research that directly serve the product thesis (e.g., replacing static screenshots with a live browser-based REPL; replacing multiple feature cards with an interactive architecture flow diagram).
+| Dimension | Direction A: Elevated Domain Convention | Direction B: Editorial / Archival Subversion | Direction C: Tactile Instrument / Spatial Canvas |
+| :--- | :--- | :--- | :--- |
+| **Core Metaphor** | *What physical or digital world does it inhabit?* | *How does an editorial, print, or cartographic lens reframe it?* | *How does a tactile hardware device or kinetic canvas reframe it?* |
+| **Spatial Composition** | e.g., Asymmetric split workbench | e.g., Multi-column broadsheet + sticky margin proofs | e.g., Full-bleed interactive instrument + floating dock |
+| **Typographic Pairing** | Font pairing #1 (Display + UI + Mono) | Font pairing #2 (Expressive Serif/Display + Sans + Mono) | Font pairing #3 (Geometric/Industrial Display + Sans + Mono) |
+| **Palette & Materiality** | Surface ground, accent, lighting & texture #1 | Surface ground, accent, lighting & texture #2 | Surface ground, accent, lighting & texture #3 |
+| **5-Second Interactive Hook** | Live interactive mechanic #1 | Live interactive mechanic #2 | Live interactive mechanic #3 |
+| **Originality Gate Score** | *Does it look like 100 other sites?* | *Why is this memorable and distinct?* | *Why is this memorable and distinct?* |
 
-### 2. Design Constraints
-- Non-negotiable ergonomic, technical, and accessibility boundaries (e.g., strict WCAG AAA contrast for medical data; 100% viewport containment on desktop dashboards without page scrolling; $\ge 44\text{px}$ touch targets for mobile).
+> **Selection Rule**: If `Direction A` looks like a standard category template—or looks like a repeat of your own previous projects (e.g., flat `1px` border boxes or a standard dark-green CLI terminal)—**reject Direction A** and select `Direction B` or `Direction C` (or synthesize the best interactive mechanics of A with the distinctive art direction of B/C).
 
-### 3. Rejected Conventions
-- Specific industry defaults that this product deliberately chooses *not* to use, along with the rationale (e.g., *"We reject the standard dark-neon crypto aesthetic in favor of high-restraint alpine banking neutrals to communicate institutional reliability"*).
+---
 
-### 4. Selected Principles
-- The 4 to 6 structural rules governing the product's visual execution (e.g., asymmetric section rhythm, 4px base density, crushed display leading, zero ambient drop shadows).
+## 2. Controlled Visual Tensions
 
-### 5. Controlled Visual Tensions
-Distinctive character in digital product design arises from **controlled contrast between paired opposing qualities**, not from random decoration:
+Memorable art direction comes from **deliberate contrast between opposing visual qualities**:
 
-| Controlled Visual Tension | How It Manifests in the Interface |
+| Visual Tension Pair | How to Execute It With High Craft |
 | :--- | :--- |
-| **Technical + Warm** | Monospaced tabular data and precise 1px borders resting on warm textured paper (`#fbf9f5`) and rich terracotta accents. |
-| **Dense + Spacious** | High-density data metrics contained inside compact cards, balanced by generous macro-margins between major section chapters. |
-| **Minimal + Expressive** | Severe monochrome typography and stark layout restraint punctuated by a single, vibrant, kinetic brand interaction. |
-| **Precise + Playful** | Rigorous geometric grid alignment softened by hand-cut sticker-style borders and organic corner curvatures. |
-| **Serious + Approachable** | High-contrast audit-grade legibility paired with conversational, outcome-explicit copywriting. |
+| **Literary Serif + Precision Telemetry** | Sculptural, high-contrast italic serif headlines (`Instrument Serif` / `Newsreader`) paired with razor-sharp interactive SVG schematics and tabular data. |
+| **Tactile Hardware + Fluid Motion** | Matte anodized or ceramic surfaces with `1px` specular bevels (`inset 0 1px 0 rgba(255,255,255,0.2)`) and spring-physics rotary/slider controls. |
+| **Monumental Scale + Micro-Annotation** | Oversized poster typography (`clamp(3.5rem, 9vw, 8rem)`, `0.90` leading) anchored by delicate cartographic coordinate ticks and footnotes. |
+| **Warm Organic Material + Algorithmic Rigor** | Sunlit linen, terracotta, or archival vellum grounds paired with deterministic real-time state simulations and zero decorative fluff. |
+| **Atmospheric Shader + Stark Foreground** | A rich, pointer-reactive WebGL/Canvas chromatic field confined to a focal aperture, contrasted against calm, ultra-legible editorial copy. |
 
 ---
 
-## 3. Formulating the Design Thesis
+## 3. Formulating the Winning Design Thesis
 
-The **Design Thesis** is the definitive 2-to-4 sentence contract that governs all subsequent UI generation. It must directly answer four questions:
-
-1. **What should this product feel like?**
-2. **Why does that feeling serve the target audience and operational stakes?**
-3. **What concrete visual principles will create that feeling?**
-4. **What generic industry defaults are we deliberately avoiding?**
-
----
-
-### Exemplary Design Theses Across Archetypes
-
-#### Archetype A: Enterprise Database & Telemetry Monitor (Technical / High-Stakes)
-> *"The product must feel like a mission-critical flight recorder: midnight tungsten canvas, crisp phosphor-green latency indicators, strict monospaced tabular alignment, and zero decorative glassmorphism. Because database engineers require instant anomaly detection without cognitive fatigue, we prioritize compact data density and 1px crisp borders. We deliberately reject marketing-style gradient blobs, floating badges, and generic 3-card feature grids in favor of live query telemetry and an interactive schema workbench."*
-
-#### Archetype B: Boutique Financial Advisory & Wealth Management (High-Trust / Editorial)
-> *"The product must feel like a bespoke private bank broadsheet: warm alabaster paper canvas (`#f9f8f5`), authoritative high-contrast serif headlines, deep navy structural ink, and asymmetric editorial columns. To convey enduring financial stewardship to high-net-worth clients, we rely on generous macro-whitespace and rigorous typographic scale contrast. We explicitly reject trendy neon accents, floating 3D coins, and generic SaaS card containers."*
-
-#### Archetype C: Expressive Mobile Social & Audio Sandbox (Playful / Low-Stakes)
-> *"The product must feel like a tactile, kinetic soundboard: soft pastel ground, oversized sculptural display type, 2px hand-cut carbon outlines, and spring-physics touch gestures. To invite creative exploration, interactive elements use pill-shaped geometries and vibrant multi-accent sticker chips. We avoid rigid enterprise tables, muted gray monochrome palettes, and static desktop-style navigations."*
+Your **Design Thesis** in `DESIGN.md` must be a punchy 2–4 sentence creative director's brief answering:
+1. **Which of the 3 directions won and why?**
+2. **What is the concrete physical/editorial metaphor and controlled visual tension?**
+3. **What exact typography pairing, surface materiality, and color harmony bring it to life?**
+4. **What is the signature 5-second interactive centerpiece, and which category clichés (both Gen-1 AI slop and Gen-2 wireframe clichés) are explicitly banned?**

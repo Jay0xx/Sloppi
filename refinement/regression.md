@@ -1,66 +1,45 @@
-# Sloppi Regression Verification & Trade-off Governance
+# Sloppi v2.0 Real Visual Regression Testing & Before/After Screenshot Comparison
 
-Regression Verification ensures that targeted refinements in one component do not inadvertently damage adjacent layouts, responsive ergonomics, accessibility, or visual hierarchy.
+Refinement is unproven until verified visually in the browser. A CSS change that fixes one element can easily flatten visual hierarchy, clip mobile text, or break an adjacent grid.
 
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│                   THE REGRESSION PRINCIPLE                             │
-│                                                                        │
-│ "Every visual refinement carries collateral risk.                      │
-│  Increasing heading size improves desktop hierarchy but may break      │
-│  mobile wrapping. Removing cards reduces repetition but may destroy    │
-│  visual grouping. Never conclude an iteration without a systematic     │
-│  regression audit across all viewports."                               │
-└────────────────────────────────────────────────────────────────────────┘
-```
+Sloppi v2.0 mandates **Before vs. After Screenshot Comparison** for visual refinements and redesign passes.
 
 ---
 
-## 1. The 7-Point Regression Verification Checklist
+## 1. The Screenshot Regression Protocol
 
-After executing any code modification, the agent scans for collateral regressions:
+Whenever executing a visual refinement or redesign iteration:
 
 ```
-┌────────────────────────────────────────────────────────────────────────┐
-│ 1. HIERARCHY REGRESSION CHECK  ──► Did the change create competing     │
-│                                    focal points or weaken the primary? │
-│ 2. RESPONSIVE REGRESSION CHECK ──► Did the change cause horizontal     │
-│                                    overflow or clipped text on mobile? │
-│ 3. ACCESSIBILITY REGRESSION    ──► Did new background tints drop       │
-│                                    contrast below WCAG AA (4.5:1)?     │
-│ 4. LAYOUT / WRAP REGRESSION    ──► Did expanding a container squeeze   │
-│                                    an adjacent sidebar or table?       │
-│ 5. STATE / INTERACTION CHECK   ──► Did CSS property changes remove     │
-│                                    the visible :focus-visible ring?    │
-│ 6. TOKEN CONSISTENCY CHECK     ──► Were new hardcoded pixel values     │
-│                                    accidentally introduced?            │
-│ 7. CONTENT MEASURE CHECK       ──► Did paragraph line length exceed    │
-│                                    the strict 65ch maximum?            │
-└────────────────────────────────────────────────────────────────────────┘
+1. CAPTURE "BEFORE" SCREENSHOTS (390px Mobile & 1280px+ Desktop)
+                 │
+                 ▼
+2. APPLY TARGETED SINGLE-OBJECTIVE INTERVENTION
+                 │
+                 ▼
+3. CAPTURE "AFTER" SCREENSHOTS AT IDENTICAL VIEWPORTS
+                 │
+                 ▼
+4. INSPECT & COMPARE BEFORE vs. AFTER SIDE-BY-SIDE
+                 │
+                 ▼
+5. VERIFY COMPOSITIONAL IMPROVEMENT + ZERO COLLATERAL REGRESSIONS
 ```
+
+### Mandatory Comparison Questions
+When inspecting the `After` screenshot against the `Before` screenshot (using `read_file` on captured images or the `browser` subagent), verify:
+1. **Did Compositional Hierarchy Improve?** Is the primary focal point clearer, the typographic scale more commanding, and the negative space better balanced—or did the change merely add surface clutter?
+2. **Did Art Direction Strengthen?** Does the revision move closer to the chosen Creative Direction in `DESIGN.md` rather than regressing toward a generic card grid or flat wireframe?
+3. **Did Any Viewport Regress?** Check `390px` mobile and `1280px` desktop for horizontal overflow (`document.body.scrollWidth > window.innerWidth`), orphaned headline words, overlapped fixed bars, or lost contrast.
 
 ---
 
-## 2. The 4-Tier Regression Severity Classification
+## 2. The 7-Point Regression Verification Checklist
 
-| Severity Tier | Definition & Impact | Action Required |
-| :--- | :--- | :--- |
-| **1. BLOCKING REGRESSION** | Core functionality, navigation, form submission, or mobile viewport broken. | **Roll back or fix immediately** in the current iteration pass. |
-| **2. MAJOR REGRESSION** | Significant usability degradation, failing contrast ratio, or broken layout grid. | **Prioritize as FIX NOW** in the immediate next step. |
-| **3. MINOR REGRESSION** | Slight 2px alignment mismatch or micro-spacing asymmetry. | **Batch into next refinement pass** or adjust if touching same file. |
-| **4. ACCEPTABLE TRADEOFF** | Deliberate minor compromise justified by a major structural improvement. | **Document in Refinement Log** and proceed without looping. |
-
----
-
-## 3. Documenting Acceptable Trade-offs
-
-Sloppi distinguishes unintended defects from intentional engineering trade-offs:
-
-```markdown
-### Documented Trade-off Example
-- **Component**: `src/sections/BenchmarkSection.tsx`
-- **Modification**: Switched from a 4-column responsive grid to a 2-column wide specification table.
-- **Benefit**: Dramatically improved technical legibility and allowed side-by-side comparison of p99 latency metrics.
-- **Trade-off**: Requires users on 768px tablet screens to scroll vertically an additional 180px.
-- **Classification**: ACCEPTABLE TRADEOFF (Justified by core user comprehension).
-```
+1. [ ] **Primary Focal Weight**: Does each viewport still have one unmistakable visual anchor?
+2. [ ] **Zero Horizontal Overflow**: `scrollWidth <= innerWidth` verified at `390px`, `768px`, and `1280px+`.
+3. [ ] **WCAG AA/AAA Contrast**: Did any surface or text color tweak drop body contrast below `4.5:1`?
+4. [ ] **Touch & Hit Ergonomics**: Are all mobile interactive controls still $\ge 44\times 44\text{px}$?
+5. [ ] **Keyboard Focus Continuity**: Are `2px` `:focus-visible` rings still visible on all interactive elements?
+6. [ ] **Interactive State Integrity**: Do interactive widgets, tabs, drawers, and live counters still function without console/runtime errors?
+7. [ ] **Token Traceability**: Were all changes synced cleanly with `:root` tokens and `DESIGN.md`?

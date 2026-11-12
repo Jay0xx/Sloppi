@@ -1,158 +1,132 @@
-# Sloppi Design Token Implementation & Traceability
+# Sloppi v2.0 Design Token Implementation & Multi-Archetype Templates
 
-Design Token Implementation translates the mathematical scales and semantic mappings established in `DESIGN.md` into machine-executable CSS custom properties and framework theme bindings.
+Design tokens translate your chosen **Creative Direction** (`DESIGN.md`) into CSS custom properties and framework theme bindings.
 
-A coding agent must never scatter raw unmapped hex values (`#3b82f6`), magic pixel margins (`margin-top: 37px`), or arbitrary font sizes across component markup. Every visual property must be traceable to a semantic token.
-
----
-
-## 1. The 3-Tier Token Architecture
-
-Sloppi enforces a clean, three-tier token separation to ensure maintainability and theme switching:
-
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│ TIER 1: GLOBAL / PRIMITIVE PALETTE                                     │
-│ Raw values with zero semantic intent.                                  │
-│ e.g., --palette-slate-950: #020617;  --palette-emerald-500: #10b981;   │
-├────────────────────────────────────────────────────────────────────────┤
-│ TIER 2: SEMANTIC TOKENS (The Core Abstraction)                         │
-│ Mappings that convey functional meaning, ground roles, and contrast.   │
-│ e.g., --color-canvas: var(--palette-slate-950);                        │
-│       --color-brand: var(--palette-emerald-500);                       │
-│       --color-text-primary: #f8fafc;                                   │
-├────────────────────────────────────────────────────────────────────────┤
-│ TIER 3: COMPONENT SCOPED VARIABLES (Optional / Contextual)             │
-│ Overrides local to a specific interactive primitive.                   │
-│ e.g., --btn-bg: var(--color-brand);  --input-border: var(--color-border│
-└────────────────────────────────────────────────────────────────────────┘
-```
+> **CRITICAL RULE (v2.0)**:
+> Never copy-paste a single default palette (`#0c0e12` dark tungsten + `#00f59b` green) or default font (`Inter` + `JetBrains Mono`) across projects. Your `:root` tokens must reflect the specific **Direction (A, B, or C)** that won your 3-Direction Divergence pass.
 
 ---
 
-## 2. Canonical Token Implementation Template (`globals.css`)
+## 1. The Semantic Token Contract
 
+Every component consumes semantic variables (`var(--color-canvas)`, `var(--font-display)`) rather than hardcoded hex codes. Define tokens across 6 pillars:
+1. **Canvas, Surfaces & Materiality** (`--color-canvas`, `--color-canvas-alt`, `--color-surface`, `--color-surface-elevated`, `--surface-highlight`, `--surface-grain-opacity`)
+2. **Typographic Contrast Tiers** (`--color-text-primary`, `--color-text-secondary`, `--color-text-muted`, `--color-text-inverse`)
+3. **Brand Signature & Chromatic Accents** (`--color-brand`, `--color-brand-hover`, `--color-brand-contrast`, `--color-accent-1`, `--color-accent-2`)
+4. **Structural Hairlines, Specular Bevels & Focus** (`--color-border`, `--color-border-strong`, `--color-focus-ring`)
+5. **Expressive Font Stacks & Fluid `clamp()` Scales** (`--font-display`, `--font-sans`, `--font-mono`, `--text-hero`, `--text-h1`, etc.)
+6. **Spatial Rhythm, Geometry & Spring Motion** (`--radius-*`, `--shadow-*`, `--ease-out-expo`, `--ease-spring`)
+
+---
+
+## 2. Three Reference Token Palettes (Adapt, Never Blindly Copy)
+
+### Archetype I: Archival Editorial & Scientific Monograph (Warm Vellum + Cobalt + Vermilion)
 ```css
 :root {
-  /* ==========================================================================
-     1. COLOR TAXONOMY (SEMANTIC)
-     ========================================================================== */
-  --color-canvas: #0c0e12;
-  --color-canvas-alt: #13171f;
-  --color-surface: #191f2b;
-  --color-surface-hover: #222a3a;
-  --color-surface-active: #2b3548;
+  --color-canvas: #F6F3EC;
+  --color-canvas-alt: #EDE8DD;
+  --color-surface: #FAF8F3;
+  --color-surface-hover: #F0ECE1;
 
-  --color-text-primary: #f1f5f9;      /* WCAG AAA >= 7:1 on canvas */
-  --color-text-secondary: #94a3b8;    /* WCAG AA >= 4.5:1 on canvas */
-  --color-text-muted: #64748b;        /* WCAG AA >= 4.5:1 on surface */
-  --color-text-inverse: #0f172a;
+  --color-text-primary: #141413;      /* 15.8:1 AAA on canvas */
+  --color-text-secondary: #4A4842;    /* 7.4:1 AAA on canvas */
+  --color-text-muted: #767268;        /* 4.6:1 AA on canvas */
+  --color-text-inverse: #F6F3EC;
 
-  --color-brand: #00f59b;             /* Brand signature action */
-  --color-brand-hover: #00dc8b;
-  --color-brand-contrast: #042014;
+  --color-brand: #0038A8;             /* Archival Blueprint Cobalt */
+  --color-brand-hover: #002B80;
+  --color-brand-contrast: #FFFFFF;
+  --color-signal: #D9381E;            /* Oxidation Vermilion focal signal */
 
-  --color-border: #263042;
-  --color-border-subtle: #1e2533;
-  --color-border-hover: #3b4863;
-  --color-focus-ring: #00f59b;
+  --color-border: #D8D2C5;
+  --color-border-strong: #141413;
+  --color-focus-ring: #0038A8;
 
-  --color-accent-info: #38bdf8;
-  --color-accent-success: #34d399;
-  --color-accent-warning: #fbbf24;
-  --color-accent-danger: #f87171;
+  --font-display: var(--font-instrument-serif), 'Playfair Display', Georgia, serif;
+  --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-mono: var(--font-commit-mono), 'IBM Plex Mono', monospace;
+}
+```
 
-  /* ==========================================================================
-     2. TYPOGRAPHY SCALES & LEADING
-     ========================================================================== */
-  --font-display: 'Inter', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+### Archetype II: Tactile Industrial Hardware (Anodized Aluminum + Carbon Wells + Amber Signal)
+```css
+:root {
+  --color-canvas: #E4E6EB;
+  --color-canvas-alt: #D6D9E0;
+  --color-surface: #EEF0F4;
+  --color-surface-recessed: #181A1F;  /* Recessed LED/Oscilloscope well */
 
-  --font-size-display-2xl: 3.815rem; /* 61.04px */
-  --font-size-display-xl: 3.052rem;  /* 48.83px */
-  --font-size-heading-lg: 2.441rem;  /* 39.06px */
-  --font-size-heading-md: 1.953rem;  /* 31.25px */
-  --font-size-heading-sm: 1.563rem;  /* 25.00px */
-  --font-size-body-lg: 1.250rem;     /* 20.00px */
-  --font-size-body: 1.000rem;        /* 16.00px */
-  --font-size-body-sm: 0.813rem;     /* 13.00px */
-  --font-size-caption: 0.688rem;     /* 11.00px */
+  --color-text-primary: #111317;
+  --color-text-secondary: #454B54;
+  --color-text-muted: #68707C;
+  --color-text-inverse: #F3F4F6;
 
-  --leading-display: 0.95;
-  --leading-heading: 1.15;
-  --leading-body: 1.60;
-  --leading-tight: 1.20;
+  --color-brand: #FF4F00;             /* Industrial International Orange */
+  --color-brand-hover: #E04500;
+  --color-brand-contrast: #FFFFFF;
 
-  --tracking-tight: -0.025em;
-  --tracking-normal: 0.000em;
-  --tracking-wide: 0.030em;
+  --color-border: #C5C9D3;
+  --surface-specular: inset 0 1px 0 0 rgba(255, 255, 255, 0.75);
+  --shadow-tactile: 0 2px 4px rgba(17, 19, 23, 0.10), 0 1px 1px rgba(17, 19, 23, 0.06);
+  --color-focus-ring: #FF4F00;
 
-  /* ==========================================================================
-     3. SPATIAL BASELINE & GAPS
-     ========================================================================== */
-  --space-1: 0.25rem;  /* 4px */
-  --space-2: 0.50rem;  /* 8px */
-  --space-3: 0.75rem;  /* 12px */
-  --space-4: 1.00rem;  /* 16px */
-  --space-6: 1.50rem;  /* 24px */
-  --space-8: 2.00rem;  /* 32px */
-  --space-12: 3.00rem; /* 48px */
-  --space-16: 4.00rem; /* 64px */
-  --space-24: 6.00rem; /* 96px */
-  --space-32: 8.00rem; /* 128px */
+  --font-display: var(--font-syne), 'Space Grotesk', sans-serif;
+  --font-sans: var(--font-ibm-plex-sans), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+}
+```
 
-  /* ==========================================================================
-     4. GEOMETRY & CORNER RADII
-     ========================================================================== */
-  --radius-xs: 2px;
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-full: 9999px;
+### Archetype III: Atmospheric Optical Obsidian (Deep Perceptual Dark + Specular Glass + Warm Gold/Coral)
+```css
+:root {
+  --color-canvas: #09080C;
+  --color-canvas-alt: #111017;
+  --color-surface: #171520;
+  --color-surface-hover: #211E2E;
 
-  /* ==========================================================================
-     5. ELEVATION & DEPTH SHADOWS
-     ========================================================================== */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.40);
-  --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.50), 0 2px 4px -2px rgba(0, 0, 0, 0.30);
-  --shadow-lg: 0 12px 24px -4px rgba(0, 0, 0, 0.60), 0 4px 8px -2px rgba(0, 0, 0, 0.40);
+  --color-text-primary: #F5F2EB;
+  --color-text-secondary: #B0A99F;
+  --color-text-muted: #7C756D;
+  --color-text-inverse: #09080C;
 
-  /* ==========================================================================
-     6. MOTION & EASING
-     ========================================================================== */
-  --duration-fast: 120ms;
-  --duration-normal: 240ms;
-  --duration-slow: 350ms;
-  --ease-snappy: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --color-brand: #F26440;             /* Warm Solar Coral */
+  --color-brand-hover: #FF7857;
+  --color-brand-contrast: #09080C;
+
+  --color-border: rgba(245, 242, 235, 0.10);
+  --surface-specular: inset 0 1px 0 0 rgba(245, 242, 235, 0.14);
+  --color-focus-ring: #F26440;
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
 }
 ```
 
 ---
 
-## 3. The Token Traceability Pipeline
+## 3. Universal Fluid Scale & Motion Tokens
 
-Every visual property rendered in the DOM must trace back to a specific design decision:
+Include fluid typography and easing variables in `:root` so layout rhythm and interactive choreography stay cohesive across all components:
 
+```css
+:root {
+  /* Fluid Typographic Scale */
+  --text-hero: clamp(2.75rem, 6.5vw + 1rem, 5.75rem);
+  --text-h1: clamp(2.25rem, 4.5vw + 0.75rem, 4.00rem);
+  --text-h2: clamp(1.75rem, 2.8vw + 0.5rem, 2.75rem);
+  --text-h3: clamp(1.35rem, 1.8vw + 0.4rem, 1.85rem);
+  --text-body-lg: clamp(1.125rem, 0.5vw + 0.95rem, 1.30rem);
+  --text-body: 1rem;
+  --text-sm: 0.875rem;
+  --text-meta: 0.75rem;
+
+  /* Choreographed Motion Curves */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 280ms;
+  --duration-cinematic: 600ms;
+}
 ```
-┌────────────────────────────────────────────────────────────────────────┐
-│ 1. DESIGN.md RATIONALE                                                 │
-│    "Dark tungsten canvas with phosphor green brand accent"             │
-│                         │                                              │
-│                         ▼                                              │
-│ 2. SEMANTIC TOKEN DECLARATION                                          │
-│    --color-brand: #00f59b;  --color-brand-contrast: #042014;           │
-│                         │                                              │
-│                         ▼                                              │
-│ 3. COMPONENT IMPLEMENTATION                                            │
-│    .btn-primary { background: var(--color-brand); color: var(...); }  │
-│                         │                                              │
-│                         ▼                                              │
-│ 4. RENDERED USER INTERFACE                                             │
-│    Pixel-perfect, high-contrast, accessible button                     │
-└────────────────────────────────────────────────────────────────────────┘
-```
-
-If a future agent or developer inspects an element and asks: *"Why is this border 1px solid #263042?"*, the token name `--color-border` immediately points back to Section 12 of `DESIGN.md`.

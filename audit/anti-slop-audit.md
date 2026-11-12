@@ -1,87 +1,68 @@
-# Sloppi Signature Anti-Slop Audit & Default Detection
+# Sloppi v2.0 Anti-Slop & Anti-Monoculture Audit (30 Signals)
 
-The Anti-Slop Audit is Sloppi's flagship critique protocol. It evaluates whether an interface exhibits the telltale signs of unthinking, mechanical AI generation.
+The Anti-Slop Audit screens interfaces against **both** generations of AI frontend failure:
+- **Signals 1–20 (Generation-1 AI Slop)**: Default purple/indigo SaaS templates, centered H1 + 2 pills, 3-card icon grids, meaningless blur orbs, and fake social proof.
+- **Signals 21–30 (Generation-2 Overfit / Wireframe Slop)**: Sterile flat `1px`-bordered boxes everywhere, automatic `Inter` + `JetBrains Mono` defaults, repeating the same dark-green CLI terminal on every dev tool, repeating the same white/navy `1px` ledger on every fintech app, and slapping `11px uppercase font-mono tracking-widest` above every single element.
+
+---
+
+## 1. The 30 Review Signals
+
+### Part A: Generation-1 AI Slop Signals (1–20)
+1. **Generic Centered Hero**: Eyebrow pill + centered H1 + 2 buttons + tilted screenshot underneath.
+2. **Indiscriminate `rounded-3xl` Cards**: Every container rounded to toy-like `24px–32px` without brand justification.
+3. **Eyebrow Pill Inflation**: `rounded-full bg-primary/10` pills stacked above every section heading.
+4. **Unjustified Neon/Purple Blur Blobs**: `filter: blur(120px)` violet/cyan circles disguising an empty layout.
+5. **Rainbow Gradient Text**: Multi-color gradient clip text applied to headings as a cheap gimmick.
+6. **Glassmorphism Over Flat Solids**: `backdrop-blur` on static cards with nothing scrolling behind them.
+7. **Muddy Drop Shadows**: Single-layer dark `rgba(0,0,0,0.4)` shadows on flat in-flow boxes.
+8. **Arbitrary Glowing Dots**: Meaningless blurred dots scattered behind cards.
+9. **Random 3D Floating Shapes**: Decorative spheres, torus knots, or stars with zero domain meaning.
+10. **Squiggly Wireframe Mockups**: Fake UI fragments with placeholder lines instead of real interactive UI.
+11. **Universal 3-Card Icon Grid**: Three identical rectangular cards with a colored circle icon on top.
+12. **Cookie-Cutter Section Repetition**: Stacking 4 consecutive sections with the exact same card grid.
+13. **Axis-Free Fake Charts**: Decorative wavy SVG lines with no units, scales, or interactive inspection.
+14. **Unsubstantiated Hyper-Stats**: *"10x Faster"*, *"99.9% Synergy"* with zero methodology or context.
+15. **Fabricated Social Proof**: Fake quotes from *"Sarah J., VP of Growth"* or unauthorized Fortune 500 logo clouds.
+16. **Non-Interactive Tag Clutter**: Clusters of pills/badges that cannot be clicked or filtered.
+17. **Icon-Beside-Every-Bullet**: Forcing a generic Lucide icon onto every single heading and list item.
+18. **Generic CTA Copy**: Repeating *"Get Started"* and *"Learn More"* across the page.
+19. **Centered Long Paragraphs**: Center-aligning body copy longer than 3 lines (`> 65ch`).
+20. **Buzzword Marketing Copy**: *"Supercharge, elevate, seamless, unleash, next-gen velocity."*
+
+### Part B: Generation-2 Overfit & Wireframe Cliché Signals (21–30)
+21. **The Flat `1px` Border Wireframe Trap**: Every single section, card, and metric is just a flat white or dark rectangle with a `1px solid` border and zero materiality, lighting, texture, or tonal depth.
+22. **Unthinking `Inter` + `JetBrains Mono` Default**: Failing to load an expressive Display/Serif/Grotesque font pairing that gives the brand a unique typographic voice.
+23. **The `11px Uppercase Font-Mono Tracking-Widest` Addiction**: Putting the exact same tiny uppercase monospace eyebrow label above every section and inside every card.
+24. **The "Midnight Tungsten + Phosphor Green CLI" Reflex**: Automatically styling every developer or technical tool with `#0b0d13` dark slate, `#00d084` green, and a mock terminal window.
+25. **The "Warm Alabaster + Navy Ink Ledger" Reflex**: Automatically styling every fintech or B2B app with `#fbf9f5`/`#ffffff`, `#102A56` navy, and flat `1px` bordered tables.
+26. **The Cookie-Cutter `8+4` Bento Reflex**: Replacing a 3-card grid with a standard `col-span-8` + `col-span-4` bento grid without bespoke interactive content.
+27. **Timid Typographic Scale Contrast**: Display headlines (`32px–40px`) barely larger than section titles (`24px–28px`), lacking sculptural hero presence.
+28. **Static Above-the-Fold Viewport**: A hero that only shows static text and a static box rather than a live 5-second interactive instrument.
+29. **Lifeless CSS-Only Micro-States**: Missing spring choreography, shared-layout transitions, or tactile active states because animation libraries were unnecessarily avoided.
+30. **Cross-Project Self-Plagiarism**: Reusing the exact same layout skeleton, font stack, or color palette from another recent project in the workspace.
+
+---
+
+## 2. The Dual Integrity & Materiality Test (Replacing "Strip the Effects")
+
+In Sloppi v1, the *"Strip the Effects"* test caused agents to delete all lighting, texture, and depth—resulting in sterile wireframes. Sloppi v2.0 enforces the **Dual Integrity & Materiality Test**:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                      THE DEFAULT DETECTION RULE                        │
+│            THE DUAL INTEGRITY & MATERIALITY TEST (v2.0)                │
 │                                                                        │
-│ "These patterns are NOT absolutely forbidden. They are REVIEW SIGNALS. │
-│  For every flagged pattern, the agent must ask:                        │
-│  'Does this element have a concrete, product-specific reason to exist?'│
-│  If YES: Retain or refine.  If NO: Reconsider and replace."            │
+│ TEST A — STRUCTURAL BONES CHECK:                                       │
+│ Does the layout have unmistakable typographic hierarchy, asymmetric    │
+│ spatial rhythm, and a real interactive centerpiece even without blur   │
+│ blobs?                                                                 │
+│ • If NO ──► Fix the spatial composition and scale ratio first.         │
+│                                                                        │
+│ TEST B — ART DIRECTION & MATERIALITY CHECK:                            │
+│ Does the interface possess rich, intentional surface craft—such as     │
+│ expressive display typography, tactile surface grain, specular `1px`   │
+│ bevels, perceptual color blocking, or choreographed motion—so it NEVER │
+│ looks like a bare wireframe?                                           │
+│ • If NO ──► Elevate surface materiality, font voice, and choreography. │
 └────────────────────────────────────────────────────────────────────────┘
 ```
-
----
-
-## 1. Catalog of 26 AI Default Review Signals
-
-```
-[ Rendered Interface Inspection ]
-        │
-        ├──────► SIGNAL 1:  Generic Centered Hero (Giant Title + 2 Pill Buttons + Floating Dashboard)
-        ├──────► SIGNAL 2:  Excessive Rounded Cards (rounded-3xl applied indiscriminately)
-        ├──────► SIGNAL 3:  Excessive Pill Badges (Pills stacked above every single section heading)
-        ├──────► SIGNAL 4:  Unjustified Gradient Backgrounds (Radial mesh blobs filling empty space)
-        ├──────► SIGNAL 5:  Unjustified Gradient Text (Multi-colored rainbow text on every H2)
-        ├──────► SIGNAL 6:  Unjustified Glassmorphism (backdrop-filter: blur() on plain backgrounds)
-        ├──────► SIGNAL 7:  Excessive Ambient Shadows (Heavy fuzzy drop-shadows on flat cards)
-        ├──────► SIGNAL 8:  Excessive Blur Filters (Blurred glowing dots behind UI components)
-        ├──────► SIGNAL 9:  Decorative 3D Blobs / Spheres (Floating rendered shapes with zero meaning)
-        ├──────► SIGNAL 10: Floating UI Fragments (Tilted mockups with squiggly placeholder lines)
-        ├──────► SIGNAL 11: Universal 3-Card Grid Reflex (Stacking 3 identical cards for everything)
-        ├──────► SIGNAL 12: Repetitive Feature Sections (Identical card geometry repeated 4 times)
-        ├──────► SIGNAL 13: Generic Dashboard Mockups (Fake graphs with missing axes and units)
-        ├──────► SIGNAL 14: Decorative Statistics ("10x Faster", "99.9% Growth" with no data source)
-        ├──────► SIGNAL 15: Fabricated Social Proof (Unverified quotes, fake avatars, unauthorized logos)
-        ├──────► SIGNAL 16: Excessive Badges & Tags (Visual clutter with no filtering function)
-        ├──────► SIGNAL 17: Unnecessary Icons (Forcing a generic icon onto every bullet point)
-        ├──────► SIGNAL 18: Generic CTA Copy (Repeating "Get Started" or "Learn More" 8 times)
-        ├──────► SIGNAL 19: Repeated CTA Banner Blocks (Identical full-width signup boxes every 2 scrolls)
-        ├──────► SIGNAL 20: Excessive Section Symmetry (Every section having identical column counts)
-        ├──────► SIGNAL 21: Monotone Section Heights (Every section having identical 600px height)
-        ├──────► SIGNAL 22: Excessive Centered Body Copy (Centered paragraphs longer than 3 lines)
-        ├──────► SIGNAL 23: Arbitrary Whitespace Gaps (160px gaps separating related micro-copy)
-        ├──────► SIGNAL 24: Decorative Wavy Dividers (Arbitrary SVG wave transitions between sections)
-        ├──────► SIGNAL 25: Excessive Animation / Spinning (Pulsing glowing buttons and spinning badges)
-        └──────► SIGNAL 26: Trendy Effects Without Justification (Parallax or scroll-jacking on tools)
-```
-
----
-
-## 2. The "Strip the Effects" Mental Test
-
-To verify that an interface's design strength is structural rather than decorative, the agent executes the **"Strip the Effects" Test**:
-
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│                 THE "STRIP THE EFFECTS" INTEGRITY TEST                 │
-│                                                                        │
-│ Mentally (or via CSS override) strip away:                             │
-│ • All background gradients & glowing mesh blurs                        │
-│ • All drop-shadows & elevation glows                                  │
-│ • All glassmorphism blur filters                                       │
-│ • All decorative animations & floating transformations                 │
-│                                                                        │
-│ Then inspect: DOES THE INTERFACE STILL POSSESS A STRONG DESIGN?        │
-│                                                                        │
-│ • If YES: The design has authentic structural, typographic, and        │
-│   compositional integrity. Visual effects are serving as enhancement.  │
-│                                                                        │
-│ • If NO: The design is hollow slop relying on surface decoration to     │
-│   mask weak hierarchy, generic copy, and lazy card grids.              │
-└────────────────────────────────────────────────────────────────────────┘
-```
-
----
-
-## 3. Remediation Matrix: Converting Slop into Intentional Design
-
-| Flagged Review Signal | Why It Fails | Sloppi Intentional Replacement |
-| :--- | :--- | :--- |
-| **Generic Centered Hero** | Conveys zero product-specific reality. | Choose from 10 Hero Paradigms (Split Terminal, Dense Telemetry HUD, Editorial). |
-| **Universal 3-Card Grid** | Lazy default representation for heterogeneous concepts. | Map to specific presentation models (Spec Table, Architectural Diff, Sequential Timeline). |
-| **Gradient Text Blobs** | Cheap visual gimmick that degrades readability. | Crisp high-contrast display typography with tight letter-spacing (`-0.025em`). |
-| **Centered Body Paragraphs** | Severely degrades reading speed and tracking comprehension. | Left-align body copy constrained strictly to `max-width: 65ch`. |
-| **Floating 3D Spheres** | Irrelevant decorative filler. | Replace with annotated SVG system architecture diagram or live interactive REPL. |

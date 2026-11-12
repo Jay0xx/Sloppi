@@ -1,167 +1,62 @@
-# Sloppi Master Design Research Protocol
+# Sloppi v2.0 Master Design Research & Live Observation Protocol
 
-The Master Design Research Protocol defines the systematic methodology by which a Sloppi-enabled coding agent converts an abstract user prompt and product definition into actionable, original design intelligence.
-
-Sloppi strictly rejects undirected inspiration browsing ("Find some cool websites"). Research exists exclusively to resolve concrete design questions and extract transferable principles.
-
----
-
-## 1. The Core Research Pipeline
-
-Every design research pass follows this linear progression:
+Design research in Sloppi v2.0 exists to **spark original creative directions and extract concrete visual mechanics**—never to fill out bureaucratic paperwork or name-drop famous startups from memory.
 
 ```
-PRODUCT UNDERSTANDING
-        │
-        ▼
-DESIGN PROBLEM IDENTIFICATION
-        │
-        ▼
-RESEARCH QUESTION FORMULATION
-        │
-        ▼
-SOURCE ROUTING & SELECTION
-        │
-        ▼
-DIVERSE REFERENCE SELECTION (Reference Constellation)
-        │
-        ▼
-STRUCTURAL REFERENCE ANALYSIS
-        │
-        ▼
-PRINCIPLE EXTRACTION (Rules vs. Surface Details)
-        │
-        ▼
-CROSS-REFERENCE COMPARISON (Conventions vs. Defaults)
-        │
-        ▼
-DESIGN SYNTHESIS & DESIGN THESIS
-        │
-        ▼
-STANDARDIZED RESEARCH OUTPUT
+1. INTERROGATE PRODUCT & CATEGORY CLICHÉS
+                 │
+                 ▼
+2. INSPECT LIVE REFERENCES (or declare OFFLINE_SYNTHESIS)
+                 │
+                 ▼
+3. LOG CONCRETE VISUAL OBSERVATIONS (Layout, Type, Materiality, Motion)
+                 │
+                 ▼
+4. DIVERGE INTO 3 DISTINCT CREATIVE DIRECTIONS (A vs. B vs. C)
+                 │
+                 ▼
+5. PASS THE PRE-IMPLEMENTATION ORIGINALITY GATE
 ```
 
 ---
 
-## 2. Phase A: Understand the Product
+## 1. Phase A: Rapid Product & Category Interrogation
 
-Before opening a single gallery, querying a search engine, or inspecting a reference, the agent must define the product's operational parameters across 13 core dimensions:
-
-1. **Product Category**: (e.g., Developer Infrastructure, Consumer Mobile, B2B Fintech, Creative Tool, Healthcare SaaS, Editorial).
-   *Warning*: Never assume the category from the technology stack. A Next.js or React app can be an enterprise ledger or an avant-garde magazine.
-2. **Target Users & Mental Model**: Who uses this product daily? What software environments do they inhabit (terminal, spreadsheet, social feeds, Figma)?
-3. **Primary User Goal**: What is the single most critical task the user arrives to accomplish?
-4. **Primary Conversion Action**: What constitutes immediate success (e.g., `Install via npm`, `Deploy Cloud Cluster`, `Upgrade to Pro`, `Book Demo`, `Join Waitlist`)?
-5. **Secondary & Tertiary Actions**: Ancillary pathways (e.g., `Read Documentation`, `Inspect API Reference`, `View Changelog`, `Contact Sales`).
-6. **Product Maturity**: Is this an experimental prototype, an emerging challenger brand, or an established enterprise system?
-7. **Brand Personality**: 3–4 tonal anchors (e.g., `Industrial, Calm, Precise` vs. `Vibrant, Kinetic, Approachable`).
-8. **Target Platform**: Desktop browser, mobile web, tablet canvas, or responsive multi-device.
-9. **Information Density Requirement**:
-   - *Compact / High Density*: Data tables, monitoring dashboards, code terminals.
-   - *Comfortable Density*: Standard SaaS workflows, configuration panels.
-   - *Spacious / Low Density*: Marketing landing pages, editorial essays, luxury commerce.
-10. **Technical Complexity & Operational Stakes**: What are the consequences of user error (low stakes in social apps vs. critical stakes in financial transactions or server deployments)?
-11. **Expected Usage Frequency**: Daily workflow tool (needs muscle-memory ergonomics) vs. occasional utility (needs instant obviousness).
-12. **Accessibility Requirements**: Standard WCAG AA (4.5:1 contrast, keyboard navigation) vs. strict WCAG AAA (high-contrast clinical or government compliance).
-13. **Responsive Adaptation Scope**: Pure desktop canvas vs. full mobile-first ergonomic experience.
+Before browsing references or picking tokens, answer 5 sharp questions:
+1. **Operational Reality & Persona**: What is the product's core mechanism, who uses it daily, and what environment do they live in?
+2. **Primary 5-Second Action**: What interactive proof or live instrument can the user touch in the very first viewport?
+3. **Density & Platform Priority**: Does this call for a sparse editorial broadsheet, a balanced interactive workflow, or a viewport-locked (`100dvh`) spatial workbench? Is `390px` mobile or `1440px` desktop the primary ergonomic target?
+4. **Category Cliché to Subvert**: What is the lazy AI default for this category (both Gen-1 purple SaaS slop AND Gen-2 flat `1px`-border / dark-green terminal clichés)?
+5. **Emotional & Material Metaphor**: If this software were a physical object, publication, or architectural space, what would it feel like?
 
 ---
 
-## 3. Phase B: Identify the Design Questions
+## 2. Phase B: Mandatory Reference Inspection (Zero Fake Citations)
 
-Convert the product understanding into 3 to 6 sharp, high-intent **Research Questions**.
+Route your inquiry to 2–4 diverse channels from [references/source-registry.md](../references/source-registry.md) (`awwwards.com`, `godly.website`, `minimal.gallery`, `60fps.design`, `dribbble.com`, `saaspo.com`, `loadmo.re`).
 
-An agent must not ask vague questions ("What should the site look like?"). It must interrogate specific visual and architectural problems:
-- *Visual Identity Question*: What visual language establishes institutional credibility without feeling archaic?
-- *Composition Question*: Should this interface prioritize modular bento-box density or asymmetric editorial whitespace?
-- *Hierarchy Question*: How can typography establish clear reading order without wrapping every paragraph in a bordered card?
-- *Navigation Question*: How should 24 distinct documentation sections be structured for rapid discovery?
-- *Motion Question*: What state transitions will communicate successful data synchronization without adding latency?
-
-*(Consult `sloppi/research/research-questions.md` for the question generation framework).*
-
----
-
-## 4. Phase C: Route Questions to Sources
-
-Route each formulated question to the most appropriate specialized primary and secondary sources.
-
-- Match category questions to **SaaSPO** and **Recent.design**.
-- Match whitespace and composition questions to **Minimal Gallery** and **Deck.Gallery**.
-- Match token structure and system rules to **Refero Styles**.
-- Match interaction and motion physics to **60fps.design**.
-- Match mobile touch ergonomics to **Loadmo.re**.
-- Match hero and CTA conversion questions to **Supahero** and **CTA Gallery**.
-
-*(Consult `sloppi/research/source-routing.md` for the source prioritization model and routing matrix).*
+### The Evidence Logging Rule
+Never write *"Inspired by Linear and Stripe."* For every reference inspected, document:
+- **Source / URL Inspected** (or `OFFLINE_SYNTHESIS` if browser/network tools are unavailable).
+- **Observed Compositional Ratio**: Exact spatial split, grid rhythm, and negative space behavior.
+- **Observed Typographic Mechanics**: Contrast between display and body scales, serif/sans/mono tension, tracking/leading.
+- **Observed Surface & Lighting Craft**: How depth, texture, borders, or gradients are handled.
+- **Transferable Mechanic vs. Rejected Surface Skin**: What structural principle you are extracting and what brand-specific colors/logos you are discarding.
 
 ---
 
-## 5. Phase D: Select a Reference Constellation
+## 3. Phase C: Synthesize 3 Distinct Creative Directions
 
-Never select a single website to serve as the overall visual template. Require **Reference Diversity**:
-- Select 2 to 5 distinct references, each chosen for a **different functional reason** (e.g., Ref A for hero narrative structure, Ref B for typography scale contrast, Ref C for navigation density, Ref D for motion feedback).
-- Ensure references are not stylistic clones of one another.
-
-*(Consult `sloppi/research/reference-selection.md` for the selection criteria and constellation architecture).*
+Using your observations, formulate **3 genuinely distinct creative directions** (`Direction A`, `Direction B`, `Direction C`) as specified in [doctrine/creative-direction.md](../doctrine/creative-direction.md):
+- They must differ in **spatial layout**, **typographic pairing**, **color/surface materiality**, and **signature interactive centerpiece**.
+- Evaluate all three against the **Pre-Implementation Originality Gate** and select (or hybridize) the boldest, highest-craft direction for `DESIGN.md`.
 
 ---
 
-## 6. Phase E: Structurally Analyze References
+## 4. Calibrating Research Depth to Task Scope
 
-Inspect each reference structurally across 15 standard dimensions.
-- Map the exact compositional skeleton, typographic scale ratios, color role assignments, geometric curvature, spatial rhythm, and interaction triggers.
-- **Mandatory Requirement**: Explicitly split findings into **Transferable Principles** (underlying rules) and **Non-Transferable Details** (brand-specific artifacts, exact logos, superficial decorations).
-
-*(Consult `sloppi/research/reference-analysis.md` for the analysis template and principle extraction rules).*
-
----
-
-## 7. Phase F: Cross-Reference Comparison (Convention vs. Default)
-
-Compare findings across all analyzed references:
-1. **Identify Common Patterns**: What structural mechanisms do top-tier references share?
-2. **Identify Divergences**: Where do they take radically different approaches, and why does their specific audience justify that divergence?
-3. **Convention vs. Default Test**:
-   - *Convention*: A pattern that exists because it solves a universal usability friction (e.g., sticky header with primary action on long-scroll pages).
-   - *Default*: An unthinking cliché used simply because it is common (e.g., purple gradient blobs, 3 identical cards, generic floating badges).
-4. **Identify Rejected Patterns**: Explicitly mark common industry defaults that this product will deliberately refuse to adopt.
-
----
-
-## 8. Phase G: Synthesize & Formulate the Design Thesis
-
-Synthesize the extracted principles, constraints, and opportunities into a cohesive whole:
-1. **Map Visual Tensions**: Establish the dynamic balance (e.g., `Industrial + Warm`, `Dense + Legible`, `Minimal + Expressive`).
-2. **Draft the Design Thesis**: Author a 1–2 sentence declaration stating:
-   - What the product must feel like.
-   - Why that feeling serves the user's mental model.
-   - What visual principles create that feeling.
-   - What generic conventions are deliberately rejected.
-
-*(Consult `sloppi/research/synthesis.md` for the synthesis methodology).*
-
----
-
-## 9. Phase H: Generate Standardized Research Output
-
-Document the complete research findings in the standardized format specified in `sloppi/research/research-output.md`.
-
-This document becomes the direct evidentiary foundation for the upcoming `DESIGN.md` contract.
-
----
-
-## 10. Research Depth & Stopping Criteria
-
-Match research depth strictly to task scope:
-
-| Depth Mode | Trigger Conditions | Scope of Research |
+| Task Tier | Research & Divergence Scope | Time Budget |
 | :--- | :--- | :--- |
-| **Lightweight** | Minor component tweaks, single CTA adjustments, localized bug fixes on existing systems. | 1 targeted source (e.g., CTA Gallery), 1–2 focused questions, immediate token mapping. |
-| **Standard** | New landing pages, new feature dashboards, significant section redesigns. | 2–3 sources, 3–4 questions, constellation of 3 references, structured analysis. |
-| **Deep** | Greenfield product builds, complete rebrands, multi-page web applications. | 4–6 sources, 5–8 questions, constellation of 4–5 references, full cross-reference comparison. |
-
-### The Stopping Rule
-> **Stop researching the moment uncertainty falls below the threshold where additional research would materially alter the design thesis or token definitions.**
-
-Do not collect references indefinitely. Do not turn a simple component build into a protracted research detour.
+| **Micro / Small Task** (Token fix, single component) | Inspect existing project `DESIGN.md` and tokens; 1 targeted pattern check if needed. | Immediate |
+| **Medium Task** (Hero redesign, new section, slop cleanup) | Identify current slop flaw; formulate 2–3 distinct layout/art-direction options for the section; pick the most original. | Fast & focused |
+| **Large Task** (New landing page, web app, full redesign) | Inspect 2–4 live references; generate 3 full divergent directions (A/B/C); pass Originality Gate; record in `DESIGN.md`. | Comprehensive |

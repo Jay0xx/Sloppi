@@ -1,21 +1,31 @@
 # Changelog
 
-All notable changes to the **Sloppi** skill will be documented in this file.
+All notable changes to the **Sloppi** skill are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## [2.0.0] - 2026-11-12
+
+### Added
+- **Creative Direction & 3-Direction Divergence (`doctrine/creative-direction.md`)**: Mandates generating 3 structurally and aesthetically orthogonal design directions (`Direction A`, `Direction B`, `Direction C`) differing across layout paradigm, font pairing, surface materiality, and 5-second interactive centerpiece before writing code.
+- **Pre-Implementation Design Originality Gate**: Moves originality and anti-slop screening upstream before implementation, rejecting both Generation-1 AI SaaS templates and Generation-2 "anti-slop" wireframe clichés.
+- **Mandatory Live Reference Inspection (`references/source-registry.md`, `research/protocol.md`)**: Added **Awwwards (`awwwards.com`)**, **Godly (`godly.website`)**, and **Dribbble (`dribbble.com`)** alongside `Minimal Gallery`, `60fps.design`, `SaaSPO`, and `Loadmo.re`. Enforces logging concrete visual observations (`OBSERVED` vs. `OFFLINE_SYNTHESIS`) rather than name-dropping sites from memory.
+- **Visual-First Primary Composition Gate (`implementation/protocol.md`, `audit/visual-audit.md`)**: Requires building, rendering, and inspecting the primary above-the-fold composition in a live browser before scaling to the remaining sections.
+- **Real Visual Regression Testing (`refinement/regression.md`)**: Mandates Before vs. After viewport screenshot comparisons (`390px`, `768px`, `1280px+`) to verify that refinements genuinely improve spatial composition and focal hierarchy.
+- **30-Signal Dual Anti-Slop Audit (`audit/anti-slop-audit.md`)**: Expanded from 26 to 30 signals to catch Generation-2 overfit clichés (flat `1px`-bordered wireframes, default `Inter` + `JetBrains Mono`, automatic dark-green CLI terminals, automatic white/navy ledgers, `11px` uppercase mono eyebrow addiction, and cookie-cutter `8+4` bento grids) and replaced the naive "Strip the Effects" test with the **Dual Integrity & Materiality Test**.
+
+### Changed
+- **Expressive Typography & Multi-Archetype Tokens (`design-system/typography.md`, `implementation/token-implementation.md`)**: Removed the hardcoded `'Inter'` + `'JetBrains Mono'` and `#0c0e12` dark-green single template in favor of 6 curated expressive web font pairings, fluid `clamp()` scales, and 3 distinct multi-archetype token templates.
+- **Dependency Policy (`implementation/dependency-policy.md`)**: Un-banned `motion` (`framer-motion`), interactive SVG/Canvas shaders, and headless accessible primitives (`@radix-ui`, `cmdk`, `vaul`) so interfaces achieve tactile spring choreography.
+- **Streamlined 10-Section `DESIGN.template.md`**: Condensed the bureaucratic 25-section form into a high-signal 10-section Creative Direction & Design System contract.
+- **Repository Cleanup**: Removed accidental duplicate nested `sloppi/sloppi/` directory and fixed all broken relative module links in `routing.md` and `research/protocol.md`.
+
+---
+
 ## [0.1.0] - 2026-08-15
 
 ### Added
-- **Foundational Doctrine**: 15 Core Principles, 20-pattern failure catalog, and 6-stage cognitive design reasoning framework.
-- **Design Research Protocol**: 10-axis high-intent inquiry model, 15 specialized reference channels in `source-registry.md`, and transferable principles extraction.
-- **Content & Composition Intelligence**: 7-tier Attention Budget, Section Justification Test, 10 Hero models, 8 Feature presentation layouts, and outcome-explicit CTA copywriting.
-- **Design System Engine**: Mathematical typography scales, two-tier semantic color taxonomy, 4px/8px spatial baselines, concentric border radii, and the canonical 25-section `DESIGN.md` persistent contract.
-- **Frontend Implementation Protocol**: 16-point codebase inspection matrix, 5-layer dependency hierarchy, 7-pass incremental build strategy, and Polish Trap remediation.
-- **Visual QA & Anti-Slop Audit Engine**: 4-tier Viewport Matrix, 26 AI Default Review Signals, "Strip the Effects" integrity test, and 9-field standardized audit report schema.
-- **Critique & Refinement Loop**: 5-layer root-cause diagnostic pipeline, Impact × Cost prioritization matrix, "One Iteration = One Objective" state machine, 7-point regression verification, and objective stopping rules.
-- **Operational Workflows & Checklists**: Fast-path recipes for Greenfield, Redesign, Existing System, Visual Fix, and UI Components; 4 executable agent verification checklists.
-- **Tooling Adaptability & Failure Recovery**: 7 graceful degradation protocols and epistemic honesty rules.
+- Initial foundational doctrine, research protocol, 25-section `DESIGN.md` template, and visual audit checklists.

@@ -1,6 +1,6 @@
-# Sloppi Task Routing & Complexity Scaling
+# Sloppi v2.0 Task Routing & Complexity Scaling
 
-The Task Router determines the exact subset of Sloppi modules, research protocols, and audit passes required for a given task, preventing bureaucratic over-engineering on simple fixes while guaranteeing comprehensive rigor on complex projects.
+The Task Router determines the exact subset of Sloppi v2.0 modules, creative divergence passes, and visual verification gates required for a given task—preventing bureaucratic over-engineering on quick fixes while guaranteeing bold art direction and engineering rigor on full builds.
 
 ---
 
@@ -15,22 +15,27 @@ The Task Router determines the exact subset of Sloppi modules, research protocol
 ├────────────────────────────────────────────────────────────────────────┤
 │ 2. SMALL TASK                                                          │
 │ Scope:    Redesign a button primitive, improve navbar, fix mobile tap. │
-│ Protocol: Inspect existing tokens → implement component → audit state. │
-│ Modules:  [ component-strategy.md, interaction-implementation.md,      │
-│             responsive-audit.md ]                                      │
+│ Protocol: Inspect project DESIGN.md → implement 6 states → verify DOM. │
+│ Modules:  [ design-system/component-rules.md,                          │
+│             implementation/interaction-implementation.md,              │
+│             audit/responsive-audit.md ]                                │
 ├────────────────────────────────────────────────────────────────────────┤
 │ 3. MEDIUM TASK                                                         │
-│ Scope:    Redesign a hero section, build new feature bento, fix page.  │
-│ Protocol: Content architecture → compose layout → implement → audit →   │
-│           targeted refinement.                                         │
-│ Modules:  [ content/page-architecture.md, layout-implementation.md,    │
-│             audit/visual-audit.md, refinement/iteration.md ]           │
+│ Scope:    Redesign a hero section, build a new section, fix AI slop.   │
+│ Protocol: Capture Before screenshot → formulate 2–3 distinct section   │
+│           concepts → implement winning concept → compare Before/After. │
+│ Modules:  [ doctrine/creative-direction.md,                            │
+│             content/page-architecture.md,                              │
+│             audit/visual-audit.md, refinement/regression.md ]          │
 ├────────────────────────────────────────────────────────────────────────┤
 │ 4. LARGE TASK                                                          │
-│ Scope:    Greenfield web application, full landing page, redesign.     │
-│ Protocol: Full 14-Stage Closed-Loop Lifecycle.                         │
-│ Modules:  [ All Research, Content, Design System, DESIGN.md,           │
-│             Implementation, Audit, and Refinement Modules ]            │
+│ Scope:    Greenfield web app, full landing page, full app redesign.    │
+│ Protocol: Full 8-Stage Creative Director Lifecycle (Live References →  │
+│           3-Direction Divergence → Originality Gate → DESIGN.md →      │
+│           Primary Composition Prototype → Visual Proof Gate → Scale).  │
+│ Modules:  [ doctrine/creative-direction.md, references/source-registry,│
+│             design-system/typography.md, templates/DESIGN.template.md, │
+│             implementation/protocol.md, audit/anti-slop-audit.md ]     │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -40,11 +45,11 @@ The Task Router determines the exact subset of Sloppi modules, research protocol
 
 | Incoming User Request | Required Operational Workflow | Primary Modules to Load |
 | :--- | :--- | :--- |
-| **New Full Project / Website** | `workflows/new-project.md` | Full 14-stage lifecycle (`research/`, `content/`, `design-system/`, `DESIGN.md`, `implementation/`, `audit/`, `refinement/`). |
-| **Existing Codebase Redesign** | `workflows/redesign.md` | `implementation/project-inspection.md`, `research/`, `content/`, `design-system/`, `audit/`. |
-| **Component Library Extension** | `workflows/component.md` | `implementation/component-strategy.md`, `interaction-implementation.md`, `audit/accessibility-audit.md`. |
-| **Mobile / Responsive Layout Bug**| `workflows/visual-fix.md` | `implementation/responsive-implementation.md`, `audit/responsive-audit.md`, `refinement/regression.md`. |
-| **Generic / Ugly AI Slop Cleanup**| `workflows/visual-fix.md` | `audit/anti-slop-audit.md`, `audit/hierarchy-audit.md`, `refinement/critique.md`. |
+| **New Full Project / Website / Web App** | [workflows/new-project.md](workflows/new-project.md) | [doctrine/creative-direction.md](doctrine/creative-direction.md), [references/source-registry.md](references/source-registry.md), [design-system/typography.md](design-system/typography.md), [templates/DESIGN.template.md](templates/DESIGN.template.md), [implementation/protocol.md](implementation/protocol.md). |
+| **Existing Codebase Redesign** | [workflows/redesign.md](workflows/redesign.md) | [doctrine/creative-direction.md](doctrine/creative-direction.md), [implementation/project-inspection.md](implementation/project-inspection.md), [audit/anti-slop-audit.md](audit/anti-slop-audit.md), [refinement/regression.md](refinement/regression.md). |
+| **Component Library / Widget Extension** | [workflows/component.md](workflows/component.md) | [design-system/component-rules.md](design-system/component-rules.md), [implementation/interaction-implementation.md](implementation/interaction-implementation.md), [audit/accessibility-audit.md](audit/accessibility-audit.md). |
+| **Mobile / Responsive Layout Bug** | [workflows/visual-fix.md](workflows/visual-fix.md) | [implementation/responsive-implementation.md](implementation/responsive-implementation.md), [audit/responsive-audit.md](audit/responsive-audit.md), [refinement/regression.md](refinement/regression.md). |
+| **Generic AI Slop or Flat Wireframe Cleanup** | [workflows/visual-fix.md](workflows/visual-fix.md) | [doctrine/creative-direction.md](doctrine/creative-direction.md), [audit/anti-slop-audit.md](audit/anti-slop-audit.md), [refinement/critique.md](refinement/critique.md). |
 
 ---
 
@@ -53,19 +58,19 @@ The Task Router determines the exact subset of Sloppi modules, research protocol
 When project constraints, user instructions, and design heuristics conflict, resolve in strict order:
 
 ```
-1. EXPLICIT USER REQUIREMENTS (User's intentional directives outrank defaults)
+1. EXPLICIT USER REQUIREMENTS (User's intentional directives always win)
        ↓
 2. CORE PRODUCT & FUNCTIONAL REQUIREMENTS (Task completion & business logic)
        ↓
-3. ACCESSIBILITY & USABILITY STANDARDS (WCAG AA/AAA, keyboard traversal, touch ergonomics)
+3. ACCESSIBILITY & USABILITY STANDARDS (WCAG AA/AAA, keyboard focus, ≥44px targets)
        ↓
-4. EXISTING CODEBASE ARCHITECTURE & CONSTRAINTS (Framework maturity & existing tokens)
+4. EXISTING CODEBASE ARCHITECTURE & CONSTRAINTS (Framework & existing system)
        ↓
-5. PROJECT DESIGN.MD CONTRACT (Persistent design decisions & ratios)
+5. PROJECT DESIGN.MD CREATIVE CONTRACT (Winning direction, font voice, materiality)
        ↓
-6. SYNTHESIZED RESEARCH EVIDENCE (Transferable principles from source registry)
+6. OBSERVED LIVE REFERENCE EVIDENCE (Transferable mechanics from source registry)
        ↓
-7. SLOPPI HEURISTIC GUIDELINES (Anti-default rules & layout best practices)
+7. SLOPPI ORIGINALITY & ANTI-SLOP GUARDRAILS (Defeating Gen-1 & Gen-2 clichés)
        ↓
-8. AGENT PERSONAL PREFERENCE (Strictly lowest priority; never override requirements)
+8. AGENT DEFAULT HABITS (Strictly lowest priority; never fall back to autopilot)
 ```

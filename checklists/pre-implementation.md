@@ -1,17 +1,15 @@
-# Sloppi Agent Checklist: Pre-Implementation
+# Sloppi v2.0 Agent Checklist: Pre-Implementation
 
-Execute this checklist before writing any frontend JSX, HTML, or CSS.
+Execute this gate right before writing frontend code.
 
 ---
 
 ```markdown
-## Pre-Implementation Checklist
+## Pre-Implementation Checklist (v2.0)
 
-- [ ] **1. Codebase Architecture Inspected**: Framework, styling system, component directory, and maturity tier identified.
-- [ ] **2. DESIGN.md Contract Established**: All 25 canonical sections defined (Typography scale, Color roles, Spatial baseline).
-- [ ] **3. Token Integration Strategy Mapped**: Greenfield `:root` CSS variables or existing Tailwind theme mapped without duplication.
-- [ ] **4. Content Model Ready**: Real domain specs, falsifiable technical claims, and outcome-explicit CTAs drafted.
-- [ ] **5. Intentional Asset Absence Plan**: Vector schematics, monospace terminals, or real data chosen in place of stock photos.
-- [ ] **6. Single Icon Family Selected**: Exactly one curated icon library chosen with uniform stroke width (1.5px/2.0px).
-- [ ] **7. 5-Layer Dependency Sequence Planned**: Tokens → Primitives → Domain Components → Sections → Layouts.
+- [ ] **1. Streamlined 10-Section `DESIGN.md` Locked**: Winning Creative Direction (A/B/C), reference observations, font stack, semantic tokens, and interactive centerpiece are documented in `DESIGN.md`.
+- [ ] **2. Distinctive Web Fonts Loaded**: Actual Google Fonts / web fonts (`next/font/google` or `@import`) configured for `--font-display`, `--font-sans`, and `--font-mono` (never falling back to raw `Inter` / `system-ui`).
+- [ ] **3. Semantic Tokens Injected in `:root`**: Colors, fluid `clamp()` typography, surface materiality, and motion curves defined in global CSS.
+- [ ] **4. Visual-First Build Order Planned**: Ready to build and render the **Primary Composition (Above-the-Fold Hero / Core Workspace) FIRST** and inspect it in the live browser before scaling remaining sections.
+- [ ] **5. Motion & Headless Dependencies Ready**: `motion` (`framer-motion`) and single curated icon library (`lucide-react` or `@phosphor-icons/react`) configured with `prefers-reduced-motion` support.
 ```
