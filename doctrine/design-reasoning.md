@@ -53,20 +53,20 @@ How does the user *experience* the product's core mechanism within 5 seconds of 
 
 ## Stage 2: Live Reference Inspection & Evidence Extraction
 
-Consult [references/source-registry.md](../references/source-registry.md) and inspect 2–4 references (`awwwards.com`, `godly.website`, `minimal.gallery`, `60fps.design`, `dribbble.com`, `saaspo.com`, `loadmo.re`).
-- Record **concrete observable mechanics**: exact grid ratios, typographic scale jumps, surface lighting/texture, and motion choreography.
-- Never copy a single site's skin; synthesize orthogonal mechanics from disparate references.
+Consult [research/source-routing.md](../research/source-routing.md) and [references/source-registry.md](../references/source-registry.md) to route by design question and inspect 2–4 actual examples or clips (opening deep links rather than thumbnails).
+- Record **deep links**, **observed composition/behavior** (and for motion: **trigger, what moves, what stays anchored, how it settles**), **adaptable principle**, **where it serves this product**, and mark `[INFERRED]` details.
+- Never copy a single site's skin or auto-adopt a demo library; synthesize orthogonal mechanics across references.
 
 ---
 
 ## Stage 3: 3-Direction Creative Divergence
 
-Generate **3 distinct creative concepts** (`Direction A`, `Direction B`, `Direction C`) as defined in [doctrine/creative-direction.md](creative-direction.md):
-- **Direction A**: High-craft evolution of domain conventions.
-- **Direction B**: Editorial, archival, or spatial subversion of the category.
-- **Direction C**: Tactile instrument, kinetic poster, or atmospheric canvas approach.
+Generate **3 distinct creative concepts** (`Direction A`, `Direction B`, `Direction C`) as defined in [doctrine/creative-direction.md](creative-direction.md) and [research/synthesis.md](../research/synthesis.md):
+- **Direction A**: Quiet / hierarchy-led direction relying on composition, typography, and spacing.
+- **Direction B**: Editorial, archival, or section-led subversion of category conventions.
+- **Direction C**: Motion-led or tactile-instrument direction naming the specific product moment where motion improves feedback, orientation, or continuity.
 
-Each direction must specify a different **layout structure**, **font pairing**, **color/materiality system**, and **interactive centerpiece**.
+Each direction must make a different choice about **composition**, **typography**, and **interaction** (plus palette/materiality).
 
 ---
 
@@ -74,7 +74,7 @@ Each direction must specify a different **layout structure**, **font pairing**, 
 
 Evaluate Directions A, B, and C against the **Pre-Implementation Originality Gate** ([doctrine/creative-direction.md](creative-direction.md#3-the-pre-implementation-design-originality-gate)):
 - Reject any direction that relies on overused defaults—including Sloppi v1's own overused tropes (e.g., defaulting to `Inter` + `JetBrains Mono`, `#0b0d13` + `#00d084` terminals, or flat white/navy `1px` bordered tables).
-- Formulate a **Design Thesis** for the winning direction that locks in its physical metaphor, visual tension, typographic voice, and signature interactive mechanic.
+- Formulate a **Design Thesis** for the winning direction that locks in its physical metaphor, visual tension, typographic voice, and interaction posture.
 
 ---
 
@@ -83,10 +83,10 @@ Evaluate Directions A, B, and C against the **Pre-Implementation Originality Gat
 Translate the winning direction into a cohesive system in `DESIGN.md`:
 1. **Distinctive Typography**: Pair an expressive, high-character Display/Headline typeface with a razor-sharp UI/Body typeface and a purposeful Monospace face. Use fluid `clamp()` sizing and optical tracking.
 2. **Perceptual Color & Materiality**: Define semantic tokens (`--color-canvas`, `--color-surface`, `--color-text-primary`, `--color-brand`, etc.) backed by rich materiality—whether warm paper grain, brushed metallic bevels, bold chromatic poster blocks, or deep optical refraction.
-3. **Choreographed Motion**: Define spring physics (`stiffness`, `damping`, `mass`), scroll-linked reveals, and state transitions alongside `@media (prefers-reduced-motion: reduce)` fallbacks.
+3. **Behavior-First Interaction & Stack-Fit Motion**: Start from intended behavior, choose a stack-fitting implementation after checking dependency cost and licensing, and specify trigger, end state, touch, keyboard, repeated activation, and reduced-motion behavior ([implementation/interaction-implementation.md](../implementation/interaction-implementation.md)).
 
 ---
 
 ## Stage 6: Visual-First Primary Composition Prototype
 
-Crystallize the contract in `DESIGN.md`, then **implement and render the primary above-the-fold composition first**. Inspect the live browser render to confirm the art direction is visually striking before scaling to the rest of the interface.
+Crystallize the contract in `DESIGN.md`, then **implement and prototype the primary composition (plus any proposed effect) first**. Verify layout and hierarchy via **screenshots** and timing/continuity via a **browser recording or interaction trace** before scaling to the rest of the interface.

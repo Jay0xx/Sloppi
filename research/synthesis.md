@@ -8,18 +8,21 @@ After analyzing references, never jump straight to a single safe design. First *
 
 ## 1. The 3-Direction Divergence Matrix
 
-Before authoring `DESIGN.md`, compare three meaningfully different creative directions across four orthogonal vectors:
+Before authoring `DESIGN.md`, turn your logged reference observations into **three meaningfully different creative directions** (`Direction A`, `Direction B`, `Direction C`). Each direction MUST make a **different choice about composition, typography, and interaction** (alongside palette/materiality):
 
-| Dimension | Direction A: Elevated Domain Convention | Direction B: Editorial / Archival Subversion | Direction C: Tactile Instrument / Spatial Canvas |
+| Dimension | Direction A: Quiet / Hierarchy-Led | Direction B: Elevated Domain / Section-Led | Direction C: Motion-Led / Spatial Instrument |
 | :--- | :--- | :--- | :--- |
-| **Core Metaphor** | *What physical or digital world does it inhabit?* | *How does an editorial, print, or cartographic lens reframe it?* | *How does a tactile hardware device or kinetic canvas reframe it?* |
-| **Spatial Composition** | e.g., Asymmetric split workbench | e.g., Multi-column broadsheet + sticky margin proofs | e.g., Full-bleed interactive instrument + floating dock |
-| **Typographic Pairing** | Font pairing #1 (Display + UI + Mono) | Font pairing #2 (Expressive Serif/Display + Sans + Mono) | Font pairing #3 (Geometric/Industrial Display + Sans + Mono) |
-| **Palette & Materiality** | Surface ground, accent, lighting & texture #1 | Surface ground, accent, lighting & texture #2 | Surface ground, accent, lighting & texture #3 |
-| **5-Second Interactive Hook** | Live interactive mechanic #1 | Live interactive mechanic #2 | Live interactive mechanic #3 |
-| **Originality Gate Score** | *Does it look like 100 other sites?* | *Why is this memorable and distinct?* | *Why is this memorable and distinct?* |
+| **Composition Choice** | e.g., Single-column broadsheet + generous margin whitespace (calibrated via `deadsimplesites.com`) | e.g., Asymmetric split sections tailored per beat (informed by `unsection.com` / `saaspo.com`) | e.g., Experimental navigation or viewport-locked interactive canvas (informed by `hoverstat.es` / `eyecannndy.com`) |
+| **Typography Choice** | Font pairing #1 (e.g., high-contrast display serif + restrained sans; scale & spacing carry order) | Font pairing #2 (e.g., crisp architectural sans + tabular mono) | Font pairing #3 (e.g., kinetic geometric display + condensed UI + mono) |
+| **Interaction Posture** | **Minimal motion**: relies on typographic hierarchy, spacing, and instant high-contrast states | **Focused micro-feedback**: lightweight transitions anchored at user controls | **Motion-led**: names the exact **product moment** where motion improves **feedback, orientation, or continuity** |
+| **Palette & Materiality** | Surface ground, ink contrast, and texture #1 | Surface ground, accent, lighting & texture #2 | Surface ground, accent, lighting & texture #3 |
+| **Primary Viewport Focus** | Editorial focal hierarchy / live readable proof | Domain-authentic structural workflow | Live interactive instrument or anchored transition moment |
+| **Originality Gate Score** | *Does typography + space stand alone without fluff?* | *Does it subvert category templates?* | *Does motion serve feedback, orientation, or continuity?* |
 
-> **Selection Rule**: If `Direction A` looks like a standard category template—or looks like a repeat of your own previous projects (e.g., flat `1px` border boxes or a standard dark-green CLI terminal)—**reject Direction A** and select `Direction B` or `Direction C` (or synthesize the best interactive mechanics of A with the distinctive art direction of B/C).
+> **Selection Rules**:
+> 1. **Quiet Directions Need No Decorative Motion**: If typographic scale, spatial rhythm, and instant clarity solve the brief (test against `deadsimplesites.com`), a quiet direction can win on hierarchy and spacing alone.
+> 2. **Motion-Led Directions Must Name the Product Moment**: Never propose motion as generic hero spectacle. State the exact moment (e.g., confirm-to-receipt transition, sheet expansion, error/success state shift) where the effect improves **feedback, orientation, or continuity**.
+> 3. **Reject Clones**: If any direction looks like a standard category template or repeats your own recent projects (e.g., flat `1px` border boxes or a dark-green CLI terminal), reject or mutate it before `DESIGN.md`.
 
 ---
 

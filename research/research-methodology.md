@@ -32,31 +32,29 @@ An agent does not need to research all 15 sources for every task. Before researc
 
 ### Step 1: Identify Information Needs
 Determine the exact design questions that require answers:
-- What information density and terminology does this product's audience expect? (Consult **SaaSPO**)
-- What typography hierarchy and color balance best conveys the brand tone? (Consult **Refero Styles**, **Minimal Gallery**)
-- How should the primary value entry point be structured? (Consult **Supahero**, **CTA Gallery**)
-- What navigation and wayfinding model fits the link count? (Consult **Navbar Gallery**)
-- What feedback physics and transitions will clarify state changes? (Consult **60fps.design**)
-- How should mobile screens reorganize the desktop information architecture? (Consult **Loadmo.re**)
+- What typography pairing, optical scale, and reading hierarchy fits the voice? (Start with **Typewolf**)
+- How should a specific section or page element be structured? (Start with **Unsection**, plus **Supahero** / **Navbar/CTA/Deck/Footer Galleries**)
+- What gesture behavior or state-transition feedback clarifies touch/mobile flows? (Start with **Spotted in Prod**, paired with **60fps.design**, **Loadmo.re**, or **Distortion Waves** / **Dissolve**)
+- What experimental composition, mood, or pacing widens creative options? (Use **Hover States**, **Cosmos**, **Eyecandy**, **Awwwards**, **Godly**)
+- How much does the composition communicate with minimal motion? (Benchmark against **Dead Simple Sites** and **Minimal Gallery**)
+- What domain conventions should we adopt or subvert, and what stack-fit tools exist? (Use **SaaSPO**, **Refero Styles**, and **DesignEng Tools** followed to its upstream source)
 
-### Step 2: Source Routing
-Use the `references/source-registry.md` to select 2 to 3 targeted sources.
-- **Do not** consult generic Dribbble/Pinterest art boards for technical SaaS tools.
-- **Do not** consult enterprise directories when designing an expressive consumer product.
+### Step 2: Question-Driven Source Routing
+Use [research/source-routing.md](source-routing.md) and [references/source-registry.md](../references/source-registry.md) to select 2 to 4 targeted sources and open actual examples or clips.
+- **Do not** browse feeds randomly or cite thumbnails without opening the example/clip.
+- **Do not** treat interactive demos (`libraries.dev/waves`, `dissolve.rselmi.com`, `oxyn.space`, `wobli.space`) as automatic dependencies; verify demo behavior separately from implementation docs.
 
 ### Step 3: Intelligence Extraction (What to Look For)
-When inspecting research references, extract:
-1. **Mathematical Ratios**: Exact type scale steps, line-height proportions, container widths, padding units.
-2. **Semantic Mappings**: How colors are assigned to functional roles (what color is the canvas? What color indicates an active state?).
-3. **Negative Space Architecture**: Where does the page breathe? How do margins separate major narrative chapters?
-4. **Content Scaffolding**: How are technical terms, metrics, code snippets, and customer proofs framed?
+When inspecting research references, log:
+1. **Deep Link & Verification Status**: Exact example/clip URL, plus `[INFERRED]` on any unverified timing/internals or status/fallback if a demo is inaccessible.
+2. **Observed Composition & Typographic Ratios**: Scale steps, line-height proportions, reading measure, negative space rhythm.
+3. **Motion Capture (when applicable)**: Trigger, what moves, what stays anchored, and how the interaction settles.
+4. **Adaptable Principle & Product Fit**: The structural/behavioral rule worth adapting and where it serves the current product.
 
 ### Step 4: Cross-Domain Synthesis
-Combine insights from disparate sources into a cohesive whole:
-- Take **layout architecture** from a top developer tool in SaaSPO.
-- Take **typographic restraint and whitespace** from Minimal Gallery.
-- Take **micro-interaction feedback timing** from 60fps.design.
-- Ground them in a unified token system inside `DESIGN.md`.
+Feed logged insights into the 3-direction divergence ([research/synthesis.md](synthesis.md)):
+- Contrast a **quiet hierarchy/spacing direction** (benchmarked against `deadsimplesites.com` and `typewolf.com`) with section-led and motion-led alternatives that name the exact product moment for feedback, orientation, or continuity.
+- Ground the winning direction in `DESIGN.md` with explicit stack-fit, cost, and license checks before coding.
 
 ---
 

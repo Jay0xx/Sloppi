@@ -14,30 +14,30 @@
 
 ---
 
-## 2. Live Reference Observations (`OBSERVED` vs. `OFFLINE_SYNTHESIS`)
-- **Reference Mode**: `[OBSERVED (Live Browser / Search) | OFFLINE_SYNTHESIS]`
-- **Reference 1 — `[Name / URL]`**:
-  - *Observed Layout & Spatial Ratio*: [Exact grid/viewport mechanics observed]
-  - *Observed Typography & Materiality*: [Font contrast, surface texture/lighting]
-  - *Transferable Principle Extracted*: [The rule we are adapting]
-- **Reference 2 — `[Name / URL]`**:
-  - *Observed Motion / Interactive Hook*: [Choreography and state feedback observed]
-  - *Transferable Principle Extracted*: [The mechanic we are adapting]
+## 2. Live Reference Observations (`OBSERVED`, `[INFERRED]`, or `OFFLINE_SYNTHESIS`)
+- **Reference Mode**: `[OBSERVED (Live Browser / Search) | PARTIAL (mark [INFERRED] items) | OFFLINE_SYNTHESIS]`
+- **Reference 1 — `[Registry Source / Deep Link URL]`**:
+  - *Observed Behavior or Composition*: [Exact layout, typographic hierarchy, or interaction observed in actual example/clip]
+  - *Motion Capture (if applicable)*: Trigger `[...]` · Moves `[...]` · Anchored `[...]` · Settles `[...]` *(tag unverified values `[INFERRED]`)*
+  - *Design Principle Worth Adapting*: [Transferable rule extracted]
+  - *Where It Serves This Product*: [Exact screen, section, or product moment]
+- **Reference 2 — `[Registry Source / Deep Link URL]`**:
+  - *Observed Behavior or Composition*: [...]
+  - *Design Principle Worth Adapting & Product Fit*: [...]
 
 ---
 
 ## 3. Three-Direction Creative Divergence (A vs. B vs. C)
 
-| Dimension | Direction A: [Name] | Direction B: [Name] | Direction C: [Name] |
+| Dimension | Direction A: [Name — e.g., Quiet / Hierarchy-Led] | Direction B: [Name — e.g., Section / Domain-Led] | Direction C: [Name — e.g., Motion-Led / Spatial] |
 | :--- | :--- | :--- | :--- |
-| **Visual Metaphor** | [Metaphor A] | [Metaphor B] | [Metaphor C] |
-| **Spatial Layout** | [Layout structure A] | [Layout structure B] | [Layout structure C] |
-| **Font Pairing** | [Display + Sans + Mono A] | [Display + Sans + Mono B] | [Display + Sans + Mono C] |
+| **Composition Choice** | [Layout structure A] | [Layout structure B] | [Layout structure C] |
+| **Typography Choice** | [Display + Sans + Mono A] | [Display + Sans + Mono B] | [Display + Sans + Mono C] |
+| **Interaction Choice** | [Quiet hierarchy & spacing / minimal motion] | [Focused micro-feedback at specific controls] | [Motion-led: product moment improving feedback, orientation, or continuity] |
 | **Palette & Materiality** | [Colors, lighting & texture A] | [Colors, lighting & texture B] | [Colors, lighting & texture C] |
-| **5-Sec Interactive Hook** | [Interactive centerpiece A] | [Interactive centerpiece B] | [Interactive centerpiece C] |
 
 - **Selected Winning Direction**: **[Direction A / B / C or Hybrid]**
-- **Why It Won the Originality Gate**: [1–2 sentences explaining why this direction is unmistakably original, passes the Silhouette Squint Test, and avoids both SaaS templates and flat wireframes.]
+- **Why It Won the Originality Gate**: [1–2 sentences explaining why this direction is unmistakably original, fits the product moment, and avoids both SaaS templates and flat wireframes.]
 
 ---
 
@@ -92,12 +92,17 @@
 
 ---
 
-## 8. Signature Interactive Centerpiece & Motion Physics
-- **The 5-Second Interactive Centerpiece**: [Detailed behavior of the primary interactive widget/canvas/instrument.]
-- **Motion & Spring Choreography**:
-  - *Primary Spring*: `stiffness: ..., damping: ..., mass: ...`
-  - *Reveal / Easing*: `cubic-bezier(0.16, 1, 0.3, 1)`
-  - *Reduced Motion*: Full `@media (prefers-reduced-motion: reduce)` and `MotionConfig` support.
+## 8. Intended Behavior, Motion Contract & Stack Fit
+- **Product Moment & Intended Behavior**: [What this interaction clarifies—feedback, orientation, or continuity—or explicitly note "Quiet direction: hierarchy & spacing carry order with minimal motion."]
+- **Stack Fit, Dependency Cost & License**: [Native CSS / View Transitions / `motion` / etc.; bundle cost, peer constraints, and license check—never auto-adopt demo packages]
+- **Proposed Effect Specification**:
+  - *Trigger*: [Event, gesture, or threshold]
+  - *End State & Anchors*: [What moves, what stays anchored, how it settles]
+  - *Touch Behavior*: [Tap/drag ergonomics, $\ge 44\times 44\text{px}$ target, zero hover dependency]
+  - *Keyboard Behavior*: [`Tab`/`Enter`/`Space`/`Escape` parity, visible `:focus-visible`, focus preserved]
+  - *Repeated Activation*: [Mid-flight cancellation/reversal safety, no queued backlog]
+  - *Reduced Motion*: [`@media (prefers-reduced-motion: reduce)` / `MotionConfig` behavior preserving state clarity]
+- **Verification Plan**: Prototyped inside primary composition; **screenshots** for layout/hierarchy + **browser recording or interaction trace** for timing/continuity.
 
 ---
 

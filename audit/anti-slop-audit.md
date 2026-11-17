@@ -38,8 +38,8 @@ The Anti-Slop Audit screens interfaces against **both** generations of AI fronte
 25. **The "Warm Alabaster + Navy Ink Ledger" Reflex**: Automatically styling every fintech or B2B app with `#fbf9f5`/`#ffffff`, `#102A56` navy, and flat `1px` bordered tables.
 26. **The Cookie-Cutter `8+4` Bento Reflex**: Replacing a 3-card grid with a standard `col-span-8` + `col-span-4` bento grid without bespoke interactive content.
 27. **Timid Typographic Scale Contrast**: Display headlines (`32px–40px`) barely larger than section titles (`24px–28px`), lacking sculptural hero presence.
-28. **Static Above-the-Fold Viewport**: A hero that only shows static text and a static box rather than a live 5-second interactive instrument.
-29. **Lifeless CSS-Only Micro-States**: Missing spring choreography, shared-layout transitions, or tactile active states because animation libraries were unnecessarily avoided.
+28. **Generic Static Hero Boilerplate**: A hero with a canned tagline + placeholder screenshot where neither commanding typographic proof (in a quiet direction) nor a purposeful product interaction is present.
+29. **Dead Controls or Unjustified Demo Effects**: Either interactive controls have zero hover/focus/active/touch/reduced-motion state feedback, OR a heavy reference-demo effect (`waves`, particles, glitch text, idle loops) was bolted on without serving feedback, orientation, or continuity.
 30. **Cross-Project Self-Plagiarism**: Reusing the exact same layout skeleton, font stack, or color palette from another recent project in the workspace.
 
 ---

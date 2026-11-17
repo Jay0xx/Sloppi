@@ -1,8 +1,10 @@
 # Sloppi Motion & Micro-Interaction Architecture
 
-Motion in Sloppi is governed by physical purpose, spatial continuity, and user feedback. Grounded in research from **60fps.design**, motion is treated as an ergonomic communication channel rather than theatrical decoration.
+Motion in Sloppi starts from **intended behavior**—clarifying **feedback**, **orientation**, or **continuity** rather than acting as theatrical decoration or an automatic default effect. Grounded in live behavioral analysis from **Spotted in Prod**, **60fps.design**, and **Dead Simple Sites** (as the minimal-motion benchmark), motion is earned only where hierarchy and spacing alone are insufficient.
 
-A coding agent must never animate elements gratuitously or introduce sluggish fade-in delays that block user reading and interaction.
+A coding agent must never animate elements gratuitously, install heavy demo libraries by reflex, or introduce sluggish fade-in delays that block reading and interaction.
+
+> **Implementation & Verification Contract**: For stack-fit selection, dependency cost & licensing checks, the 7-field Proposed Effect Specification (`Trigger`, `End State`, `Touch`, `Keyboard`, `Repeated Activation`, `Reduced Motion`, `Moment`), primary-composition prototyping, and recording/trace verification, follow [implementation/interaction-implementation.md](../implementation/interaction-implementation.md).
 
 ---
 

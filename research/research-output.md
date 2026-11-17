@@ -47,27 +47,28 @@ This document serves as the evidentiary foundation that directly informs the cre
 
 ## 4. Selected Reference Constellation
 
-| Reference Name | URL | Selected For (Domain) | Specific Question Answered |
-| :--- | :--- | :--- | :--- |
-| **Reference A** | `[URL]` | *Composition & Layout* | [Question 1] |
-| **Reference B** | `[URL]` | *Typography & Scale* | [Question 2] |
-| **Reference C** | `[URL]` | *Navigation & Density* | [Question 3] |
+| Reference Name | Registry Channel | Deep Link Inspected | Verification Status (`OBSERVED` / `PARTIAL` / `INACCESSIBLE`) | Selected For (Design Question) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Reference A** | `[e.g., Typewolf]` | `[Actual example/live site URL]` | `OBSERVED` | *Typography & Hierarchy* |
+| **Reference B** | `[e.g., Unsection]` | `[Actual section example URL]` | `OBSERVED` | *Section Composition* |
+| **Reference C** | `[e.g., Spotted in Prod]` | `[Actual clip URL]` | `PARTIAL ([INFERRED] timings)` | *State Feedback & Gestures* |
 
 ---
 
-## 5. Reference Structural Analysis
+## 5. Reference Structural & Behavioral Analysis
 
-### Reference A: [Name] (`[URL]`)
-- **Composition & Space**: [Structural layout findings]
-- **Typographic Scale**: [Scale steps, line-height proportions]
-- **Color Taxonomy**: [Canvas ground, text hierarchy, accent roles]
-- **Geometry & Elevation**: [Radii scale, border width, shadow depth]
-- **Interaction & Motion**: [Transition timings, micro-feedback]
-- **Transferable Principles**:
-  - *Principle 1*: [Extracted reusable rule]
-  - *Principle 2*: [Extracted reusable rule]
-- **Non-Transferable Details**:
-  - *Detail 1*: [Brand-specific color, logo, or proprietary illustration to discard]
+### Reference A: [Name] (`[Deep Link URL]`)
+- **Verification Status**: `[OBSERVED (Live Browser) | PARTIAL (mark [INFERRED] items) | INACCESSIBLE (<status> — fallback used)]`
+- **Observed Composition or Behavior**: [Exact spatial layout, typographic hierarchy, surface materiality, or interaction behavior seen in the actual example/clip]
+- **Motion Capture (if interactive/motion-relevant)**:
+  - *Trigger*: [Event, gesture, or threshold]
+  - *What Moves*: [Layers, fields, or coordinates animating]
+  - *What Stays Anchored*: [Frames, metrics, or buttons held steady]
+  - *How It Settles*: [End state, easing/spring settlement, reset behavior; mark unverified values `[INFERRED]`]
+- **Implementation Separation Check** *(if demo/tool index)*: [Observed demo behavior vs. upstream source, stack fit, dependency cost, and license]
+- **Design Principle Worth Adapting**: [Extracted reusable compositional, typographic, or behavioral rule]
+- **Where It Serves the Current Product**: [Specific screen, section, or product moment—feedback, orientation, continuity, or quiet clarity]
+- **Non-Transferable Details**: [Brand colors, proprietary artwork, copy, or heavy demo dependencies to discard]
 
 *(Repeat decomposition for Reference B, Reference C, etc.)*
 

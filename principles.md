@@ -10,13 +10,13 @@ Sloppi v2.0 is a creative direction and design engineering system that prevents 
 │    Token consistency without original art direction produces neat,     │
 │    accessible boredom. Lead with visual storytelling and point of view.│
 │                                                                        │
-│ 2. MANDATORY REFERENCE INSPECTION (ZERO NAME-DROPPING)                 │
-│    Inspect actual live designs (`awwwards.com`, `godly.website`,       │
-│    `minimal.gallery`, `60fps.design`) and log what you observed.       │
+│ 2. QUESTION-ROUTED REFERENCE INSPECTION (ZERO NAME-DROPPING)             │
+│    Route by design question across the source registry, open actual    │
+│    examples/clips, log deep links + observed mechanics + `[INFERRED]`. │
 │                                                                        │
 │ 3. THREE DISTINCT DESIGN DIRECTIONS BEFORE CODE                        │
-│    Always diverge into 3 orthogonal creative directions (differing in  │
-│    layout paradigm, font pairing, materiality, and interactive hook).  │
+│    Always diverge into 3 directions differing in composition,          │
+│    typography, and interaction (quiet vs. justified motion-led).       │
 │                                                                        │
 │ 4. THE PRE-IMPLEMENTATION ORIGINALITY GATE                             │
 │    Reject any concept that resembles a standard SaaS template OR       │
@@ -30,17 +30,17 @@ Sloppi v2.0 is a creative direction and design engineering system that prevents 
 │    Never hide weak layout behind purple blur blobs—and never strip away│
 │    all materiality until the site is just flat `1px`-bordered boxes.   │
 │                                                                        │
-│ 7. THE 5-SECOND INTERACTIVE CENTERPIECE                                │
-│    Every hero or primary workspace must give the user a live, domain-  │
-│    authentic instrument, canvas, or sandbox to touch within 5 seconds. │
+│ 7. PRODUCT-MOMENT CLARITY (QUIET OR INTERACTIVE)                       │
+│    Quiet directions prove clarity via hierarchy and spacing; motion-   │
+│    led directions name the product moment needing live proof.          │
 │                                                                        │
 │ 8. VISUAL-FIRST IMPLEMENTATION (PRIMARY COMPOSITION GATE)              │
-│    Build and render the primary above-the-fold composition in the      │
-│    browser first; verify its art direction sings before scaling.       │
+│    Prototype the primary composition (and proposed effect) first;      │
+│    verify layout via screenshots + timing via recording or trace.      │
 │                                                                        │
-│ 9. PURPOSEFUL CHOREOGRAPHY & SPRING PHYSICS                            │
-│    Use spring physics (`motion`), shared-layout transitions, and       │
-│    scroll-linked reveals to communicate spatial continuity and state.  │
+│ 9. BEHAVIOR-FIRST MOTION & STACK-FIT DISCIPLINE                        │
+│    Start with intended behavior, check dependency cost & licensing,    │
+│    specify trigger/end state/touch/keyboard/repeat/reduced motion.     │
 │                                                                        │
 │ 10. CONTENT & MECHANISM DICTATE CONTAINER                              │
 │     Never force heterogeneous features into identical 3-card or 8+4    │

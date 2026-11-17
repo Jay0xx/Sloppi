@@ -8,15 +8,15 @@ This module governs **how a coding agent explores, selects, and executes genuine
 
 ## 1. Mandatory Live Reference Inspection (Zero Fake Citations)
 
-Before proposing any design direction, you must ground your visual thinking in real reference evidence:
+Before proposing any design direction, ground your visual thinking in real reference evidence routed by design question ([research/source-routing.md](../research/source-routing.md) and [references/source-registry.md](../references/source-registry.md)):
 
-1. **Inspect Actual Designs When Online**:
-   - Use your browser or web search tools to inspect 2–4 real visual references from curated channels ([references/source-registry.md](../references/source-registry.md)): **Awwwards (`awwwards.com`)**, **Godly (`godly.website`)**, **Minimal Gallery (`minimal.gallery`)**, **60fps.design (`60fps.design`)**, **Dribbble (`dribbble.com`)**, **SaaSPO (`saaspo.com`)**, or **Loadmo.re (`loadmo.re`)**.
-   - **Record Concrete Visual Observations**: Do not merely drop URLs or brand names (*"Inspired by Linear, Stripe, and Mercury"*). Document what you actually observed:
-     - *Spatial ratio & grid mechanics* (e.g., *"70% viewport-locked interactive canvas on the right with a 30% scrolling editorial index on the left"*).
-     - *Typographic voice & scale contrast* (e.g., *"110px high-contrast serif headline with `-0.04em` tracking paired with 13px tabular technical captions"*).
-     - *Materiality & lighting* (e.g., *"Warm tactile paper grain `#F6F3EC` with ink-bleed hover transitions and zero card boxes"*).
-     - *Signature motion hook* (e.g., *"Spring-physics cursor-tethered lens that magnifies underlying data nodes"*).
+1. **Inspect Actual Examples or Clips When Online**:
+   - Route by need: `typewolf.com` (typography), `unsection.com` (specific sections), `spottedinprod.com` (iOS gestures/state transitions), `hoverstat.es` (experimental composition/nav), `deadsimplesites.com` (minimal-motion restraint check), `cosmos.so` (mood/material/color), `eyecannndy.com` (framing/pacing/transitions), `designeng.tools` (follow entries to original sources), plus `awwwards.com`, `godly.website`, `minimal.gallery`, `60fps.design`, `dribbble.com`, `saaspo.com`, `loadmo.re`, and verified interactive demos (`libraries.dev/waves`, `dissolve.rselmi.com`, `oxyn.space`, `wobli.space`).
+   - **Record Concrete Observations (Never Name-Drop)**: Open the actual example or clip and log:
+     - *Deep link & verification status* (mark any unverified timing/internals `[INFERRED]`; if a demo is inaccessible, log its status and switch to a comparable source).
+     - *Composition, typography & materiality observed* (spatial ratios, font voice/scale contrast, surface lighting/grain).
+     - *Motion mechanics (when relevant)*: **trigger**, **what moves**, **what stays anchored**, and **how the interaction settles**.
+     - *Design principle worth adapting & where it serves the current product* (keeping demo mechanics separate from package dependencies).
 2. **Epistemic Honesty When Offline**:
    - If network/browser access is unavailable or blocked, explicitly mark `Reference Mode: OFFLINE_SYNTHESIS` in `DESIGN.md`. Never fabricate observations of websites you did not inspect.
 
@@ -26,14 +26,14 @@ Before proposing any design direction, you must ground your visual thinking in r
 
 Before writing `DESIGN.md` or generating components for a new frontend or redesign, you **MUST formulate 3 meaningfully different creative directions** (`Direction A`, `Direction B`, `Direction C`).
 
-> **Strict Rule**: Three color palettes applied to the same layout DO NOT count as three directions. The three directions must be **structurally and aesthetically orthogonal** across all four axes below:
+> **Strict Rule**: Three color palettes applied to the same layout DO NOT count as three directions. Each direction must make a **different choice about composition, typography, and interaction** (alongside surface/materiality). A **quiet direction** can rely on typographic hierarchy and spacing (calibrated against `deadsimplesites.com`); a **motion-led direction** must name the **specific product moment** where the effect improves **feedback, orientation, or continuity**:
 
-| Divergence Axis | Direction A (e.g., Category-Expected Elevated) | Direction B (e.g., Editorial / Spatial Subversion) | Direction C (e.g., Tactile Instrument / Kinetic Poster) |
+| Divergence Axis | Direction A (e.g., Quiet / Hierarchy-Led) | Direction B (e.g., Editorial / Section-Led Subversion) | Direction C (e.g., Motion-Led / Spatial Instrument) |
 | :--- | :--- | :--- | :--- |
-| **1. Spatial & Layout Paradigm** | How the viewport is divided (e.g., Multi-pane command workbench) | A radically different composition (e.g., Asymmetric editorial magazine / scrollytelling) | A third distinct structure (e.g., Full-bleed interactive instrument / Swiss poster grid) |
-| **2. Typographic Voice** | Distinct font family pairing & scale ratio #1 | Distinct font family pairing & scale ratio #2 | Distinct font family pairing & scale ratio #3 |
-| **3. Surface, Materiality & Palette** | Light/dark temperature, texture, depth & border philosophy #1 | Opposite temperature, surface physics & depth model #2 | High-craft tactile/chromatic or archival material model #3 |
-| **4. Signature Interactive Centerpiece** | Bespoke interactive mechanic #1 above the fold | Bespoke interactive mechanic #2 above the fold | Bespoke interactive mechanic #3 above the fold |
+| **1. Composition Choice** | Sparse asymmetric column or broadsheet relying on spacing & scale | Distinct section cadence tailored per content job | Viewport-locked workbench, experimental nav, or full-bleed canvas |
+| **2. Typography Choice** | Distinct font pairing & dramatic scale ratio #1 | Distinct font pairing & scale ratio #2 | Distinct font pairing & scale ratio #3 |
+| **3. Interaction Choice** | Minimal motion; instant, crisp state feedback + high-legibility hierarchy | Lightweight anchored micro-feedback at specific user actions | Motion-led centerpiece naming the exact product moment for **feedback, orientation, or continuity** |
+| **4. Surface, Materiality & Palette** | Light/dark temperature, texture, depth & border philosophy #1 | Opposite temperature, surface physics & depth model #2 | High-craft tactile/chromatic or archival material model #3 |
 
 ### Example: Diverging on a Developer API / Cloud Database Tool
 
@@ -81,10 +81,11 @@ Before selecting your winning direction and coding, run every candidate through 
 │    If YES ──► Add authentic materiality (grain, specular lighting,     │
 │    custom SVG artwork, tonal depth, or sculptural typography).         │
 │                                                                        │
-│ 5. THE 5-SECOND INTERACTIVE HOOK TEST                                  │
-│    Does the primary viewport give the user something genuinely         │
-│    delightful and product-specific to manipulate within 5 seconds?     │
-│    If NO ──► Replace static hero copy/mockups with a live instrument.  │
+│ 5. THE PRIMARY MOMENT & INTERACTION FIT TEST                           │
+│    If the direction is interactive or motion-led, does it name the     │
+│    exact product moment improving feedback, orientation, or continuity?│
+│    If it is a quiet direction, do hierarchy, spacing, and immediate    │
+│    domain proof communicate clearly without generic hero boilerplate?  │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -105,12 +106,12 @@ Never fall into a single house style. Draw from diverse visual traditions and co
 
 ---
 
-## 5. Visual-First Prototyping Mandate
+## 5. Visual-First Prototyping & Dual Verification Mandate
 
 Never write 10 components blindly and only check the browser at the end.
-1. **Build the Primary Composition First**: Implement the global tokens (`globals.css`) and the **above-the-fold hero / core interactive workspace** first.
-2. **Render & Critique Live**: Launch the dev server, open the live browser viewport, and capture a screenshot.
+1. **Build and Prototype in the Primary Composition First**: Implement the global tokens (`globals.css`), typography, and **above-the-fold hero / core flow** first—prototyping any proposed motion directly inside that primary composition ([implementation/interaction-implementation.md](../implementation/interaction-implementation.md)).
+2. **Verify Static Hierarchy + Live Timing**: Capture **screenshots** to verify layout, spacing, and typographic hierarchy, and capture a **browser recording or interaction trace** to inspect timing, continuity, touch/keyboard response, and repeated activation.
 3. **Evaluate Against Your Chosen Direction**:
    - Does it actually look like a distinctive, art-directed piece of design, or did it regress into a generic Tailwind template?
-   - Is the display typography dramatic enough? Does the interactive centerpiece work smoothly?
-4. **Course-Correct Before Scaling**: Fix any visual flatness or compositional timidity in the hero **before** building the remaining sections, using the hero's proven visual language as the benchmark for the rest of the application.
+   - Is the display typography commanding? Do quiet moments breathe cleanly, and do motion-led moments improve feedback, orientation, or continuity?
+4. **Course-Correct Before Scaling**: Fix any visual flatness or motion lag in the primary composition **before** building the remaining sections, using the proven visual language as the benchmark for the rest of the application.

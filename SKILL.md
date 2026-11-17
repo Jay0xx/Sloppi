@@ -28,12 +28,12 @@ Activate Sloppi whenever you are:
 
 ## 2. Core Operational Doctrine (v2.0)
 
-1. **Creative Director First, Compliance Officer Second**: Never treat design as a bureaucratic form-filling exercise. Spend your cognitive budget on **visual storytelling, spatial tension, expressive typography, tactile materiality, and bespoke interactive mechanics**.
-2. **Mandatory Reference Inspection (No Name-Dropping)**: Never cite reference websites (e.g., *Linear, Stripe, Mercury, Wise, Awwwards*) from memory without inspecting live visual references or user-supplied assets. When live browsing/search is available, inspect real designs from [references/source-registry.md](references/source-registry.md) (`awwwards.com`, `godly.website`, `minimal.gallery`, `60fps.design`, `dribbble.com`, `saaspo.com`, `loadmo.re`) and log **concrete visual observations**. If offline, explicitly declare `OFFLINE_SYNTHESIS`—never fabricate URL decompositions.
-3. **Three Distinct Design Directions Before Code**: For any new page, app, or redesign, you MUST formulate **3 structurally and aesthetically distinct creative directions** (differing in spatial layout paradigm, typographic voice, surface materiality, and interactive hook)—not three color themes of the same wireframe. See [doctrine/creative-direction.md](doctrine/creative-direction.md).
+1. **Creative Director First, Compliance Officer Second**: Never treat design as a bureaucratic form-filling exercise. Spend your cognitive budget on **visual storytelling, spatial tension, expressive typography, tactile materiality, and purposeful interaction**.
+2. **Question-Driven Reference Inspection (No Name-Dropping)**: Never cite reference websites (e.g., *Linear, Stripe, Mercury, Wise, Awwwards*) from memory without inspecting live visual references or user-supplied assets. Route each inquiry by design question using [research/source-routing.md](research/source-routing.md) and [references/source-registry.md](references/source-registry.md) (e.g., `typewolf.com` for typography, `unsection.com` for sections, `spottedinprod.com` for iOS gestures, `hoverstat.es` for experimental composition, `deadsimplesites.com` for minimal-motion restraint, `cosmos.so` for mood/material, `eyecannndy.com` for framing/transitions, `designeng.tools` followed to original sources, and interactive demos such as `libraries.dev/waves`, `dissolve.rselmi.com`, `oxyn.space`, `wobli.space`). Open the actual example or clip, record the deep link, observed behavior/composition (including trigger, what moves, what stays anchored, and how it settles for motion), adaptable principle, and product application, and explicitly mark `[INFERRED]` details. If offline or a demo is inaccessible, declare `OFFLINE_SYNTHESIS` or log its status and pivot to a comparable source—never fabricate observations.
+3. **Three Distinct Design Directions Before Code**: For any new page, app, or redesign, you MUST formulate **3 structurally and aesthetically distinct creative directions** grounded in your research observations—making different choices about **composition, typography, and interaction**—not three color themes of the same wireframe. A **quiet direction** can rely on typographic hierarchy and spacing; a **motion-led direction** must name the exact product moment where the effect improves feedback, orientation, or continuity. See [doctrine/creative-direction.md](doctrine/creative-direction.md) and [research/synthesis.md](research/synthesis.md).
 4. **Pre-Implementation Design Originality Gate**: Screen concepts **before writing component code**. Reject any direction that resembles either a standard SaaS template OR your own recent projects (e.g., repeating the same `1px` border ledger or dark-green terminal).
-5. **Visual-First Implementation (Primary Composition Gate)**: Build and render the **primary composition (above-the-fold hero or core interactive workspace) first**. Inspect the actual browser render and verify that the typography, atmosphere, and interactive centerpiece genuinely sing before building the remaining sections.
-6. **Real Visual Regression Testing**: Compare **Before vs. After viewport screenshots** across Mobile (`390px`), Tablet (`768px`), and Desktop (`1280px+`). Verify that revisions improved composition, focal hierarchy, and craft rather than piling on decorative effects.
+5. **Behavior-First Motion & Primary Composition Gate**: Start every proposed interaction with the **intended behavior**, pick an implementation that **fits the existing stack**, and inspect **dependency cost and licensing** before recommending an external primitive—never turning reference demos into automatic dependencies or default effects. Specify trigger, end state, touch, keyboard, repeated activation, and reduced motion, then build and prototype in the **primary composition (above-the-fold hero or core workspace) first**. Verify layout and hierarchy via **screenshots** and timing/continuity via a **browser recording or interaction trace** before scaling.
+6. **Real Visual Regression Testing**: Compare **Before vs. After viewport screenshots** across Mobile (`390px`), Tablet (`768px`), and Desktop (`1280px+`)—paired with interaction traces/recordings when motion is present—to verify that revisions improved composition, hierarchy, and continuity rather than piling on decorative effects.
 7. **Never Override Explicit User Direction**: If the user explicitly requests a specific palette, layout, glassmorphism, or reference style, execute it at world-class level rather than lecturing them.
 
 ---
@@ -91,10 +91,12 @@ Load only the specific modules needed for your current task:
 - [doctrine/design-reasoning.md](doctrine/design-reasoning.md) — Cognitive pipeline from product stakes to visual execution.
 
 ### Live Research & Reference Synthesis
-- [research/protocol.md](research/protocol.md) — Mandatory reference inspection & evidence logging protocol.
-- [references/source-registry.md](references/source-registry.md) — Curated channels (Awwwards, Godly, Minimal Gallery, 60fps.design, Dribbble, SaaSPO, Loadmo.re, Refero).
-- [research/reference-analysis.md](research/reference-analysis.md) — Extracting visual mechanics, spatial ratios, and choreography.
-- [research/synthesis.md](research/synthesis.md) — Formulating the 3 divergent concepts and winning Design Thesis.
+- [research/protocol.md](research/protocol.md) — Question-driven inspection protocol, deep-link evidence logging, motion capture, and `[INFERRED]` tagging.
+- [research/source-routing.md](research/source-routing.md) — Routing design questions (typography, sections, gestures, experimental layouts, minimal restraint, tooling) to primary sources.
+- [references/source-registry.md](references/source-registry.md) — Curated galleries, craft/motion catalogs, design-engineering indexes, and verified interactive demos.
+- [research/reference-analysis.md](research/reference-analysis.md) — Extracting visual mechanics, spatial ratios, motion dynamics (trigger, moving/anchored layers, settlement), and product fit.
+- [research/research-output.md](research/research-output.md) — Standardized research log capturing deep links, observed behaviors, `[INFERRED]` details, and transferable principles.
+- [research/synthesis.md](research/synthesis.md) — Formulating the 3 divergent concepts (composition, typography, interaction—including quiet vs. motion-led paths) and winning Design Thesis.
 
 ### Content, Narrative & Page Architecture
 - [content/methodology.md](content/methodology.md) — Content-driven composition & density calibration.
@@ -109,6 +111,7 @@ Load only the specific modules needed for your current task:
 - [design-system/layout.md](design-system/layout.md) — Editorial grids, spatial canvases, poster layouts, and rhythm modulation.
 - [design-system/geometry.md](design-system/geometry.md) — Silhouette variety, concentric radii, and custom SVG/clip-path craft.
 - [design-system/elevation.md](design-system/elevation.md) — Specular highlights, optical depth, tactile shadows, and surface grain.
+- [design-system/motion.md](design-system/motion.md) — Purposeful motion categories, duration/easing baselines, spatial continuity, and reduced-motion rules.
 - [design-system/component-rules.md](design-system/component-rules.md) — Adaptive component anatomy and 12 interactive states.
 - [templates/DESIGN.template.md](templates/DESIGN.template.md) — Streamlined 10-section Creative Direction & Design System contract.
 
@@ -116,18 +119,19 @@ Load only the specific modules needed for your current task:
 - [implementation/protocol.md](implementation/protocol.md) — Primary Composition Gate, visual-first build sequence & Polish Trap remediation.
 - [implementation/token-implementation.md](implementation/token-implementation.md) — Multi-archetype CSS Custom Properties (never defaulting to `Inter`).
 - [implementation/layout-implementation.md](implementation/layout-implementation.md) — CSS Grid choreography, sticky scrollytelling, and container architecture.
-- [implementation/interaction-implementation.md](implementation/interaction-implementation.md) — Spring physics, scroll-driven choreography, and keyboard focus.
+- [implementation/interaction-implementation.md](implementation/interaction-implementation.md) — Behavior-first motion specs (trigger, end state, touch, keyboard, repeated activation, reduced motion), stack fit, primary-composition prototyping, and trace verification.
 - [implementation/responsive-implementation.md](implementation/responsive-implementation.md) — Mobile ergonomics ($\ge 44\text{px}$ targets) & viewport adaptation.
 - [implementation/asset-strategy.md](implementation/asset-strategy.md) — Bespoke SVGs, shaders, interactive canvases, and icon governance.
-- [implementation/dependency-policy.md](implementation/dependency-policy.md) — Encouraging high-craft motion (`motion`/`framer-motion`), headless primitives, and creative tech.
+- [implementation/dependency-policy.md](implementation/dependency-policy.md) — Stack-fit selection, dependency cost & license inspection, and anti-auto-dependency rules for reference demos.
 
 ### Visual QA, Originality Audit & Screenshot Regression
-- [audit/visual-audit.md](audit/visual-audit.md) — Primary Composition Gate & 4-Viewport Screenshot Inspection Matrix.
+- [audit/visual-audit.md](audit/visual-audit.md) — Primary Composition Gate, 4-Viewport Screenshot Matrix, and recording/trace timing checks.
+- [audit/interaction-audit.md](audit/interaction-audit.md) — Keyboard focus, touch/repeated-activation safety, timing discipline, and reduced-motion verification.
 - [audit/anti-slop-audit.md](audit/anti-slop-audit.md) — 30 Review Signals (Gen-1 AI Slop + Gen-2 Overfit Clichés).
 - [audit/distinctiveness-audit.md](audit/distinctiveness-audit.md) — The Mistaken Identity Test & Category Subversion check.
 - [refinement/critique.md](refinement/critique.md) — 5-layer root-cause diagnosis.
 - [refinement/iteration.md](refinement/iteration.md) — Single-objective refinement & screenshot comparison loop.
-- [refinement/regression.md](refinement/regression.md) — Before/After visual regression verification.
+- [refinement/regression.md](refinement/regression.md) — Before/After screenshot and interaction-trace regression verification.
 
 ### Workflows & Checklists
 - [checklists/pre-design.md](checklists/pre-design.md) — Originality & 3-Direction Divergence gate before `DESIGN.md`.

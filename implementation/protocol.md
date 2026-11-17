@@ -20,25 +20,26 @@ A coding agent must never write 15 components blindly from top to bottom and onl
 │                            to Inter) & inject semantic tokens in :root.│
 │                                  │                                     │
 │                                  ▼                                     │
-│ 3. PRIMARY COMPOSITION ──► Build the above-the-fold Hero OR core       │
-│    PROTOTYPE FIRST         interactive workspace + navigation +        │
-│                            signature 5-second interactive centerpiece. │
+│ 3. PRIMARY COMPOSITION ──► Build the above-the-fold Hero OR core flow     │
+│    PROTOTYPE FIRST         + navigation + any proposed interaction/motion │
+│                            inside that primary composition (not isolated).│
 │                                  │                                     │
 │                                  ▼                                     │
-│ 4. LIVE VISUAL PROOF   ──► Render in the browser, capture screenshot,  │
-│    GATE (MANDATORY!)       and evaluate against references & thesis:   │
-│                            • Does it have bold art direction?          │
-│                            • Is the typographic scale dramatic?        │
-│                            • Does the interactive hook work?           │
-│                            If flat/generic ──► Fix NOW before scaling! │
+│ 4. LIVE VISUAL & TRACE ──► Render in browser: capture SCREENSHOTS for   │
+│    PROOF GATE (MANDATORY!) layout & hierarchy, plus a RECORDING or      │
+│                            INTERACTION TRACE for timing & continuity:   │
+│                            • Do typography, spacing & hierarchy hold?   │
+│                            • Do trigger, end state, touch, keyboard,    │
+│                              repeated activation & reduced motion work? │
+│                            If flat/laggy ──► Fix NOW before scaling!    │
 │                                  │                                     │
 │                                  ▼                                     │
 │ 5. SCALE FULL          ──► Build remaining sections/screens modulating │
 │    INTERFACE               spatial rhythm, ground tones, & mechanics.  │
 │                                  │                                     │
 │                                  ▼                                     │
-│ 6. MULTI-VIEWPORT QA   ──► Inspect 390px, 768px, 1280px+ screenshots,  │
-│    & REGRESSION DIFF       fix defects, compare Before/After, & ship.  │
+│ 6. MULTI-VIEWPORT QA   ──► Inspect 390px, 768px, 1280px+ screenshots &  │
+│    & REGRESSION DIFF       traces, fix defects, compare Before/After.   │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 

@@ -31,25 +31,39 @@ Before browsing references or picking tokens, answer 5 sharp questions:
 
 ---
 
-## 2. Phase B: Mandatory Reference Inspection (Zero Fake Citations)
+## 2. Phase B: Question-Driven Reference Inspection (Zero Fake Citations)
 
-Route your inquiry to 2–4 diverse channels from [references/source-registry.md](../references/source-registry.md) (`awwwards.com`, `godly.website`, `minimal.gallery`, `60fps.design`, `dribbble.com`, `saaspo.com`, `loadmo.re`).
+Route your inquiry by the specific design question using [research/source-routing.md](source-routing.md) and [references/source-registry.md](../references/source-registry.md):
+- **Typography, pairings & scale**: Start with `typewolf.com`.
+- **Specific section or page element**: Start with `unsection.com`.
+- **Gesture behavior & mobile state transitions**: Start with `spottedinprod.com` (alongside `60fps.design` and `loadmo.re`).
+- **Experimental web composition & navigation**: Use `hoverstat.es` (alongside `awwwards.com` and `godly.website`).
+- **Minimal-motion restraint test**: Use `deadsimplesites.com` (with `minimal.gallery`) to test how much the composition communicates with minimal motion.
+- **Mood, imagery, material & color / framing & pacing**: Use `cosmos.so` for mood/material/color and `eyecannndy.com` for visual techniques, framing, pacing, and transitions.
+- **Design-engineering discovery & interactive demos**: Use `designeng.tools` and follow entries to their **original source**. For interactive transition/effect demos (`libraries.dev/waves`, `dissolve.rselmi.com`, `oxyn.space`, `wobli.space`), verify in the browser before describing mechanics, inspect the demo separately from implementation docs, and never treat a demo as an automatic dependency or default effect. If a demo is inaccessible, record its exact status and continue with a comparable source.
 
 ### The Evidence Logging Rule
-Never write *"Inspired by Linear and Stripe."* For every reference inspected, document:
-- **Source / URL Inspected** (or `OFFLINE_SYNTHESIS` if browser/network tools are unavailable).
-- **Observed Compositional Ratio**: Exact spatial split, grid rhythm, and negative space behavior.
-- **Observed Typographic Mechanics**: Contrast between display and body scales, serif/sans/mono tension, tracking/leading.
-- **Observed Surface & Lighting Craft**: How depth, texture, borders, or gradients are handled.
-- **Transferable Mechanic vs. Rejected Surface Skin**: What structural principle you are extracting and what brand-specific colors/logos you are discarding.
+Open the **actual example, live site, or video/interaction clip** when available rather than stopping at gallery thumbnails. Never write *"Inspired by Linear and Stripe."* For every reference used, document:
+- **Deep Link & Verification Status**: Exact URL of the example/clip inspected (or `OFFLINE_SYNTHESIS` / `INACCESSIBLE: <status>` with fallback source).
+- **Specific Behavior or Composition Observed**: Exact spatial ratios, grid rhythm, typographic pairing/scale contrast, or surface materiality observed.
+- **Motion Capture (when motion or interaction is analyzed)**:
+  - *Trigger*: Event, gesture, or threshold that initiates it.
+  - *What Moves*: Layers, properties, or regions that transform.
+  - *What Stays Anchored*: Context, values, or layout frames held steady for orientation.
+  - *How the Interaction Settles*: End state, settling behavior, reset/reversal, or edge cues.
+- **Design Principle Worth Adapting**: The transferable structural/ergonomic rule (vs. discarded brand skin).
+- **Where It Serves the Current Product**: Exact page, section, flow, or product moment where the principle applies.
+- **Mark Inferred Details**: Any timing, easing curve, gesture threshold, or off-frame detail that could only be inferred rather than directly observed MUST be labeled `[INFERRED]`.
 
 ---
 
-## 3. Phase C: Synthesize 3 Distinct Creative Directions
+## 3. Phase C: Turn Observations into 3 Distinct Creative Directions
 
-Using your observations, formulate **3 genuinely distinct creative directions** (`Direction A`, `Direction B`, `Direction C`) as specified in [doctrine/creative-direction.md](../doctrine/creative-direction.md):
-- They must differ in **spatial layout**, **typographic pairing**, **color/surface materiality**, and **signature interactive centerpiece**.
-- Evaluate all three against the **Pre-Implementation Originality Gate** and select (or hybridize) the boldest, highest-craft direction for `DESIGN.md`.
+Feed your logged observations directly into Sloppi's three-direction workflow ([research/synthesis.md](synthesis.md) and [doctrine/creative-direction.md](../doctrine/creative-direction.md)):
+- Each direction (`Direction A`, `Direction B`, `Direction C`) MUST make a **different choice about composition, typography, and interaction** (plus materiality/palette).
+- **Quiet Directions Are Valid and First-Class**: A quiet direction can rely on typographic hierarchy, proportion, and spacing (calibrated against `deadsimplesites.com` / `typewolf.com` / `minimal.gallery`) rather than adding decorative motion.
+- **Motion-Led Directions Must Justify the Moment**: A motion-led direction MUST name the **specific product moment** where the effect improves **feedback, orientation, or continuity**—never motion for spectacle.
+- Evaluate all three against the **Pre-Implementation Originality Gate** and select (or hybridize) the winning direction for `DESIGN.md`.
 
 ---
 
@@ -57,6 +71,6 @@ Using your observations, formulate **3 genuinely distinct creative directions** 
 
 | Task Tier | Research & Divergence Scope | Time Budget |
 | :--- | :--- | :--- |
-| **Micro / Small Task** (Token fix, single component) | Inspect existing project `DESIGN.md` and tokens; 1 targeted pattern check if needed. | Immediate |
-| **Medium Task** (Hero redesign, new section, slop cleanup) | Identify current slop flaw; formulate 2–3 distinct layout/art-direction options for the section; pick the most original. | Fast & focused |
-| **Large Task** (New landing page, web app, full redesign) | Inspect 2–4 live references; generate 3 full divergent directions (A/B/C); pass Originality Gate; record in `DESIGN.md`. | Comprehensive |
+| **Micro / Small Task** (Token fix, single component) | Inspect existing project `DESIGN.md` and tokens; 1 targeted pattern/gesture check if needed (`unsection.com` / `spottedinprod.com`). | Immediate |
+| **Medium Task** (Hero redesign, section, state-feedback flow, slop cleanup) | Identify current flaw; route to 1–2 question-matched sources (`typewolf.com`, `unsection.com`, `spottedinprod.com`, `deadsimplesites.com`); formulate 2–3 options and verify Before/After. | Fast & focused |
+| **Large Task** (New landing page, web app, full redesign) | Inspect 2–4 live references across question domains; open deep links/clips; generate 3 full divergent directions (A/B/C) varying composition, typography, and interaction; pass Originality Gate; record in `DESIGN.md`. | Comprehensive |

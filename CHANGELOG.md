@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.0] - 2026-11-17
+
+### Added
+- **Expanded Reference Source Registry (`references/source-registry.md`, `research/source-routing.md`)**: Added 12 curated sources (`cosmos.so`, `eyecannndy.com`, `hoverstat.es`, `typewolf.com`, `unsection.com`, `spottedinprod.com`, `deadsimplesites.com`, `designeng.tools`, `libraries.dev/waves`, `dissolve.rselmi.com`, `oxyn.space`, `wobli.space`) with question-driven routing and live browser-verified mechanics/licensing notes.
+- **Deep-Link, Motion 4-Tuple & `[INFERRED]` Research Logging (`research/protocol.md`, `research/reference-analysis.md`, `research/research-output.md`)**: Requires opening actual examples/clips, recording deep links, observed composition/behavior, adaptable principle, and product fit, capturing `Trigger`, `What Moves`, `What Stays Anchored`, and `How It Settles`, tagging inferred details `[INFERRED]`, and recording inaccessible-demo fallbacks.
+- **Behavior-First Motion & Effect Contract (`implementation/interaction-implementation.md`, `implementation/dependency-policy.md`, `audit/interaction-audit.md`)**: Added stack-fit escalation, dependency cost and license checks, anti-auto-dependency guardrails for reference demos, a 7-field Proposed Effect Specification (`Moment`, `Trigger`, `End State & Anchors`, `Touch`, `Keyboard`, `Repeated Activation`, `Reduced Motion`), primary-composition prototyping, and dual verification (screenshots for layout/hierarchy + browser recording or interaction trace for timing/continuity).
+
+### Changed
+- **Quiet vs. Motion-Led 3-Direction Synthesis (`research/synthesis.md`, `doctrine/creative-direction.md`, `audit/anti-slop-audit.md`)**: Clarified that directions vary across composition, typography, and interaction—allowing quiet directions to win on hierarchy and spacing while motion-led directions must name the product moment improving feedback, orientation, or continuity.
+- **Discoverability & Module Alignment (`SKILL.md`, `routing.md`, `templates/DESIGN.template.md`, `workflows/*`, `checklists/*`)**: Surfaced `research/source-routing.md`, `research/research-output.md`, `design-system/motion.md`, and `audit/interaction-audit.md` directly in `SKILL.md` and synchronized checklists/templates.
+
+---
+
 ## [2.0.0] - 2026-11-12
 
 ### Added

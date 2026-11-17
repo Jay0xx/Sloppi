@@ -8,21 +8,20 @@ Agents must not browse sources randomly. They must route questions based on func
 
 ## 1. Domain Routing Matrix
 
-| Design Question Domain | Primary Sources | Secondary Sources | Tertiary Sources | What to Extract |
+Route every design question to its specialized primary source first, open the **actual example, clip, or live site** rather than stopping at thumbnails, and pair motion-heavy explorations with a minimal-motion restraint check:
+
+| Design Question Domain | Start Here (Primary) | Companion / Secondary Sources | Minimal-Restraint or Tooling Check | What to Extract |
 | :--- | :--- | :--- | :--- | :--- |
-| **Product / Industry Taxonomy** | **SaaSPO**<br>`saaspo.com` | **Recent.design**<br>`recent.design` | **Minimal Gallery**<br>`minimal.gallery` | Industry information architecture, category credibility expectations, realistic feature framing. |
-| **General Visual Composition & Space** | **Minimal Gallery**<br>`minimal.gallery` | **Recent.design**<br>`recent.design` | **Inspora**<br>`inspora.design` | Negative space ratios, asymmetric grid tension, layout restraint, breaking card-in-card clutter. |
-| **Design System & AI Context** | **Refero Styles**<br>`styles.refero.design` | **SaaSPO**<br>`saaspo.com` | *Internal project tokens* | Machine-readable token models, exact modular scales, semantic color roles, explicit Do/Don't rules. |
-| **Typography & Scale Hierarchy** | **Minimal Gallery**<br>`minimal.gallery`<br>**Deck.Gallery**<br>`deck.gallery` | **Refero Styles**<br>`styles.refero.design` | **Recent.design**<br>`recent.design` | Font pairing contrast, line-height proportions (crushed display vs. open body), optical letter-spacing. |
-| **Hero Sections & First Entry Points** | **Supahero**<br>`supahero.io` | **SaaSPO**<br>`saaspo.com`<br>**Minimal Gallery**<br>`minimal.gallery` | **Recent.design**<br>`recent.design` | Top-of-fold visual weight balance, interactive demo vs. editorial headline vs. code terminal. |
-| **Navigation & Header Architecture** | **Navbar Gallery**<br>`navbar.gallery` | **SaaSPO**<br>`saaspo.com` | **Minimal Gallery**<br>`minimal.gallery` | Link density scaling (floating island vs. mega-menu), wayfinding hierarchy, mobile hamburger vs. tab bar. |
-| **CTA, Conversion & Action Hierarchy** | **CTA Gallery**<br>`cta.gallery` | **SaaSPO**<br>`saaspo.com` | **Deck.Gallery**<br>`deck.gallery` | Visual weight contrast (primary vs. secondary), outcome-explicit micro-copy, inline assurance proof. |
-| **Interaction, Motion & State Physics** | **60fps.design**<br>`60fps.design` | *Relevant production web apps* | **Inspora**<br>`inspora.design` | State transition triggers, duration scales (100–300ms), spatial continuity cues, feedback timing. |
-| **Mobile-First & Touch Ergonomics** | **Loadmo.re**<br>`loadmo.re` | *Relevant production mobile web* | **Minimal Gallery**<br>`minimal.gallery` | Thumb-zone reachability, responsive refactoring (multi-column tables → vertical narrative/sheets), touch hit areas. |
-| **Brand Identity, Motifs & Geometry** | **LogoInspo**<br>`logoinspo.com`<br>**Deck.Gallery**<br>`deck.gallery` | **Posts.design**<br>`posts.design` | **Refero Styles**<br>`styles.refero.design` | Geometric motifs, corner radius derivation, logo typography relationships, graphic symbols. |
-| **Social, Campaign & Marketing Expression** | **Posts.design**<br>`posts.design` | **Inspora**<br>`inspora.design` | **OGfolio**<br>`ogfolio.com` | Multi-surface brand consistency, social graphic framing, changelog and announcement cards. |
-| **Page Closures & Footers** | **Footer.design**<br>`footer.design` | **SaaSPO**<br>`saaspo.com` | **Minimal Gallery**<br>`minimal.gallery` | Secondary sitemap density, brand signature closure, legal/utility disclosures without clutter. |
-| **OG Images & Link Previews** | **OGfolio**<br>`ogfolio.com` | **Posts.design**<br>`posts.design` | **Deck.Gallery**<br>`deck.gallery` | 1200x630 social card layout, feed-stopping typography, visual continuity with the landing hero. |
+| **Typography, Pairings & Scale** | **Typewolf**<br>`typewolf.com` | **Minimal Gallery** (`minimal.gallery`), **Refero Styles** (`styles.refero.design`) | **Dead Simple Sites** (`deadsimplesites.com`) | Display/body/mono pairing contrast, optical scale ratio, crushed vs. open leading, reading measure. |
+| **Specific Section or Page Element** | **Unsection**<br>`unsection.com` | **Supahero** (`supahero.io`), **Navbar/CTA/Deck/Footer Galleries** | **Minimal Gallery** (`minimal.gallery`) | Deep link to section example, column split, focal entry order, padding rhythm, element count. |
+| **iOS Gestures & Mobile State Transitions** | **Spotted in Prod**<br>`spottedinprod.com` | **60fps.design** (`60fps.design`), **Loadmo.re** (`loadmo.re`) | **Dissolve** (`dissolve.rselmi.com`), **Waves** (`libraries.dev/waves`) | Clip deep link, trigger, what moves, what stays anchored, how it settles, `[INFERRED]` internals. |
+| **Experimental Composition & Navigation** | **Hover States**<br>`hoverstat.es` | **Awwwards** (`awwwards.com`), **Godly** (`godly.website`) | **Dead Simple Sites** (`deadsimplesites.com`) | Live site deep link, unconventional grid/nav structure, trigger/settlement behavior, DOM feasibility. |
+| **Sparse Composition & Minimal-Motion Test** | **Dead Simple Sites**<br>`deadsimplesites.com` | **Minimal Gallery** (`minimal.gallery`) | **Typewolf** (`typewolf.com`) | How much hierarchy, spacing, and typography communicate with minimal or zero motion. |
+| **Moodboards, Imagery, Material & Color** | **Cosmos**<br>`cosmos.so` | **Dribbble** (`dribbble.com`), **Godly** (`godly.website`) | *Discard literal artwork* | Cluster mood, tactile surface textures, lighting temperature, value/contrast relationships. |
+| **Visual Techniques, Framing & Pacing** | **Eyecandy**<br>`eyecannndy.com` | **Awwwards** (`awwwards.com`), **60fps.design** (`60fps.design`) | *Open in real browser* | Framing geometry, transition cuts, pacing cadence, spatial continuity across state shifts. |
+| **Activation-Point Transitions & Interactive Demos** | **Distortion Waves** (`libraries.dev/waves`) | **Dissolve** (`dissolve.rselmi.com`), **Oxyn** (`oxyn.space`), **Wobli** (`wobli.space`) | **DesignEng Tools** (`designeng.tools`) | Verify live in browser; separate demo mechanics from implementation docs, dependency cost, and license. |
+| **Design-Engineering Tools & Components** | **DesignEng Tools**<br>`designeng.tools` | *Follow entries to original upstream source* | `implementation/dependency-policy.md` | Upstream repo/doc deep link, stack fit, bundle/peer requirements, and OSS license. |
+| **Product / Industry Taxonomy** | **SaaSPO**<br>`saaspo.com` | **Unsection** (`unsection.com`), **Recent.design** (`recent.design`) | **Deck.Gallery** (`deck.gallery`) | Domain proof architecture, credible workflow patterns, and category clichés to subvert. |
 
 ---
 
@@ -87,13 +86,24 @@ Real design problems rarely fit neatly into a single source. Sloppi agents synth
 - **Tertiary Sources**:
   - `LogoInspo`: Derive subtle geometric status symbols from the tool's CLI monogram.
 
-### Scenario 3: An Expressive Consumer Mobile Application
+### Scenario 3: A Typography-Led Editorial Landing Page
 - **Primary Sources**:
-  - `Loadmo.re`: Extract mobile-native swipe navigation, bottom sheets, and thumb-zone ergonomics.
-  - `60fps.design`: Extract spring-based physics, micro-interactions, and fluid list-reordering gestures.
+  - `Typewolf`: Open live featured sites to extract display-to-body pairing contrast, optical sizing, and reading hierarchy.
+  - `Dead Simple Sites`: Benchmark how much composition, whitespace, and scale communicate with minimal or zero motion.
+  - `Unsection`: Inspect specific editorial hero, index, and essay/feature section layouts without generic 3-card clutter.
 - **Secondary Sources**:
-  - `Refero Styles`: Extract soft, tactile geometry (pill buttons, organic card curvature, vibrant multi-accent palettes).
-  - `Recent.design`: Inspect contemporary tactile textures and expressive typography.
-  - `OGfolio`: Design high-impact, bold social share preview cards.
-- **Excluded Sources**:
-  - Enterprise directories with 5-column desktop comparison tables.
+  - `Cosmos`: Extract archival paper textures, ink contrast temperatures, and editorial photography crops (discard literal imagery).
+  - `Hover States`: Inspect one experimental navigation or asymmetric column option for `Direction C`.
+- **Excluded / Guarded Sources**:
+  - Heavy kinetic illustration or WebGL transition libraries (`wobli.space`, `libraries.dev/waves`) unless a specific product moment justifies motion over pure typographic clarity.
+
+### Scenario 4: A Mobile Flow Where a State Change Needs Clearer Feedback
+- **Primary Sources**:
+  - `Spotted in Prod`: Open shipped iOS interaction clips to capture trigger, moving elements, anchored context, and settlement behavior.
+  - `Distortion Waves` (`libraries.dev/waves`): Inspect `Preview` separately from `Install` docs to study transitions originating at the tap button while keeping totals/labels anchored.
+  - `Loadmo.re` & `60fps.design`: Extract thumb-zone ergonomics, bottom-sheet continuity, and touch response timing.
+- **Secondary / Tooling Sources**:
+  - `Dissolve` (`dissolve.rselmi.com`): Study mobile exit/deletion causality and swipe-threshold feedback (without importing React Native Skia into a web stack).
+  - `DesignEng Tools`: Follow relevant gesture/toast/sheet entries to their original source to evaluate stack fit, dependency cost, and licensing.
+- **Restraint Check**:
+  - `Dead Simple Sites`: Verify whether an instant anchored label/badge change already solves clarity under `prefers-reduced-motion` and repeated taps.

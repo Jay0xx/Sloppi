@@ -8,13 +8,15 @@ Visual inspection in Sloppi v2.0 happens at **two critical moments**:
 
 ## 1. Stage 5: The Primary Composition Gate (Visual-First Check)
 
-Never build an entire 8-section page before looking at the browser. As soon as the primary composition (Hero / Core Workspace) is rendered:
-1. **Capture a Live Browser Screenshot** (using the `browser` subagent or Playwright/headless screenshot tool).
+Never build an entire 8-section page before looking at the browser. Prototype any proposed interactions directly inside the primary composition (Hero / Core Workspace or Flow) first, and as soon as it renders:
+1. **Capture Dual Proof Artifacts**:
+   - **Screenshots** (via `browser` subagent or Playwright) for **layout, spacing, contrast, and typographic hierarchy**.
+   - **Browser Recording or Interaction Trace** (if motion or state transitions are present) for **timing, anchoring, easing/spring continuity, repeated activation, and reduced motion**.
 2. **Evaluate Creative Direction & Originality**:
-   - **Reference Benchmark**: Does this composition hold its own against the live references you inspected in Stage 1 (`awwwards.com`, `godly.website`, `minimal.gallery`, `60fps.design`)?
-   - **Silhouette & Scale**: Is the display typography commanding (`clamp`)? Is there unmistakable spatial tension, or did it collapse into a timid, centered SaaS template or flat `1px`-border wireframe?
-   - **5-Second Interactive Proof**: Click/interact with the centerpiece widget in the browser. Does it respond with smooth spring physics and clear visual causality?
-3. **Pass / Pivot Decision**: If the primary composition feels generic, flat, or lifeless, **overhaul its typography, materiality, or spatial split right now** before coding the remaining sections.
+   - **Reference Benchmark**: Does this composition hold its own against the live references inspected in Stage 1 ([references/source-registry.md](../references/source-registry.md))?
+   - **Silhouette & Scale**: Is the display typography commanding (`clamp`)? Does a quiet direction carry clear hierarchy through spacing and scale alone, or did it collapse into a timid template or flat `1px`-border wireframe?
+   - **Interaction & Timing Proof**: Trigger the primary state change via mouse, touch, keyboard, and repeated rapid activation. Does it preserve orientation, settle cleanly, and obey `@media (prefers-reduced-motion: reduce)`?
+3. **Pass / Pivot Decision**: If the primary composition feels generic, flat, or laggy, **fix typography, materiality, or motion timing right now** before coding the remaining sections.
 
 ---
 
