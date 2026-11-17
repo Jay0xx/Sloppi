@@ -83,3 +83,14 @@ For complex, coordinated UI primitives (e.g. Tabs, Accordions, Dropdowns), prefe
 // ❌ Fragile monolithic configuration prop anti-pattern
 <Tabs tabs={[{ label: 'TypeScript', content: '...' }]} />
 ```
+
+---
+
+## 5. Discovering, Installing & Adapting Registry Components
+
+When an app needs accessible UI primitives or compatible domain components (never replacing core bespoke creative direction with generic boilerplate):
+
+1. **Discover & Inspect**: Use **`shadcn` MCP** (`search_items_in_registries`, `view_items_in_registries`) for `@shadcn` or compatible registries (such as `https://oxyn.space/r/registry.json`), **`Dissolve` MCP** (`list_variants`, `get_variant`) for Expo/RN particle components, or **`Context7`** for up-to-date package APIs.
+2. **Install Into the Target App**: Install via the app's existing package manager (`pnpm`, `npm`, `yarn`, `bun`, `npx expo install`, or `npx react-native-dissolve add <component>`) and review generated files and peer/CSS/provider prerequisites ([dependency-policy.md](dependency-policy.md)).
+3. **Strip Demo Chrome & Bind Tokens**: Map copied component styles to the app's semantic tokens (`--color-*`, `--radius-*`, typography, NativeWind `@theme inline`) and wire real state/accessibility (`aria-busy`, `role="status"`, `:focus-visible`, reduced motion).
+4. **Review Before Shipping**: Run **`web-design-guidelines`** for accessibility/interaction compliance and **`vercel-react-best-practices`** for React/Next.js performance patterns when working in React.

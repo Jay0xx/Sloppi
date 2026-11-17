@@ -186,53 +186,57 @@ This registry maps specialized design galleries, typography/section archives, ge
 
 ### DesignEng Tools
 - **URL**: `https://www.designeng.tools/`
-- **Design Domain**: Discovery for Design-Engineering Tools, Components & Implementation Resources
-- **Tier**: **Primary Tooling Discovery Index**
-- **Inspection Rule**: **Follow relevant entries to their original source** (repository, docs, or live demo). Never cite the directory summary alone—verify actual mechanics, stack compatibility, maintenance, dependency cost, and license at the upstream source.
+- **Purpose & When to Consult**: Discovery hub for design-engineering tools, component libraries, icons, and implementation resources (`https://www.designeng.tools/llms.txt`).
+- **Official Publisher / Source**: `https://www.designeng.tools/` (index only; does not distribute runtime packages directly).
+- **Inspection & Distribution Rule**: **Follow relevant entries to their original upstream publisher.** Never cite the directory summary alone—verify installation routes, platform support, prerequisites, maintenance, and license at the upstream repo/docs before adding to a project.
 
 ### Distortion Waves (`libraries.dev/waves`)
 - **URL**: `https://libraries.dev/waves`
-- **Design Domain**: Activation-Point Screen Transition Reference (`Preview` demo vs. `Install` docs)
-- **Tier**: **Interactive Transition Reference**
+- **Purpose & When to Consult**: Interactive reference for a screen transition that originates at the activation point (`source` button/element), plus official distribution for `distortion-waves` (React) and `DistortionWavesKit` (SwiftUI).
+- **Official Publisher & Source**: [Jakubantalik/Libraries.dev](https://github.com/Jakubantalik/Libraries.dev) (`packages/distortion-waves` and `ports/ios/DistortionWavesKit`). Companion 7-library skill: `npx skills add Jakubantalik/Libraries.dev` (note: covers `border-beam`, `thinking-orbs`, `liquid-gooey`, `voice-glow`, `bot-avatars`, `metal-fx`, `img-fx`).
 - **Inspection Rule**: **Inspect the demo (`Preview`) and implementation docs (`Install`) separately.**
 - **Browser-Verified Mechanics (`Preview`)**:
   - *Trigger*: Activating the primary action button (`Confirm`) initiates a directional wave from the touch/click anchor (`source={button}`).
   - *What Moves vs. Stays Anchored*: Unchanging context (`$1,250.00`, account details, modal frame, and the `overlay` action button) stays anchored while the semantic state fields update (`Sending` $\rightarrow$ `Sent`, photo avatar $\rightarrow$ green checkmark, `Arrives` $\rightarrow$ `Arrived`, button label `Confirm` $\rightarrow$ `Done`).
   - *How It Settles*: Settles into the confirmed receipt with a subtle chromatic edge rim (`Play` resets; supports `Vertical`, `Center`, `Horizontal` modes).
-- **Separate Docs, Stack Cost & License (`Install`)**:
-  - React (`distortion-waves`, MIT): requires **React 18+** and **WebGL2** (falls back to crossfade when WebGL2 is unavailable or under Reduce Motion; cross-origin media requires CORS; excludes iframes).
-  - SwiftUI (`DistortionWavesKit`, MIT): requires **iOS 17+ / macOS 14+** and **Xcode compilation of 3 Metal shaders** (not SwiftPM-only).
-  - *Sloppi Rule*: Extract the spatial-origin principle (transitions anchored at the activation point while holding stable context steady); use native CSS/View Transitions or lightweight `motion` unless a WebGL2/Metal shader wave truly fits the stack and budget.
+- **Official Installation Routes, Platform Support, Prerequisites & Licensing (`Install`)**:
+  - **React Web (`distortion-waves`)**: Documented install `npm install distortion-waves` (note: verify npm registry availability before running—`npm view distortion-waves` returned `404` on npmjs at verification time, while `v0.1.0` source lives in `packages/distortion-waves` on GitHub). Requires **React 18+** (`react`, `react-dom >= 18`) and **WebGL2**; cross-origin images/fonts require CORS; `iframe`, `object`, `embed`, and `audio` are excluded; falls back to crossfade when WebGL2 is unavailable or under `reducedMotion="system"` / `"always"`. **MIT**.
+  - **SwiftUI (`DistortionWavesKit`)**: Swift Package product `DistortionWavesKit` from `https://github.com/Jakubantalik/Libraries.dev` (`branch: "main"`). Requires **iOS 17+ / macOS 14+** and must be built through **Xcode** so `DistortionWaveShaders.metal` compiles into `default.metallib` (SwiftPM CLI alone leaves shaders uncompiled). Views require opaque backgrounds and no UIKit-backed views/materials; crossfades under Reduce Motion. **MIT**.
+  - *Sloppi Rule*: Extract the spatial-origin principle first; choose native CSS/View Transitions unless a WebGL2/Metal wave fits the stack and budget.
 
 ### Dissolve (`dissolve.rselmi.com`)
 - **URL**: `https://dissolve.rselmi.com/`
-- **Design Domain**: React Native Skia + Reanimated Particle Dissolve & Tactile Gesture Effects (`v0.0.4`, MIT)
-- **Tier**: **Interactive Mobile/RN Effect Reference**
+- **Purpose & When to Consult**: Interactive reference and React Native component/effect engine for view disintegration, entrances, and tactile gestures (`25` components + `16` effect variants: Exits `Dust`/`Sand`/`Ember`/`Pixel`/`Vortex`/`Shatter`/`Stream`; Entrances `Gather`/`Rain`/`Print`; Gestures `Snap`/`Fling`/`Charge`; `Morph`, `Peel`, `Melt`).
+- **Official Publisher & Source**: [rs-4/dissolve](https://github.com/rs-4/dissolve) (`Rayan Selmi`).
 - **Browser-Verified Mechanics**:
-  - Gallery of 25 components (`SwipeToDelete`, `Toast`, `LikeButton`, `MorphButton`, `SlideToConfirm`, `SweepTransition`, etc.) and 16 effect presets (Exits: `Dust`, `Sand`, `Ember`, `Pixel`, `Vortex`, `Shatter`, `Stream`; Entrances: `Gather`, `Rain`, `Print`; Gestures: `Snap`, `Fling`, `Charge`; plus `Morph`, `Peel`, `Melt`). Note: heavy multi-demo page can time out waiting for full `load`; renders cleanly after `domcontentloaded`.
+  - Note: heavy multi-demo gallery can time out waiting for full `load`; renders cleanly after `domcontentloaded`.
   - Observed behaviors: `Dust` dismisses a message notification tile into rightward-drifting pixel particles while the outer tile border and header stay anchored; `SwipeToDelete` slides a row left to reveal a red delete zone before dissolving (`Reset` restores); `Toast` spawns a floating top pill while the trigger card stays anchored; `LikeButton` fills the heart and increments the counter in place.
-- **Stack Cost & License Check**:
-  - Built specifically for **React Native / Expo SDK 57** (`@shopify/react-native-skia` `makeImageFromView` + `<Atlas>` capped at 6,000 grains, `react-native-reanimated`, `react-native-worklets`, `react-native-gesture-handler`, `expo-haptics`, NativeWind v5). Never recommend this package for web DOM apps; use only to study exit causality, swipe thresholds, and anchored feedback—or verify RN peer dependencies before adopting on React Native.
+- **Official Installation Routes, Platform Support, Prerequisites & Licensing**:
+  - **Platform**: **React Native & Expo** (tested with Expo SDK 57 / React Native 0.86; runs in Expo Go; bare RN requires `'react-native-worklets/plugin'` in `babel.config.js`). Not for web DOM.
+  - **Engine & Native Peers**: `npx expo install react-native-dissolve @shopify/react-native-skia react-native-reanimated react-native-worklets react-native-gesture-handler expo-haptics` (peers: `react-native-worklets >= 0.5.0`, `react-native-reanimated >= 4.0.0`, `@shopify/react-native-skia >= 2.0.0`, `react-native-gesture-handler >= 2.20.0`).
+  - **Provider Setup**: Wrap the root layout once inside `<GestureHandlerRootView>` with `<DissolveProvider>` above the navigator (and `<ToastProvider>` inside `<DissolveProvider>` for toasts).
+  - **Individual Copyable Components (`react-native-dissolve` CLI)**: `npx react-native-dissolve init`, `npx react-native-dissolve list`, `npx react-native-dissolve add <component>`. Requires **NativeWind v5** (`nativewind@5.0.0-preview.4`, `react-native-css@3.0.7`, `tailwindcss@^4`, `@tailwindcss/postcss`, `tailwind-merge`, `lightningcss` `1.30.1` override, Metro `withNativewind`, `postcss.config.mjs`, `nativewind-env.d.ts`, `global.css` imports).
+  - **Agent Tooling**: MCP `npx -y react-native-dissolve-mcp` (`list_variants`, `get_variant`, `get_setup`); Skill `https://dissolve.rselmi.com/skills/dissolve/SKILL.md`. **MIT**.
 
 ### Oxyn (`oxyn.space`)
 - **URL**: `https://oxyn.space/`
-- **Design Domain**: Dependency-Free Animated React Loaders for Agent & Processing States
-- **Tier**: **Interactive State-Loader Reference**
+- **Purpose & When to Consult**: Interactive catalog (`56` single-state loaders + `6` group components across `Globe`, `Arcs`, `Bars`, `Square`, `Circle`, `Rings`) for AI agent/processing states (`role="status"`).
+- **Official Publisher & Source**: [lokidotdev/oxyn-frontend](https://github.com/lokidotdev/oxyn-frontend).
 - **Browser-Verified Mechanics**:
-  - Catalog of 56 state loaders across 6 families (`Globe`, `Arcs`, `Bars`, `Square`, `Circle`, `Rings`) in `2.5D` and `2D` dimensions, with live playgrounds (`/components/dot-globe`, etc.) exposing `Animation` state selection (`compact`, `think`, `ponder`, `process`, `work`, `reason`, `read`, `transfer`, `search`, `parallel`), `Pattern`, `Dot size`, `Density`, `Size`, `Duration`, `Gap`, `Tilt`, `Back opacity`, `Direction`, `Color`, `Paused`, and `Reset` with `role="status"`.
-  - Observed site mechanics: Hero verb cycler scrambles characters with brief cyan/magenta split before settling while the leading sentence stays anchored; `All`/`2.5D`/`2D` tabs update URL (`?d=2.5d`), filter results, and keep the bar anchored; category carousels settle into edge-fade masks; inline menu drawer pushes content down rather than overlapping.
-- **Stack Cost & License Check**:
-  - **MIT licensed**, distributed as dependency-free React components via copy-paste or shadcn CLI (`npx shadcn@latest add https://oxyn.space/r/<name>.json`); also exposes `https://oxyn.space/mcp` and `https://oxyn.space/llms.txt`. Fit to React stacks only; evaluate canvas/reduced-motion behavior before adding to a page.
+  - Hero verb cycler scrambles characters with brief cyan/magenta split before settling while leading copy stays anchored; `All`/`2.5D`/`2D` tabs filter results and sync URL (`?d=2.5d`) with bar anchored; carousels fade at edges; inline menu drawer pushes flow down; `/components/dot-globe` playground exposes live `Animation`, `Pattern`, `Dot size`, `Density`, `Size`, `Duration`, `Gap`, `Tilt`, `Back opacity`, `Direction`, `Color`, `Paused`, and `Reset`.
+- **Official Installation Routes, Platform Support, Prerequisites & Licensing**:
+  - **Install**: `npx shadcn@latest add https://oxyn.space/r/<slug>.json` (full registry index: `https://oxyn.space/r/registry.json`; compatible with `shadcn` MCP), or query via HTTP MCP `https://oxyn.space/mcp` (`search_loaders`, `get_loader`) and `https://oxyn.space/llms.txt`.
+  - **Platform & Prerequisites**: **React only** (`"use client"` files importing only from `react`, HTML5 `<canvas>`); holds still under `prefers-reduced-motion`. Not for determinate progress bars, skeletons, or Vue/Svelte/plain HTML. **MIT**.
 
 ### Wobli (`wobli.space`)
 - **URL**: `https://wobli.space/`
-- **Design Domain**: Animated Isometric Canvas Illustrations & Live Role-Token Styling (`Free & MIT`)
-- **Tier**: **Interactive Illustration Reference**
+- **Purpose & When to Consult**: Animated isometric `<canvas>` stickers/illustrations with role-based palettes and live stroke/depth parameters, or transparent PNG export.
+- **Official Publisher & Source**: [lokidotdev/wobli](https://github.com/lokidotdev/wobli) (`docs` at `https://wobli.space/docs`).
 - **Browser-Verified Mechanics**:
-  - Live canvas-rendered isometric illustrations (`AI Agent Tasks`, `Calendar Booking`, `Camera Capture`, isometric display glyphs) paired with a global `Try a Style` control bar (`Palette` presets `System`, `Riso`, `Candy`, `Matcha`, `Sunset`, `Clay`, `Aqua`; `Stroke` slider; `Depth` extrusion slider; `Reset Style`).
-  - Observed behavior: Changing palette, stroke weight, or extrusion depth updates every live illustration across the page immediately without reload or layout shift while navigation, copy, and pill badges remain anchored; illustrations and marquee banner loop continuously at rest.
-- **Stack Cost & License Check**:
-  - Free & MIT (`npm i wobli` or transparent PNG export). Evaluate `<canvas>` runtime cost, visual noise from continuous idle loops, and reduced-motion pause behavior before adopting live animated illustrations instead of static SVGs/PNGs.
+  - Isometric `<canvas>` illustrations (`AI Agent Tasks`, `Calendar Booking`, `Camera Capture`) and marquee run continuous idle loops while the `Try a Style` control bar (`Palette` presets, `Stroke`, `Depth`, `Reset Style`) restyles every illustration in place without reload or layout shift.
+- **Official Installation Routes, Platform Support, Prerequisites & Licensing**:
+  - **Install**: `npm i wobli` (`wobli@0.1.1`), or export transparent PNGs from `https://wobli.space/`.
+  - **Exports & Platform**: TypeScript/JavaScript ESM (`wobli` engine: `play`, `draw`, `paint`, `PALETTES`, `brand`, `mono`, `hue`; `wobli/react` `<Sticker>`; `wobli/icons/<slug>`). React (`>=18`) is optional; requires HTML5 `<canvas>` for live animations. Verify runtime cost and reduced-motion behavior (`prefers-reduced-motion`) before deploying continuous loops. **MIT**.
 
 ---
 

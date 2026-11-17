@@ -10,7 +10,7 @@ This workflow guides an agent through diagnosing and repairing weak visual hiera
 [ Visual Fix Workflow v2.0 ]
         │
         ├──────► STEP 1: Capture "BEFORE" Viewport Screenshot
-        │                • Render and capture the exact defect at `390px` mobile and `1280px` desktop.
+        │                • Render via `Playwright` MCP (or browser subagent) and capture baseline at `390px` & `1280px`.
         │
         ├──────► STEP 2: 5-Layer Root-Cause Trace
         │                • Trace symptom through Content → Hierarchy → Composition → Art Direction/Materiality → CSS.
@@ -19,10 +19,11 @@ This workflow guides an agent through diagnosing and repairing weak visual hiera
         │
         ├──────► STEP 3: Formulate High-Craft Structural Intervention
         │                • Isolate 1 primary objective per iteration (`refinement/iteration.md`).
-        │                • Apply targeted typographic, spatial, material, or interactive improvement.
+        │                • Apply targeted typographic, spatial, material, or interactive improvement
+        │                  (applying `web-design-guidelines` / `vercel-react-best-practices` if relevant).
         │
         ├──────► STEP 4: Re-Render & Compare BEFORE vs. AFTER Screenshots
-        │                • Capture the "After" screenshot at the exact same viewport dimensions.
+        │                • Capture the "After" screenshot via `Playwright` MCP at identical viewports (plus trace if animated).
         │                • Verify that composition, focal hierarchy, and visual craft genuinely improved.
         │
         └──────► STEP 5: 7-Point Regression Check & Conclude

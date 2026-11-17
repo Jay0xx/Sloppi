@@ -9,11 +9,14 @@ This workflow guides an agent through building or refining a reusable UI compone
 ```
 [ Component Workflow ]
         │
-        ├──────► STEP 1: Determine Taxonomy Tier (Primitive vs. Component vs. Compound)
-        ├──────► STEP 2: Consult Token Registry (Map colors, typography, radii, and shadows)
-        ├──────► STEP 3: Implement 12 Component States (:hover, :focus-visible, :active, disabled)
+        ├──────► STEP 1: Determine Taxonomy Tier & Discover Fit
+        │                • Classify Primitive vs. Component vs. Compound (`implementation/component-strategy.md`).
+        │                • If external: query `shadcn` MCP / `Dissolve` MCP (RN/Expo) & check `Context7` docs.
+        ├──────► STEP 2: Install (if external) & Map Semantic Tokens
+        │                • Install into app via existing package manager; adapt to `--color-*`/`--radius-*` tokens.
+        ├──────► STEP 3: Implement 12 Component States & Real State Binding
         ├──────► STEP 4: Enforce Keyboard & Focus (2px high-contrast focus ring with offset)
-        ├──────► STEP 5: Touch Target Verification (Ensure min-height/width >= 44px on mobile)
+        ├──────► STEP 5: Touch Target & Repeated-Activation Verification (>= 44px; rapid-click safe)
         ├──────► STEP 6: Reduced Motion Fallback (@media prefers-reduced-motion respected)
-        └──────► STEP 7: Export & Document Props (Ensure strict TypeScript typing)
+        └──────► STEP 7: Review & Export (`web-design-guidelines` + `vercel-react-best-practices` if React)
 ```

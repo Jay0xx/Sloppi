@@ -137,5 +137,18 @@ Never develop and tune a proposed effect in an isolated blank page disconnected 
 
 1. **Prototype in the Primary Composition**: Implement and test the effect directly inside the real primary composition (the above-the-fold hero or primary mobile/app flow) during Stage 4/5 ([implementation/protocol.md](protocol.md)).
 2. **Screenshots for Layout & Hierarchy**: Capture viewport screenshots (`390px` mobile, `768px` tablet, `1280px+` desktop) to verify composition, focal hierarchy, contrast, and zero overlap/clipping across resting and settled states.
-3. **Browser Recording or Interaction Trace for Timing & Continuity**: Capture a browser video/recording, frame sequence, or interaction timeline/DOM-state trace across **trigger $\rightarrow$ mid-transition $\rightarrow$ settlement** (plus **repeated activation** and **reduced motion**) to verify timing, anchoring, and visual continuity.
+3. **Browser Recording or Interaction Trace for Timing & Continuity**: Capture a browser video/recording, frame sequence, or interaction timeline/DOM-state trace (via **Playwright MCP** or the `browser` subagent) across **trigger $\rightarrow$ mid-transition $\rightarrow$ settlement** (plus **repeated activation** and **reduced motion**) to verify timing, anchoring, and visual continuity.
 4. **Honest Reporting**: If a live recording or trace cannot be captured in the environment, explicitly report the timing/continuity tier as `[INFERRED]` or `UNAVAILABLE` per [failure-recovery.md](../failure-recovery.md)—never claim verified timing from static code alone.
+
+---
+
+## 6. Installing, Adapting & Verifying External Interactive Components
+
+When a component or motion primitive passes the behavior-first, stack-fit, cost, and license checks in [dependency-policy.md](dependency-policy.md):
+
+1. **Verify Current Setup via Docs & Tooling**: Query **`Context7`** (`resolve-library-id`, `query-docs`), **`shadcn` MCP**, or **`Dissolve` MCP** (`get_setup`, `get_variant`) for exact installation commands, peer dependencies, provider wrappers, and platform fallbacks before editing `package.json`.
+2. **Install Only in the Target App**: Use the target app's package manager (`pnpm`, `npm`, `yarn`, `bun`, or `npx expo install` / Xcode SPM) and inspect all generated/copied files (`components.json`, `components/dissolve/`, `global.css`, `babel.config.js`, `metro.config.js`, `Package.swift`).
+3. **Bind to App Tokens & Real State**: Replace sample copy, hardcoded colors, and demo timers with the app's semantic design tokens and live state flags (async submission, loading state, error/success handling, `reducedMotion` props).
+4. **Verify Interaction & Code Quality**:
+   - **Web / React**: Review interactions and semantics with **`web-design-guidelines`**, verify bundle/rendering/re-renders with **`vercel-react-best-practices`**, and exercise click, keyboard, viewport resize, and reduced-motion states live via **`Playwright` MCP** (screenshots + trace/snapshot).
+   - **React Native / Expo / SwiftUI**: Confirm provider placement, native plugin/Xcode shader compilation requirements, and platform `Reduce Motion` behavior; run project typecheck/tests cleanly.

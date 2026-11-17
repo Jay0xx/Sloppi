@@ -80,7 +80,24 @@ Consult [routing.md](routing.md) to calibrate process depth so you spend maximum
 
 ---
 
-## 5. Master Resource Directory
+## 5. Connected Companion Skills & MCP Toolchain
+
+Scale tool usage to task complexity and target platform—only load the skills and MCP tools relevant to the current task:
+
+| Tool / Companion Skill | Role in Sloppi Workflow | When to Invoke |
+| :--- | :--- | :--- |
+| **Sloppi** *(core)* | Reference synthesis, 3 creative directions, originality gate, design system contract, and visual decisions. | Every frontend/UI design, redesign, or visual fix task. |
+| **Frontend Design** (`frontend-design`) | Additional studio aesthetic direction and point-of-view critique when divergent art direction needs extra range. | Medium/Large greenfield or redesign briefs where visual distinctiveness needs reinforcement. |
+| **shadcn MCP** (`shadcn`) | Compatible component discovery, inspection, and installation from `@shadcn` or custom registries (e.g., `oxyn.space/r/registry.json`). | Small/Medium/Large React/Tailwind tasks adding accessible UI primitives or registry components. |
+| **Context7 MCP** (`context7`) | Up-to-date library API, version, and setup docs (`resolve-library-id`, `query-docs`). | Whenever installing or integrating external packages (`motion`, `distortion-waves`, `wobli`, `next`, `expo`, etc.). |
+| **Dissolve MCP** (`dissolve`) | React Native / Expo animation variant discovery (`list_variants`, `get_variant`) and setup (`get_setup`). | React Native / Expo mobile tasks calling for tactile dissolve exits, entrances, or gesture transitions. |
+| **Playwright MCP** (`playwright`) | Live browser verification, viewport changes (`390px`/`768px`/`1280px+`), interaction testing, snapshots, and screenshots. | Primary Composition Gate, interactive verification, and Before/After regression checks (alongside `browser` subagent). |
+| **Web Design Guidelines** (`web-design-guidelines`) | Accessibility, keyboard focus, semantics, and UI interaction compliance audit. | Pre-ship / UI review passes on web projects (Skip for native-only RN/SwiftUI unless web views exist). |
+| **React Best Practices** (`vercel-react-best-practices`) | React and Next.js waterfall, bundle size, server/client, and re-render implementation checks. | React and Next.js builds/refactors (Skip for vanilla HTML/CSS or SwiftUI). |
+
+---
+
+## 6. Master Resource Directory
 
 Load only the specific modules needed for your current task:
 
@@ -119,10 +136,11 @@ Load only the specific modules needed for your current task:
 - [implementation/protocol.md](implementation/protocol.md) — Primary Composition Gate, visual-first build sequence & Polish Trap remediation.
 - [implementation/token-implementation.md](implementation/token-implementation.md) — Multi-archetype CSS Custom Properties (never defaulting to `Inter`).
 - [implementation/layout-implementation.md](implementation/layout-implementation.md) — CSS Grid choreography, sticky scrollytelling, and container architecture.
-- [implementation/interaction-implementation.md](implementation/interaction-implementation.md) — Behavior-first motion specs (trigger, end state, touch, keyboard, repeated activation, reduced motion), stack fit, primary-composition prototyping, and trace verification.
+- [implementation/interaction-implementation.md](implementation/interaction-implementation.md) — Behavior-first motion specs, 7-field effect contract, stack fit, component integration, primary-composition prototyping, and trace verification.
+- [implementation/component-strategy.md](implementation/component-strategy.md) — 5-tier component taxonomy, registry discovery (`shadcn` / `Dissolve` / `Context7`), token adaptation, and anti-bloat rules.
 - [implementation/responsive-implementation.md](implementation/responsive-implementation.md) — Mobile ergonomics ($\ge 44\text{px}$ targets) & viewport adaptation.
 - [implementation/asset-strategy.md](implementation/asset-strategy.md) — Bespoke SVGs, shaders, interactive canvases, and icon governance.
-- [implementation/dependency-policy.md](implementation/dependency-policy.md) — Stack-fit selection, dependency cost & license inspection, and anti-auto-dependency rules for reference demos.
+- [implementation/dependency-policy.md](implementation/dependency-policy.md) — Stack-fit selection, cost & license checks, and verified installation routes (`dissolve`, `distortion-waves`, `DistortionWavesKit`, `oxyn`, `wobli`).
 
 ### Visual QA, Originality Audit & Screenshot Regression
 - [audit/visual-audit.md](audit/visual-audit.md) — Primary Composition Gate, 4-Viewport Screenshot Matrix, and recording/trace timing checks.
